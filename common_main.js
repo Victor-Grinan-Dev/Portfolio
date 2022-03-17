@@ -20,8 +20,16 @@ function scrollFunction() {
   }
 
 const pageTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+
+  window.scroll({
+    top: 2500, 
+    left: 0, 
+    behavior: 'smooth' 
+  });
+  /*
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  */
 }
 
 const mobMenu = () => {
@@ -39,3 +47,25 @@ const mobMenu = () => {
 
   mobButton.addEventListener("click", mobMenu);
   upButton.addEventListener("click", pageTop);
+
+
+const scrollToSmoothly = (pos, time) => {
+    const currentPos = window.pageYOffset;
+    const start = null;
+    if(time == null) time = 500;
+    pos = +pos, time = +time;
+    window.requestAnimationFrame(function step(currentTime) {
+        start = !start ? currentTime : start;
+        var progress = currentTime - start;
+        if (currentPos < pos) {
+            window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos);
+        } else {
+            window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time));
+        }
+        if (progress < time) {
+            window.requestAnimationFrame(step);
+        } else {
+            window.scrollTo(0, pos);
+        }
+    });
+}
