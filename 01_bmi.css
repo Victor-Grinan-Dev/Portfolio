@@ -1,0 +1,19 @@
+.normal{
+    color: green;
+}
+
+.warning {
+    color: orange;
+}
+
+.danger {
+    color: red;
+}
+
+#weight, #height {
+    margin: 10px;
+}
+
+#calculate {
+    margin-top: 50px;
+}
