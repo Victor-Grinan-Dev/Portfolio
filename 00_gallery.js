@@ -1,5 +1,3 @@
-
-//"imgs/bekky-bekks-N6yqlPqURR4-unsplash.jpg", "imgs/maxime-lebrun-1o2071GOVp0-unsplash.jpg", "imgs/gattotere-SKlwtMS_7hI-unsplash.jpg",
 const picBank = [
     "imgs/andy-holmes-sym5TTE2ks0-unsplash.jpg",
     "imgs/autumn-studio-gsyUo-_cU94-unsplash.jpg",
