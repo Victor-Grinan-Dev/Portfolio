@@ -38,6 +38,13 @@ h1 {
     -5px -5px 10px rgb(142, 255, 138);
 }
 
+.active:focus {
+    transform: scale(150%);
+    box-shadow: 
+    10px 10px 10px rgb(142, 255, 138),
+    -10px -10px 10px rgb(142, 255, 138);
+}
+
 #stop, #start{
     border: none;
     /*background-color: rgb(175, 104, 104);*/
