@@ -169,8 +169,6 @@ const searchInDatabase = () => {
     searchResult.classList.remove("invisible");
 }
 
-
-
 //evente listeners
 fillBtn.addEventListener("click", fillDummyData);
 addBtn.addEventListener("click", enterValues);
