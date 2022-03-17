@@ -7,17 +7,8 @@ const closeOverlayBtn = document.querySelector("#closeOverlay")
 const overlay = document.querySelector("#overlay");
 const circles = document.querySelectorAll(".circle");
 
-/* LOAD SOUNDS */
 const music = new Audio("sounds/amusic.mp3");
-const fail = new Audio("sounds/gameover.wav");
-const crash = new Audio("/projects/06-speedgame/sounds/crash.mp3");
-const kick = new Audio("/projects/06-speedgame/sounds/kick.mp3");
-const snare = new Audio("/projects/06-speedgame/sounds/snare.mp3");
-const tom1 = new Audio("/projects/06-speedgame/sounds/tom-1.mp3");
-const tom2 = new Audio("/projects/06-speedgame/sounds/tom-2.mp3");
-const tom3 = new Audio("/projects/06-speedgame/sounds/tom-3.mp3");
-const tom4 = new Audio("/projects/06-speedgame/sounds/tom-4.mp3");
-
+const fail = new Audio("sounds/gameover.wav")
 
 const randomIndex = () => Math.floor(Math.random() * 7);
 
@@ -127,31 +118,31 @@ for (let i = 0; i < document.querySelectorAll(".drum").length; i++){
 const makeSound = (id) => {
     switch (id) {
         case "one":
-            
+            const crash = new Audio("/projects/06-speedgame/sounds/crash.mp3");
             crash.play();
             break;
         case "two":
-            
+            const kick = new Audio("/projects/06-speedgame/sounds/kick.mp3");
             kick.play();//dunno why is broken
             break;
         case "three":
-            
+            const snare = new Audio("/projects/06-speedgame/sounds/snare.mp3");
             snare.play();
             break;
         case "four":
-            
+            const tom1 = new Audio("/projects/06-speedgame/sounds/tom-1.mp3");
             tom1.play();
             break;
         case "five":
-            
+            const tom2 = new Audio("/projects/06-speedgame/sounds/tom-2.mp3");
             tom2.play();
             break;
         case "six":
-            
+            const tom3 = new Audio("/projects/06-speedgame/sounds/tom-3.mp3");
             tom3.play();
             break;
         case "seven":
-            
+            const tom4 = new Audio("/projects/06-speedgame/sounds/tom-4.mp3");
             tom4.play();
             break;
         default: console.log(buttonHtml);
