@@ -1,4 +1,6 @@
 //alert("yo!")
+const glitch = new Audio("sounds/sci-fi-glitch.wav")
+glitch.play();
 const menuBar = document.querySelector("#menuBar");
 const upButton = document.querySelector("#up");
 const mobButton = document.querySelector("#mobileButton");
@@ -22,8 +24,7 @@ function scrollFunction() {
 const pageTop = () => {
 
   window.scroll({
-    top: 2500, 
-    left: 0, 
+    top: 0,  
     behavior: 'smooth' 
   });
   /*
