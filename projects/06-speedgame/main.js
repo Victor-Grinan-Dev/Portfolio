@@ -7,6 +7,9 @@ const closeOverlayBtn = document.querySelector("#closeOverlay")
 const overlay = document.querySelector("#overlay");
 const circles = document.querySelectorAll(".circle");
 
+const music = new Audio("/projects/06-speedgame/sounds/amusic.mp3");
+const fail = new Audio("/projects/06-speedgame/sounds/gameover.wav")
+
 const randomIndex = () => Math.floor(Math.random() * 7);
 
 let active = 0;
@@ -25,7 +28,8 @@ const start = () => {
 }
 
 const startGame = () => {
-    
+    music.play();
+
     for (let i = 0; i < circles.length; i++){
         circles[i].style.pointerEvents = "auto";
     }
@@ -81,6 +85,9 @@ const clicked = (circle) => {
 }
 
 const stoptGame = () => {
+    fail.play();
+    music.pause();
+    music.currentTime = 0;
     console.log("stop game")
     overlay.classList.remove("invisible")
     modalText.textContent = `Your max Score is: ${score}`;
