@@ -254,6 +254,13 @@ div .project:hover {
     padding-bottom: 100px;
 }
 
+#allSkills{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
 #skillsBoxes{
     background-color: rgb(66,95,116);
