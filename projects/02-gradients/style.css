@@ -1,0 +1,59 @@
+#gradients{
+    display: flex;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#gradient { 
+    background-image: linear-gradient(to right, rgb(243, 227, 6), rgb(236, 11, 11));
+    width: 100%;
+    height: 100%;  
+}
+
+#panel{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50%;
+    border-radius: 10px;
+    border-style: groove;
+    border: 5px;
+    border-color: black;
+
+    
+}
+
+.colorBox{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    height: 50vh;
+}
+
+#buttonBox{
+    display: flex;
+
+}
+
+#buttonsBox label {
+    color: black;
+    background-color: coral;
+    width: 10px;
+
+}
+
+.nappi{
+    display: none;
+    margin: 10px;
+}
+
+#css{
+    color: black;
+}
