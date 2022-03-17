@@ -1,3 +1,4 @@
+const glitch = new Audio("sounds/sci-fi-glitch.wav")
 const grinan = document.querySelector("#grinan");
 const g = document.querySelector("#g")
 const victor = document.querySelector("#victor");
