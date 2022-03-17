@@ -34,6 +34,11 @@ const selectOneRandomPic = (array) => {
     return result
 }
 
+const reload = document.querySelector("reload").addEventListener("click", () => {
+    location.reload();
+    return false;
+})
+
 const displayImg = () => {
 
     for (let i = 0; i < totalPics; i++){  
