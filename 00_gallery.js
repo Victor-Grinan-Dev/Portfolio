@@ -18,7 +18,18 @@ const picBank = [
     "imgs/nathan-dumlao-WDjNsJWIxVE-unsplash.jpg",
     "imgs/nio-milano-caH-ZLrisZA-unsplash.jpg",
     "imgs/oleg-laptev-QRKJwE6yfJo-unsplash.jpg",
-
+    "imgs/z_img_design_05.JPG",
+    "imgs/z_img_design_class03.jpg",
+    "imgs/z_img_design_class02.jpg",
+    "imgs/Z_img_design_class01.png",
+    "imgs/big_hexes.JPG",
+    "imgs/bigblue.JPG",
+    "imgs/bigGreen.JPG",
+    "imgs/bigred.JPG",
+    "imgs/bigredreversed.jpg.JPG",
+    "imgs/bigyellow.JPG",
+    "imgs/hexes_blue_gradient_scan.JPG",
+    "imgs/hand_write.JPG"
 ];
 
 const totalPics = document.querySelector("#gallery").childElementCount;
