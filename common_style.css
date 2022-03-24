@@ -56,6 +56,11 @@ header {
     flex-direction: row;
 }
 
+#logo img{
+    width: 40px;
+    display: none;
+}
+
 #v, #g {
     font-family: var(--logo-font);
     font-size: 40px;

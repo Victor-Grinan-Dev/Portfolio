@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="a01_turnTimer.css">
+    <title>Turn Timer</title>
+</head>
+<body>
+
+    <div id="overlay">
+        <div id="setUpModal">
+            <p>Set your time:</p>
+            <div id="form">
+                <button class="button" id="minus"> - </button>
+                <p id="turnTime">99</p>
+                <p id="min">min</p>
+                <button class="button" id="plus"> + </button>
+            </div>  
+            <div id="buttons">
+                <button class="button" id="start"> Start </button>  
+                <button class="button" id="reset"> reset </button>
+            </div>
+               
+        </div>
+    </div>
+
+
+    <div id="app">
+
+        <div id="panels">
+            <div id="playerA" class="active">
+                <div id="stopA" class="stopButton"></div>
+            </div>
+
+            <div id="centerPanel">
+                <div id="clock">1:59</div>
+                <div id="timeUp" class="invisible">Time up, bro!</div>
+            </div>
+
+
+            <div id="playerB">
+                <div id="stopB" class="stopButton"></div>
+            </div>
+    
+        </div>
+
+    </div>
+</body>
+<script src="a01_turnTimer.js"></script>
+</html>
