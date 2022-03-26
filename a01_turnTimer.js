@@ -13,6 +13,8 @@ const messenger = document.querySelector("#messenger");
 const stopButton = document.querySelectorAll("#stopButton");
 const updated_mins = document.querySelector("#minsClock");
 const updated_seconds = document.querySelector("#secondsClock");
+const stopA = document.querySelector("#stopA"); 
+const stopB = document.querySelector("#stopB");
 
 //declaretion
 const ring = new Audio("./sounds/ring.wav");
@@ -133,7 +135,7 @@ const activatePlayerA  = () => {
     if (playerABtn.className.includes("standBy")){
         playerABtn.className = "active"
         playerBBtn.className = "inactive"
-        playerABtn.textContent = "X"
+        //stopA.textContent = "X"
         timer(totalTime)
     }else if(playerABtn.className.includes("active")){
         stopClock()
@@ -150,10 +152,9 @@ const stopClock = () => {
 
 const activatePlayerB  = () => {
     if (playerBBtn.className.includes("standBy")){
-        playerBBtn.className = "inactive"
         playerBBtn.className = "active"
-        playerABtn.className = "active"
         playerABtn.className = "inactive"
+        //stopB.textContent = "X"
         timer(totalTime)
     }else if(playerBBtn.className.includes("active")){
         stopClock()

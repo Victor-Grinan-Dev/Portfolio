@@ -174,8 +174,16 @@ body{
     -10px -10px 20px rgb(255, 127, 127);
 }
 
+#stopA,
+#stopB {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: aliceblue;
+    font-size: 40px;
+}
+
 #messenger {
     position: absolute;
     top: 0;
-
 }
