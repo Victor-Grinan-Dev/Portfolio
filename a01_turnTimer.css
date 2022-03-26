@@ -10,7 +10,7 @@ body{
     background-size: cover
 }
 
-#overlay {
+#overlay, #turnOverLayer, #timeUp {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -87,10 +87,8 @@ body{
 #timeUp {
     font-size: 68px;
     color: chartreuse;
-    position: absolute;
     text-shadow: 2px 2px 0 black;
     z-index: 2;
-    top: 30vh;
 }
 
 #app {
@@ -129,6 +127,8 @@ body{
 }
 
 #clock{
+    display: flex;
+    flex-direction: row;
     color: rgb(118, 228, 108);
     font-size: 60px;
     text-shadow: 
@@ -156,4 +156,22 @@ body{
     -5px -5px 5px rgb(81, 201, 161),
     10px 10px 20px aquamarine,
     -10px -10px 20px aquamarine;
+}
+
+.standBy {
+    border-style: groove;
+    border-color: rgb(255, 127, 127);
+    box-shadow: 
+    3px 3px 2px rgb(137, 42, 42),
+    -3px -3px 2px rgb(137, 42, 42),
+    5px 5px 5px rgb(201, 81, 81),
+    -5px -5px 5px rgb(201, 81, 81),
+    10px 10px 20px rgb(255, 127, 127),
+    -10px -10px 20px rgb(255, 127, 127);
+}
+
+#messenger {
+    position: absolute;
+    top: 0;
+
 }

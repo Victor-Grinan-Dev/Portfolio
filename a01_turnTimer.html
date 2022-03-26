@@ -9,6 +9,13 @@
 </head>
 <body>
 
+    <div id="messenger" class="invisible">
+        <div id="timeUp" >Time up!</div>
+        <div id="turnOver" >Turn Over!</div>
+        <button class="button" id="continue"> continue </button>  
+        <button class="button" id="gameOver"> end Game </button>
+    </div>
+
     <div id="overlay">
         <div id="setUpModal">
             <p>Set your time:</p>
@@ -30,22 +37,26 @@
     <div id="app">
 
         <div id="panels">
-            <div id="playerA" class="active">
+            <div id="playerA" class="standBy ">
                 <div id="stopA" class="stopButton"></div>
             </div>
 
             <div id="centerPanel">
-                <div id="clock">1:59</div>
-                <div id="timeUp" class="invisible">Time up, bro!</div>
+                <div id="clock">
+                    <p id="minsClock">00</p>
+                    <p>:</p>
+                    <p id="secondsClock">00</p>
+                </div>
+
             </div>
 
 
-            <div id="playerB">
+            <div id="playerB" class="standBy ">
                 <div id="stopB" class="stopButton"></div>
             </div>
     
         </div>
-
+        
     </div>
 </body>
 <script src="a01_turnTimer.js"></script>
