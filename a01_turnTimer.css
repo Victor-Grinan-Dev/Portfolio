@@ -52,6 +52,7 @@ body{
 #min {
     color: black;
     font-size: 60px;
+    margin-right: 5px;
 }
 
 #buttons {
@@ -109,7 +110,6 @@ body{
     flex-direction: column;
     position: relative;
 }
-
 
 #playerA{
     background: black;
