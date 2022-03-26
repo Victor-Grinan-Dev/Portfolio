@@ -6,7 +6,7 @@
 
 body{
     background-color: blueviolet;
-    background-image: url("./Portfolio/images/blood_bowl_tall.jpg");
+    background-image: url("./images/blood_bowl_tall.jpg");
     background-size: cover
 }
 
@@ -24,7 +24,7 @@ body{
 #setUpModal {
     width: 80vw;
     height: 30vh;
-    background-color: bisque;
+    background-color: rgb(255, 228, 196);
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -102,22 +102,23 @@ body{
 
 #panels{
     width: 80vw;
-    height: 30vh;
-    background-color: bisque;
+    height: 80vh;
+    background-color: rgba(255, 228, 196, 0.741);
     border-radius: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    position: relative;
 }
 
 
 #playerA{
     background: black;
-    width: 12vh;
-    height: 12vh;
+    width: 16vh;
+    height: 16vh;
     border-radius: 50%;
-
+    
 }
 
 #centerPanel{
@@ -129,7 +130,7 @@ body{
 
 #clock{
     color: rgb(118, 228, 108);
-    font-size: 10vw;
+    font-size: 60px;
     text-shadow: 
     1px 1px 0 black,
     -1px -1px 0 black,
@@ -141,8 +142,8 @@ body{
 
 #playerB{
     background: black;
-    width: 12vh;
-    height: 12vh;
+    width: 16vh;
+    height: 16vh;
     border-radius: 50%;
 }
 .active {
