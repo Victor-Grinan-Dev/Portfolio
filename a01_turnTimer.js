@@ -9,32 +9,34 @@ const clock = document.querySelector("#clock");
 const playerABtn = document.querySelector("#playerA");
 const playerBBtn = document.querySelector("#playerB");
 const turnOverLayer = document.querySelector("#turnOverLayer");
+const messenger = document.querySelector("#messenger");
 const stopButton = document.querySelectorAll("#stopButton");
 const updated_mins = document.querySelector("#minsClock");
 const updated_seconds = document.querySelector("#secondsClock");
-
-
 
 //declaretion
 const ring = new Audio("./sounds/ring.wav");
 
 let seconds;
+let stopTimer = false
 
 const preSetTime = 3;
 let totalTime = preSetTime; 
 //let timeInSeconds = totalTime * 60;
 
 const timer = (mins) => { //OK
-    let seconds = mins*60 || 0;     
+    seconds = mins * 60 || 0;     
     let interval = setInterval(() => {
-  
+        if (seconds === 2){
+            showMessenger()
+        }
+
          seconds--;
          updateClock(seconds)
          if(!seconds){
-              clearInterval(interval);             
-         }
-         if (seconds === 0){
-            ring.play();
+              clearInterval(interval); 
+              hideMessenger()
+              ring.play();            
          }
  
     },1000)
@@ -68,13 +70,9 @@ const updateClock = (seconds) => {
     minsLeft = formatStr(minsLeft)
     seconds = formatStr(seconds)
        
-    //console.log(minsLeft, ':', seconds)
+    console.log(minsLeft, ':', seconds)
     updated_mins.textContent = minsLeft
     updated_seconds.textContent = seconds
-    console.log("updateClock clock text content", updated_mins.textContent, ":", updated_seconds.textContent)
-
-    //updated_mins.textContent = minsLeft;
-    //updated_seconds.textContent = seconds;
 };
 
 const resetTime = () => { //OK
@@ -123,27 +121,46 @@ const startApp = () => {
     updated_seconds.textContent = "00"
 }
 
+const showMessenger = () => {
+    messenger.className = ""
+}
 
-const showTurnOver = () => {
-
+const hideMessenger = () => {
+    messenger.className = "invisible"
 }
 
 const activatePlayerA  = () => {
-    playerABtn.classList.remove("standBy")
-    playerABtn.classList.add("active")
-    playerBBtn.classList.remove("active")
-    playerBBtn.classList.add("standBy")
-    stopButton.textContent = "player A playing, press for turn over"
-    console.log("activatePlayerA total time value", totalTime, typeof totalTime)
-    timer(totalTime)
+    if (playerABtn.className.includes("standBy")){
+        playerABtn.className = "active"
+        playerBBtn.className = "inactive"
+        playerABtn.textContent = "X"
+        timer(totalTime)
+    }else if(playerABtn.className.includes("active")){
+        stopClock()
+        playerBBtn.className = "standBy"
+        playerABtn.className = "inactive"
+    }
+}
+
+const stopClock = () => {
+    if (seconds != 2){
+        seconds = 2
+    }
 }
 
 const activatePlayerB  = () => {
-    playerBBtn.classList.remove("standBy")
-    playerBBtn.classList.add("active")
-    playerABtn.classList.remove("active")
-    playerABtn.classList.add("standBy")
-    timer(totalTime)
+    if (playerBBtn.className.includes("standBy")){
+        playerBBtn.className = "inactive"
+        playerBBtn.className = "active"
+        playerABtn.className = "active"
+        playerABtn.className = "inactive"
+        timer(totalTime)
+    }else if(playerBBtn.className.includes("active")){
+        stopClock()
+        playerABtn.className = "standBy"
+        playerBBtn.className = "inactive"
+    }
+   
 }
 
 
@@ -170,13 +187,21 @@ reset.addEventListener("click", resetTime);
 set.addEventListener("click", startApp);
 playerABtn.addEventListener("click", appStart)
 playerBBtn.addEventListener("click", appStart)
+
+
+
+
+/*
 stopButton.forEach(button => {
     if (button.classList.includes("active")){
 
+    }else{
+        button.classList = ""
+        button.classList.add("inactive");
     }
     
 })
-/*
+
 
 
 const startApp = () => {

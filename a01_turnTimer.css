@@ -158,6 +158,10 @@ body{
     -10px -10px 20px aquamarine;
 }
 
+.inactive {
+    visibility: hidden;
+}
+
 .standBy {
     border-style: groove;
     border-color: rgb(255, 127, 127);
