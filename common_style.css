@@ -244,6 +244,7 @@ article {
     padding-top: 100px;
     text-align: center;
     max-width: 100vw;
+    min-height: 100vh;
 }
 
 #content {

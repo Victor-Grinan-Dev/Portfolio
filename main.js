@@ -16,7 +16,7 @@ const Fly = (time) => {
     flying1.style.left = (Math.cos(angle) * 200 + 230) + "px";
     flying2.style.top = (Math.sin(angle + Math.PI) * 40 + 40) + "px";
     flying2.style.left = (Math.cos(angle + Math.PI) * 200 + 230) + "px";
-    requestAnimationFrame(animate);
+    requestAnimationFrame(Fly, "animate");
 }
 
 const deattach = () => {  
@@ -44,5 +44,5 @@ const turnlight = () => {
 g.addEventListener("click", deattach);
 v.addEventListener("click", turnlight);
 
-Fly()
+Fly(lastTime)
 

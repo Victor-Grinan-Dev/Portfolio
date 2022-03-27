@@ -1,6 +1,4 @@
 //alert("yo!")
-const glitch = new Audio("sounds/sci-fi-glitch.wav")
-glitch.play();
 const menuBar = document.querySelector("#menuBar");
 const upButton = document.querySelector("#up");
 const mobButton = document.querySelector("#mobileButton");
