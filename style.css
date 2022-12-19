@@ -342,6 +342,10 @@ div .project:hover {
     grid-row: 3/6;
 }
 
+.invisible {
+    display: none;
+}
+
 .shake{
     animation: shake 500ms;
 }

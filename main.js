@@ -44,5 +44,7 @@ const turnlight = () => {
 g.addEventListener("click", deattach);
 v.addEventListener("click", turnlight);
 
-Fly(lastTime)
+Fly(lastTime);
+
+
 
