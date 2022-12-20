@@ -7,8 +7,12 @@ const flying1 = document.querySelector("#welcome-to");
 const flying2 = document.querySelector("#intro");
 const showAllBtn = document.querySelector("#showAll");
 const secundaries = document.querySelectorAll(".secundary");
+const projects = document.querySelectorAll(".projects");
+const scrollUp = document.querySelector(".scrollUp");
+const menuBar = document.querySelector("#menuBar"); 
+const tabs = document.querySelectorAll("tab");
 
-
+//logo flying animation
 let angle = 0;
 let lastTime = null;
 
@@ -22,6 +26,9 @@ const Fly = (time) => {
     requestAnimationFrame(Fly, "animate");
 }
 
+Fly(lastTime);
+
+//my name animation
 const deattach = () => {  
     grinan.classList.toggle("deattach");
    
@@ -44,18 +51,36 @@ const turnlight = () => {
     }
 }
 
+g.addEventListener("click", deattach);
+v.addEventListener("click", turnlight);
+
+
+//hide/show projects
 const showAllProjects = () => {
-    console.log("hi")
+
     for (let proj of secundaries){
-        proj.classList.toggle("invisible")
+        proj.classList.toggle("invisible");
     }
 }
 
-g.addEventListener("click", deattach);
-v.addEventListener("click", turnlight);
 showAllBtn.addEventListener("click", showAllProjects);
 
-Fly(lastTime);
+//scroll btn function 
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollUp.classList.remove("invisible");
+    menuBar.style.backgroundColor = "rgb(6, 30, 51)";
+  } else {
+    scrollUp.classList.add("invisible");
+    menuBar.style.backgroundColor = "";
+  }
+}
 
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
+scrollUp.addEventListener("click", topFunction);

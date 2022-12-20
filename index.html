@@ -22,19 +22,14 @@
                 <img src="./icons/logo_2.png" alt="logo">
             </div> 
             <nav>
-
-                <button id="mobileButton">
-                    
-                    <!--<span class="material-icons"> menu </span>-->
-                </button>
-                
+                <button class='scrollUp invisible'>Up</button>
                 <ul>
-                    <li><a href="#aboutArticle">About</a></li>
-                    <li><a href="#portfolioTitle">Portfolio</a></li>
-                    <li><a href="#skillsBoxes">Skills</a></li>
+                    <li><a href="#aboutArticle" class='tab'>About</a></li>
+                    <li><a href="#portfolioTitle" class='tab'>Portfolio</a></li>
+                    <li><a href="#skillsBoxes" class='tab'>Skills</a></li>
                     <!--<li><a href="00_gallery.html">Gallery</a></li>-->
-                    <li><a href="https://www.bc.fi/?sgclid=CjwKCAiAgbiQBhAHEiwAuQ6Bkr5THOt4DfqX4mz_e1O6WBURiBQcHFbgeelyfIXyITuybfpFCgFI6RoCjrEQAvD_BwE" target="blank">HBC</a></li>
-                    <li><a href="#conctactSection">Conctact</a></li>
+                    <li><a href="https://www.bc.fi/?sgclid=CjwKCAiAgbiQBhAHEiwAuQ6Bkr5THOt4DfqX4mz_e1O6WBURiBQcHFbgeelyfIXyITuybfpFCgFI6RoCjrEQAvD_BwE" target="blank" class='tab'>HBC</a></li>
+                    <li><a href="#conctactSection" class='tab'>Conctact</a></li>
                 </ul>
 
             </nav>
@@ -55,6 +50,11 @@
                 <h1 id="portfolio" class="flying2">My Portfolio</h1>
                 <p>(Please don't click the logo)</p>
             </div>
+
+            <div class="hexMap">
+                
+            </div>
+
         </section>
         
     </header>
@@ -88,7 +88,7 @@
                 <h3 id='portfolioTitle'> School Projects: </h3>
                 <div id="schoolProjects">
                     
-                    <div class="project secundary invisible">
+                    <div class="project secundary flip-in invisible">
     
                         <a href="https://elegant-halva-fb3729.netlify.app/">
                             <div id="gradientsImg" class="projectImg">
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     
-                    <div class="project secundary invisible">
+                    <div class="project secundary flip-in invisible">
                         
                         <a href="https://victor-grinan-dev.github.io/speed_game/">
                             <div id="speedGameImg" class="projectImg">
@@ -118,7 +118,7 @@
                     </div>
 
                     
-                    <div class="project secundary invisible">
+                    <div class="project secundary flip-in invisible">
                         
                         <a href="https://victor-grinan-dev.github.io/react_pokemons/">
                             <div id="pokedex" class="projectImg">
@@ -133,7 +133,7 @@
                         
                     </div>
 
-                    <div class="project hightligths">
+                    <div class="project flip-in hightligths">
                         
                         <a href="https://jocular-tapioca-476ffa.netlify.app/">
                             <div id="pokedex" class="projectImg">
@@ -148,7 +148,7 @@
                         
                     </div>
                     
-                    <div class="project secundary invisible">
+                    <div class="project secundary flip-in invisible">
                 
                         <a href="05_todoList.html">
                             <div id="toDoListImg" class="projectImg">
@@ -162,7 +162,7 @@
                         </div>
                         
                     </div>
-                    <div class="project hightligths">
+                    <div class="project flip-in hightligths">
                         
                         <a href="https://victor-grinan-dev.github.io/countries_app1/">
                             <div id="toDoListImg" class="projectImg">
@@ -181,7 +181,7 @@
                 <h3> Personal Projects: </h3>
                 <div id="personalProjects">
 
-                    <div class="project secundary invisible">             
+                    <div class="project secundary flip-in invisible">             
                         <a href="https://victor-grinan-dev.github.io/diceRoller"/>
                             <div id="diceRollerImg" class="projectImg">
                                 <img src="./projectsImgs/diceRoller.JPG" alt="#">
@@ -193,7 +193,7 @@
                         </div>                       
                     </div>
     
-                    <div class="project secundary invisible">   
+                    <div class="project secundary flip-in invisible">   
                         <a href="https://victor-grinan-dev.github.io/map-creator/">
                             <div id="" class="projectImg">
                                 <img src="./projectsImgs/hexMap.JPG" alt="hexMap">
@@ -205,7 +205,7 @@
                         </div>    
                     </div>
 
-                    <div class="project secundary invisible">                    
+                    <div class="project secundary flip-in invisible">                    
                         <a href="https://victor-grinan-dev.github.io/blood_bowl_turn_timer/">
                             <div id="turnTimer" class="projectImg">
                                 <img src="./projectsImgs/turn_timer.JPG" alt="#">
@@ -217,7 +217,7 @@
                         </div>                        
                     </div>
 
-                    <div class="project secundary invisible">                    
+                    <div class="project secundary flip-in invisible">                    
                         <a href="https://victor-grinan-dev.github.io/maimis_hair_do/">
                             <div id="turnTimer" class="projectImg">
                                 <img src="./projectsImgs/mamis_hairdo.JPG" alt="#">
@@ -230,7 +230,7 @@
                         </div>                       
                     </div>  
 
-                    <div class="project">                    
+                    <div class="project flip-in ">                    
                         <a href="https://enchanting-taiyaki-964ff9.netlify.app/" target='blank'>
                             <div id="turnTimer" class="projectImg">
                                 <img src="./projectsImgs/campaign-tracker.png" alt="#">
@@ -365,6 +365,7 @@
                 </div>
             </article>
         </section>
+
     </main>
 
 
@@ -513,7 +514,7 @@
                 <p id="love">Made with ❤️ in Finland</p>
             </section>
 
-            <button id="up" class="invisible">up</button>
+            <button id="scrollUp" class="scrollUp invisible">up</button>
 
         </footer>
     

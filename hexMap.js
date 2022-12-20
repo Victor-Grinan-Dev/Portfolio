@@ -1,0 +1,1 @@
+const hexArea = document.querySelector(".hexMap");
