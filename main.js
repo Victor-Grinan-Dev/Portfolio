@@ -47,7 +47,7 @@ const turnlight = () => {
 const showAllProjects = () => {
     console.log("hi")
     for (let proj of secundaries){
-        console.log(proj)
+        proj.classList.toggle("invisible")
     }
 }
 
