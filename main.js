@@ -56,10 +56,18 @@ v.addEventListener("click", turnlight);
 
 
 //hide/show projects
-const showAllProjects = () => {
+let is_showing = false;
 
+const showAllProjects = () => {
+    is_showing = !is_showing;
     for (let proj of secundaries){
         proj.classList.toggle("invisible");
+        
+    }
+    if(is_showing){
+        showAllBtn.textContent = "Show less";
+    }else{
+        showAllBtn.textContent = "Show all";
     }
 }
 
