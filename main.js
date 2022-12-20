@@ -5,6 +5,9 @@ const victor = document.querySelector("#victor");
 const v = document.querySelector("#v")
 const flying1 = document.querySelector("#welcome-to");
 const flying2 = document.querySelector("#intro");
+const showAllBtn = document.querySelector("#showAll");
+const secundaries = document.querySelectorAll(".secundary");
+
 
 let angle = 0;
 let lastTime = null;
@@ -41,8 +44,16 @@ const turnlight = () => {
     }
 }
 
+const showAllProjects = () => {
+    console.log("hi")
+    for (let proj of secundaries){
+        console.log(proj)
+    }
+}
+
 g.addEventListener("click", deattach);
 v.addEventListener("click", turnlight);
+showAllBtn.addEventListener("click", showAllProjects);
 
 Fly(lastTime);
 
