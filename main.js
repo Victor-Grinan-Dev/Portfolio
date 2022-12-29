@@ -11,6 +11,12 @@ const projects = document.querySelectorAll(".projects");
 const scrollUp = document.querySelector(".scrollUp");
 const menuBar = document.querySelector("#menuBar"); 
 const tabs = document.querySelectorAll("tab");
+const developer = document.querySelector("#developer");
+const collapse = document.querySelector(".collapse");
+
+//collapse menu
+collapse.style.backgroundColor="white";
+collapse.style.padding="10px";
 
 //logo flying animation
 let angle = 0;
@@ -28,32 +34,50 @@ const Fly = (time) => {
 
 Fly(lastTime);
 
+//banner css explodes
+let isV = false;
+let isG = false;
+
 //my name animation
 const deattach = () => {  
     grinan.classList.toggle("deattach");
    
-    if (grinan.classList[0] == "deattach"){
+    if (grinan.classList[0] === "deattach"){
         g.style.color = "#ce5d5d"; 
-        
+        isG = true;
     }else{
         g.style.color = "#fff";
+        isG=false;
     }
 }
 
 const turnlight = () => {
     victor.classList.toggle("lightsOn");
     
-    if (victor.classList[0] == "lightsOn"){
-        v.style.color = "#ce5d5d"; 
+    if (victor.classList[0] === "lightsOn"){
+        v.style.color = "#ce5d5d";
+        isV = true; 
              
     }else{
         v.style.color = "#fff";
+        isV=false;
     }
 }
 
 g.addEventListener("click", deattach);
 v.addEventListener("click", turnlight);
 
+const changePosition = () => {
+
+}
+
+const moveDeveloper = () => {
+    if(grinan.classList[0] === "deattach"){
+        developer.style.position = "absplute";
+    }
+};
+
+grinan.addEventListener("click", moveDeveloper);
 
 //hide/show projects
 let is_showing = false;

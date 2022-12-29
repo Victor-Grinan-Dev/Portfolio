@@ -91,6 +91,7 @@ header {
 }
 
 /*Navbar*/
+
 #menuBar {  
     align-items: center;    
     display: flex;
@@ -99,8 +100,22 @@ header {
     padding-right: 20px;
     position: fixed;
     top: 0;
-    width: 97vw;
+    width: 99vw;
     z-index: 1;
+}
+
+.nav-tab{
+    display: flex;
+}
+
+.flex-corners{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapse-show{
+    background-color: aqua;
 }
 
 #menuBar a {
@@ -109,11 +124,11 @@ header {
 }
 
 nav ul li {
-    display: inline;   
+    display: inline;  
 }
 
 nav ul li a {  
-    padding: 5px;  
+    padding: 5px;
 }
 
 nav ul li a:hover {
@@ -203,15 +218,25 @@ nav ul li a:hover {
 }
 
 /*Banner*/
-#heroBanner, #projectBanner {
+#heroBanner {
+    display: grid;
+    place-content: center;
+}
+
+.bannerContent{
+    height: 70vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+}
+/*
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     min-height: 700px;
     font-family: Roboto;
-}
-
+*/
 #projectBanner h1{
     position: relative;
     top: 150px;
@@ -255,7 +280,7 @@ img {
 
 article {
     padding-bottom: 50px;
-    padding-top: 100px;
+    padding-top: 200px;
     text-align: center;
     max-width: 100vw;
     min-height: 100vh;
@@ -271,8 +296,12 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
+section{
+    min-height: 100vh;
+}
 
 
 p{
@@ -285,6 +314,10 @@ button {
     border: none;
     border-radius: 3%;
     padding: 20px;
+}
+
+.showAll {
+    font-size: 16px;
 }
 
 #content {
