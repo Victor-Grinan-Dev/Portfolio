@@ -12,6 +12,7 @@ const scrollUp = document.querySelector(".scrollUp");
 const menuBar = document.querySelector("#menuBar"); 
 const tabs = document.querySelectorAll("tab");
 const developer = document.querySelector(".developer");
+const portfolio = document.querySelector(".portfolioWord")
 const collapse = document.querySelector(".collapse");
 
 //collapse menu
@@ -40,35 +41,31 @@ let isG = false;
 
 //my name animation
 const deattach = () => {  
-    grinan.classList.toggle("deattach");
+    grinan.classList.add("deattach");
    
     if (grinan.classList[0] === "deattach"){
         g.style.color = "#ce5d5d"; 
         isG = true;
-    }else{
-        g.style.color = "#fff";
-        isG=false;
     }
 }
 
 const turnlight = () => {
-    victor.classList.toggle("lightsOn");
+    victor.classList.add("lightsOn");
     
     if (victor.classList[0] === "lightsOn"){
         v.style.color = "#ce5d5d";
-        isV = true; 
-             
-    }else{
-        v.style.color = "#fff";
-        isV=false;
+        isV = true;     
     }
 }
 
 g.addEventListener("click", deattach);
 v.addEventListener("click", turnlight);
 
-const changePosition = () => {
-
+const animatePorfolio = () => {
+    if (victor.classList.includes(lightsOn)){
+        portfolio.style.position = "absolute";
+        portfolio.classList.add("spin");
+    }
 }
 
 const spinDeveloper = () => {
@@ -78,6 +75,7 @@ const spinDeveloper = () => {
     }
 };
 
+victor.addEventListener("click", animatePorfolio);
 grinan.addEventListener("click", spinDeveloper);
 
 //hide/show projects

@@ -135,6 +135,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column; 
     justify-content: space-around;
+    z-index: 1;
 }
 
 #hi {
