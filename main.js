@@ -11,7 +11,7 @@ const projects = document.querySelectorAll(".projects");
 const scrollUp = document.querySelector(".scrollUp");
 const menuBar = document.querySelector("#menuBar"); 
 const tabs = document.querySelectorAll("tab");
-const developer = document.querySelector("#developer");
+const developer = document.querySelector(".developer");
 const collapse = document.querySelector(".collapse");
 
 //collapse menu
@@ -71,13 +71,14 @@ const changePosition = () => {
 
 }
 
-const moveDeveloper = () => {
+const spinDeveloper = () => {
     if(grinan.classList[0] === "deattach"){
-        developer.style.position = "absplute";
+        developer.style.position = "absolute";
+        developer.classList.add("spin");
     }
 };
 
-grinan.addEventListener("click", moveDeveloper);
+grinan.addEventListener("click", spinDeveloper);
 
 //hide/show projects
 let is_showing = false;
