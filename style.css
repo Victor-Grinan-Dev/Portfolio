@@ -355,41 +355,6 @@ form div {
     min-height: 200px;
 }
 
-#allSkills{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-#skillsBoxes{
-    background-color: rgb(66,95,116);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.skill {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.skill img {
-    width: 50px;
-    height: 50px;
-    margin: 5px; 
-}
-
-
-
 article{
     align-items: center;
     display: flex;
