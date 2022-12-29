@@ -53,6 +53,7 @@
 
 .spin{ 
     position: absolute; 
+    text-shadow: 0 0 5px#040000;
     animation: spin infinite 20s linear;
   }
   
