@@ -221,8 +221,6 @@ nav ul li a:hover {
 }
 
 
-
-
 /*Main*/
 
 img {
@@ -232,7 +230,7 @@ img {
 
 article {
     padding-bottom: 50px;
-    padding-top: 200px;
+    padding-top: 150px;
     text-align: center;
     max-width: 100vw;
     min-height: 100vh;
@@ -278,6 +276,21 @@ button {
 /*Footer*/
 footer {
     background-color: var(--level-5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#conctactSection{
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .email {
@@ -291,39 +304,14 @@ footer {
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    padding-top: 50px;
     text-align: center;
 }
 
-input {
-    color: rgb(6, 30, 51);
-}
 
-#conctactSection p {
-    padding: 50px;
-}
 
 .icon {
     height: 25px;
-    margin: 0;
-    padding: 0;
     width: 25px;  
-}
-
-#emailActual {
-    padding: 0;
-}
-
-#leaveSms{
-    padding: 0;
-}
-
-form div {
-    padding-bottom: 10px;
-}
-
-.send{
-    margin: 10px;
 }
 
 #some{
@@ -341,18 +329,15 @@ form div {
     width: 50px;
     object-fit: cover;
 }
-.some img{
-    object-fit: cover;
-    height: 50px;
-    width: 50px;
-}
+
 #licenseSection {
     align-items: center;
     background-color: rgb(6, 30, 51);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 200px;
+    min-height: 100px;
+    width: 100%;
 }
 
 article{
@@ -364,6 +349,9 @@ article{
     padding-right: 5px;
     padding-top: 150px;
     padding-bottom: 200px ;
+}
+article h3, #contact, article h2{
+    font-family: var(--logo-font);
 }
 
 /*PROJECT*/
@@ -378,6 +366,11 @@ article{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+portfolio{
+    padding: 0;
+    margin: 0;
 }
 
 .project {
@@ -447,28 +440,27 @@ div .project:hover {
 
 /*Skill*/
 
+#skillsBoxes{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
 #skillArticle{
     background-color: rgb(66,95,116);
-    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 100px;
+    align-items: center;
 }
 
 #allSkills{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-#skillsBoxes{
-    background-color: rgb(66,95,116);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -488,7 +480,6 @@ div .project:hover {
     height: 50px;
     margin: 5px; 
 }
-
 
 .invisible {
     display: none;
@@ -541,7 +532,6 @@ div .project:hover {
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -551,12 +541,10 @@ div .project:hover {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -565,13 +553,11 @@ div .project:hover {
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
 
   color: black;
 }
 
-/* Style the back side */
 .flip-card-back {
   background-color: rgb(14, 15, 15);
   color: white;
@@ -579,17 +565,16 @@ div .project:hover {
 }
 
 .scrollUp{
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color:var(--highlight); /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-
-    font-size: 18px; /* Increase font size */
+    position: fixed;
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color:var(--highlight); 
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    font-size: 18px; 
 }
 
