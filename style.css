@@ -167,7 +167,7 @@ article{
     padding-bottom: 200px ;
 }
 
-/*PROJECT SECTION*/
+/*PROJECT*/
 #projectsArticle {
     background-color: rgb(33, 56, 71);
 }
@@ -394,6 +394,8 @@ div .project:hover {
 
     font-size: 18px; /* Increase font size */
 }
+
+/***** extra *****/
 
 /*
 
