@@ -61,10 +61,12 @@ g.addEventListener("click", deattach);
 v.addEventListener("click", turnlight);
 
 const animatePorfolio = () => {
-    if (victor.classList.includes(lightsOn)){
-        portfolio.style.position = "absolute";
-        portfolio.classList.add("spin");
-    }
+    victor.classList.forEach(classL => {
+        if(classL === "lightsOn"){
+            portfolio.style.position = "absolute";
+            portfolio.classList.add("spin");
+        }
+    })
 }
 
 const spinDeveloper = () => {
@@ -116,7 +118,15 @@ function topFunction() {
 scrollUp.addEventListener("click", topFunction);
 
 /* hex Map */
-
+const resetAll = () => {
+    hexMap.innerHTML = "";
+    grinan.classList.remove("deattach")
+    g.style.color = "#white";
+    victor.classList.remove("lightsOn")
+    v.style.color = "#white";
+    developer.classList.remove("spin")
+    portfolio.classList.remove("")
+}
 
 const hexMap = document.querySelector(".hexMap");
 const hexSize = 50;
@@ -126,16 +136,12 @@ let height = document.body.clientHeight;
 let rows = (height/ 4) / hexSize;
 let columns = (width / hexSize) - 1;
 
-window.addEventListener("resize", function(event) {
-    width = document.body.clientWidth;
-    height = document.body.clientHeight;
-
-    rows = (height/ 10) / hexSize ;
-    columns = (width / hexSize) - 2;
+window.addEventListener("resize", () => {
+    resetAll();
 });
 
-
 const createHexMatrix = () => {
+
     for(let i = 0; i < rows; i++){
         for (let j = 0; j < columns; j++){
             const blank = document.createElement('img');

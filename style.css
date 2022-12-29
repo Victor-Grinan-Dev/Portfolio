@@ -482,6 +482,12 @@ div .project:hover {
     margin: 5px; 
 }
 
+/*certificates*/
+#certificates{
+    background-color: var(--level-4);
+}
+
+
 .invisible {
     display: none;
 }
