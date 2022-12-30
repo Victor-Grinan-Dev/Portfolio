@@ -125,7 +125,7 @@ const resetAll = () => {
     victor.classList.remove("lightsOn")
     v.style.color = "#white";
     developer.classList.remove("spin")
-    portfolio.classList.remove("")
+    portfolio.classList.remove("spin")
 }
 
 const hexMap = document.querySelector(".hexMap");
