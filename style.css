@@ -447,7 +447,7 @@ div .project:hover {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #skillArticle{
