@@ -13,6 +13,8 @@ const tabs = document.querySelectorAll("tab");
 const developer = document.querySelector(".developer");
 const portfolio = document.querySelector(".portfolioWord")
 const collapse = document.querySelector(".collapse");
+const irrelevatCertificates = document.querySelectorAll(".irrelevant");
+const moreCertificatesBtn = document.querySelector(".moreCertificates");
 
 //collapse menu
 collapse.style.backgroundColor="white";
@@ -116,6 +118,25 @@ function topFunction() {
 }
 
 scrollUp.addEventListener("click", topFunction);
+
+/* show certificates */
+
+let is_certificateShowing = false;
+
+const showAllCertificates = () => {
+    console.log("hello madafaka!");
+    is_certificateShowing = !is_certificateShowing;
+    for (let cert of irrelevatCertificates){
+        cert.classList.toggle("invisible");
+        
+    }
+    if(is_certificateShowing){
+        moreCertificatesBtn.textContent = "Show less";
+    }else{
+        moreCertificatesBtn.textContent = "Show More";
+    }
+}
+moreCertificatesBtn.addEventListener("click", showAllCertificates);
 
 /* hex Map */
 const resetAll = () => {
