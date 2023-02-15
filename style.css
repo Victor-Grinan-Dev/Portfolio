@@ -5,9 +5,9 @@
     --level-5: rgb(6, 30, 51);
     --level-4: rgb(16,51,81);
     --level-3: rgb(37, 63, 82);
-    --level-2: rgb(66,95,116);
-    --level-1: rgb(125,154,172);
-    --level-0: rgb(160, 201, 201);
+    --level-2: #425f75 ;
+    --level-1: rgb(130, 158, 176);
+    --level-0: rgb(150, 175, 192);
     --my-white: rgb(255, 255, 255);
     --highlight: rgb(206, 93, 93);
     --hi-font: Sacramento;
@@ -31,23 +31,41 @@ html {
 }
 
 body {  
-    background-color: var(--level-1); 
+    background-color: var(--level-0); 
     display: flex;  
     flex-direction: column;
     justify-content: center;
     max-width: 100vw;
 }
 
+.bgLevel0{
+    background-color: var(--level-0); 
+}
+.bgLevel1{
+    background-color: var(--level-1); 
+}
+.bgLevel2{
+    background-color: var(--level-2); 
+}
+.bgLevel3{
+    background-color: var(--level-3); 
+}
+.bgLevel4{
+    background-color: var(--level-4); 
+}
+.bgLevel5{
+    background-color: var(--level-5); 
+}
+
 @media only screen and (max-width: 375px){
     body{
         min-width: 375px;
     }
-   
 }
 
 /*HEADER*/
 header {
-    background-color: var(--level-1);
+    background-color: var(--level-0);
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -212,8 +230,6 @@ nav ul li a:hover {
     visibility: hidden;
 }
 
-
-
 /*back up btn*/
 #up {
     bottom: 20px;
@@ -292,6 +308,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    text-align: center;
 }
 
 .email {
@@ -299,16 +316,6 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
-#conctactSection {
-    align-items: center;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-}
-
-
 
 .icon {
     height: 25px;
@@ -367,11 +374,6 @@ article h3, #contact, article h2{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-portfolio{
-    padding: 0;
-    margin: 0;
 }
 
 .project {
