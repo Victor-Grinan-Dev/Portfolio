@@ -15,10 +15,16 @@ const portfolio = document.querySelector(".portfolioWord")
 const collapse = document.querySelector(".collapse");
 const irrelevatCertificates = document.querySelectorAll(".irrelevant");
 const moreCertificatesBtn = document.querySelector(".moreCertificates");
+const navLinks = document.querySelectorAll('.nav-link');
 
 //collapse menu
 collapse.style.backgroundColor="white";
 collapse.style.padding="10px";
+
+// collapse menu close back on click
+navLinks.forEach(link => {
+    link.addEventListener('click', ()=>{collapse.classList.remove('show')});
+})
 
 //logo flying animation
 let angle = 0;
@@ -124,7 +130,6 @@ scrollUp.addEventListener("click", topFunction);
 let is_certificateShowing = false;
 
 const showAllCertificates = () => {
-    console.log("hello madafaka!");
     is_certificateShowing = !is_certificateShowing;
     for (let cert of irrelevatCertificates){
         cert.classList.toggle("invisible");
