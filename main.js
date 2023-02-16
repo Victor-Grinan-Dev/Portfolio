@@ -131,9 +131,9 @@ const showAllCertificates = () => {
         
     }
     if(is_certificateShowing){
-        moreCertificatesBtn.textContent = "Show less";
+        moreCertificatesBtn.textContent = "Hide Irrelevant certificates";
     }else{
-        moreCertificatesBtn.textContent = "Show More";
+        moreCertificatesBtn.textContent = "Show Irrelevant certificates";
     }
 }
 moreCertificatesBtn.addEventListener("click", showAllCertificates);
