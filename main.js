@@ -1,23 +1,17 @@
-const grinan = document.querySelector("#grinan");
-const g = document.querySelector("#g")
-const victor = document.querySelector("#victor");
-const v = document.querySelector("#v")
-const flying1 = document.querySelector("#welcome-to");
-const flying2 = document.querySelector("#intro");
-const showAllBtn = document.querySelector("#showAll");
-const secundaries = document.querySelectorAll(".secundary");
-const projects = document.querySelectorAll(".projects");
-const scrollUp = document.querySelector(".scrollUp");
-const menuBar = document.querySelector("#menuBar"); 
-const tabs = document.querySelectorAll("tab");
+
 const developer = document.querySelector(".developer");
 const portfolio = document.querySelector(".portfolioWord")
-const collapse = document.querySelector(".collapse");
-const irrelevatCertificates = document.querySelectorAll(".irrelevant");
-const moreCertificatesBtn = document.querySelector(".moreCertificates");
+const menuBar = document.querySelector("#menuBar"); 
+const tabs = document.querySelectorAll("tab");
 const navLinks = document.querySelectorAll('.nav-link');
 
+/* copyrights */
+const year = new Date();
+const yearSpan = document.querySelector(".year");
+yearSpan.innerText = `${year.getFullYear()}`;
+
 //collapse menu
+const collapse = document.querySelector(".collapse");
 collapse.style.backgroundColor="white";
 collapse.style.padding="10px";
 
@@ -27,6 +21,10 @@ navLinks.forEach(link => {
 })
 
 //logo flying animation
+const g = document.querySelector("#g")
+const v = document.querySelector("#v")
+const flying1 = document.querySelector("#welcome-to");
+const flying2 = document.querySelector("#intro");
 let angle = 0;
 let lastTime = null;
 
@@ -47,6 +45,9 @@ let isV = false;
 let isG = false;
 
 //my name animation
+const grinan = document.querySelector("#grinan");
+const victor = document.querySelector("#victor");
+
 const deattach = () => {  
     grinan.classList.add("deattach");
    
@@ -88,6 +89,10 @@ victor.addEventListener("click", animatePorfolio);
 grinan.addEventListener("click", spinDeveloper);
 
 //hide/show projects
+const showAllBtn = document.querySelector("#showAll");
+const secundaries = document.querySelectorAll(".secundary");
+const projects = document.querySelectorAll(".projects");
+
 let is_showing = false;
 
 const showAllProjects = () => {
@@ -106,6 +111,8 @@ const showAllProjects = () => {
 showAllBtn.addEventListener("click", showAllProjects);
 
 //scroll btn function 
+const scrollUp = document.querySelector(".scrollUp");
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -126,6 +133,8 @@ function topFunction() {
 scrollUp.addEventListener("click", topFunction);
 
 /* show certificates */
+const irrelevatCertificates = document.querySelectorAll(".irrelevant");
+const moreCertificatesBtn = document.querySelector(".moreCertificates");
 
 let is_certificateShowing = false;
 
@@ -142,6 +151,7 @@ const showAllCertificates = () => {
     }
 }
 moreCertificatesBtn.addEventListener("click", showAllCertificates);
+
 
 /* hex Map */
 const resetAll = () => {
