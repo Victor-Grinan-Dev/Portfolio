@@ -1,21 +1,10 @@
-
-const developer = document.querySelector(".developer");
-const portfolio = document.querySelector(".portfolioWord")
-const menuBar = document.querySelector("#menuBar"); 
-const tabs = document.querySelectorAll("tab");
-const navLinks = document.querySelectorAll('.nav-link');
-
-/* copyrights */
-const year = new Date();
-const yearSpan = document.querySelector(".year");
-yearSpan.innerText = `${year.getFullYear()}`;
-
 //collapse menu
 const collapse = document.querySelector(".collapse");
+const navLinks = document.querySelectorAll('.nav-link');
+
 collapse.style.backgroundColor="white";
 collapse.style.padding="10px";
 
-// collapse menu close back on click
 navLinks.forEach(link => {
     link.addEventListener('click', ()=>{collapse.classList.remove('show')});
 })
@@ -41,12 +30,13 @@ const Fly = (time) => {
 Fly(lastTime);
 
 //banner css explodes
-let isV = false;
-let isG = false;
-
-//my name animation
+const developer = document.querySelector(".developer");
+const portfolio = document.querySelector(".portfolioWord")
 const grinan = document.querySelector("#grinan");
 const victor = document.querySelector("#victor");
+
+let isV = false;
+let isG = false;
 
 const deattach = () => {  
     grinan.classList.add("deattach");
@@ -110,7 +100,9 @@ const showAllProjects = () => {
 
 showAllBtn.addEventListener("click", showAllProjects);
 
-//scroll btn function 
+//scroll up btn function 
+const menuBar = document.querySelector("#menuBar"); 
+const tabs = document.querySelectorAll("tab");
 const scrollUp = document.querySelector(".scrollUp");
 
 window.onscroll = function() {scrollFunction()};
@@ -152,6 +144,10 @@ const showAllCertificates = () => {
 }
 moreCertificatesBtn.addEventListener("click", showAllCertificates);
 
+/* copyrights */
+const year = new Date();
+const yearSpan = document.querySelector(".year");
+yearSpan.innerText = `${year.getFullYear()}`;
 
 /* hex Map */
 const resetAll = () => {
