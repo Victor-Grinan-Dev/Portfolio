@@ -502,46 +502,6 @@ div .project:hover {
     display: none;
 }
 
-.shake{
-    animation: shake 500ms;
-}
-
-@keyframes shake {
-    0%{
-        transform: rotate(0dg);
-    }
-    10%{
-        transform: rotate(-1dg);
-    }
-    20%{
-        transform: rotate(0dg);
-    }
-    30%{
-        transform: rotate(1dg);
-    }
-    40%{
-        transform: rotate(0dg);
-    }
-    50%{
-        transform: rotate(-1dg);        
-    }
-    60%{
-        transform: rotate(0dg);
-    }
-    70%{
-        transform: rotate(1dg);
-    }
-    80%{
-        transform: rotate(0dg);
-    }
-    90%{
-        transform: rotate(-1dg);
-    }
-    100%{
-        transform: rotate(0dg);
-    }
-    
-}
 
 .flip-card {
   background-color: transparent;
