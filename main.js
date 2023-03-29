@@ -9,6 +9,15 @@ navLinks.forEach(link => {
     link.addEventListener('click', ()=>{collapse.classList.remove('show')});
 })
 
+/* tabs tracker */
+const currentTab = '';
+// window.addEventListener('scroll', console.log);
+// window.onscroll = function() {printScroll()};
+
+// function printScroll(){
+//     console.log(document.body.scrollTop || document.documentElement.scrollTop)
+// }
+
 //logo flying animation
 const g = document.querySelector("#g")
 const v = document.querySelector("#v")
@@ -101,21 +110,78 @@ const showAllProjects = () => {
 showAllBtn.addEventListener("click", showAllProjects);
 
 //scroll up btn function 
-const menuBar = document.querySelector("#menuBar"); 
+const scroll_about = 677;
+const scroll_portfolio = 1481;
+const scroll_skills = 2618;
+const scroll_certificates = 3314;
+const scroll_conctactMe = 4130;
+
+const aboutTab = document.querySelector('#aboutTab');
+const portfolioTab = document.querySelector('#portfolioTab');
+const skillsTab = document.querySelector('#skillsTab');
+const certTab = document.querySelector('#certTab');
+const contactTab = document.querySelector('#contactTab');
+
+const menuBar = document.querySelector("#menuBar"); //bg change color not working.
 const tabs = document.querySelectorAll("tab");
 const scrollUp = document.querySelector(".scrollUp");
+
+let scrollValue = 0;
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollUp.classList.remove("invisible");
-    menuBar.style.backgroundColor = "rgb(6, 30, 51)";
-  } else {
-    scrollUp.classList.add("invisible");
-    menuBar.style.backgroundColor = "";
-  }
+    scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
+
+    resetActiveTab();
+
+    //aboutTab
+    if((scrollValue >= scroll_about) && (scrollValue < scroll_portfolio)){
+        aboutTab.classList.add('activeTab');
+    }
+    //portfolioTab
+    else if((scrollValue >= scroll_portfolio) && (scrollValue < scroll_skills)){
+        portfolioTab.classList.add('activeTab');
+    }
+    //skillsTab
+    else if((scrollValue >= scroll_skills) && (scrollValue < scroll_certificates)){
+        skillsTab.classList.add('activeTab');
+    }
+    //certTab
+    else if((scrollValue >= scroll_certificates) && (scrollValue < scroll_conctactMe)){
+        certTab.classList.add('activeTab');        
+    }
+    //contactTab
+    else if(scrollValue >= scroll_conctactMe){
+        contactTab.classList.add('activeTab');
+    }
+
+    if (scrollValue> 20) {
+        scrollUp.classList.remove("invisible");
+        menuBar.style.backgroundColor = "rgb(6, 30, 51)";
+    } else {
+
+        scrollUp.classList.add("invisible");
+        menuBar.style.backgroundColor = "";
+
+    }
 }
+
+const resetActiveTab = () => {
+    aboutTab.classList.remove('activeTab');
+    portfolioTab.classList.remove('activeTab');
+    skillsTab.classList.remove('activeTab');
+    certTab.classList.remove('activeTab');
+    contactTab.classList.remove('activeTab');
+}
+
+
+
+
+
+
+
+
 
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
@@ -149,7 +215,7 @@ const year = new Date();
 const yearSpan = document.querySelector(".year");
 yearSpan.innerText = `${year.getFullYear()}`;
 
-/* hex Map */
+/* reset animations */
 const resetAll = () => {
     hexMap.innerHTML = "";
     grinan.classList.remove("deattach")
@@ -160,6 +226,7 @@ const resetAll = () => {
     portfolio.classList.remove("spin")
 }
 
+/* hex Map */
 const hexMap = document.querySelector(".hexMap");
 const hexSize = 50;
 
