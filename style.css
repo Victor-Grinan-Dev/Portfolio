@@ -286,10 +286,20 @@ p{
 }
 
 button {
-    background-color: rgb(206, 93, 93); 
+    background-color: var(--highlight); 
     border: none;
     border-radius: 3%;
     padding: 20px;
+}
+
+.cvBtns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cvBtns a{
+    text-decoration: none;
 }
 
 .showAll {
