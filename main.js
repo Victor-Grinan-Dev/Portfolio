@@ -1,5 +1,3 @@
-//remove warning FLoC
-chrome_options.add_argument('--log-level=1');
 
 //collapse menu
 const collapse = document.querySelector(".collapse");
