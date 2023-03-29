@@ -9,15 +9,6 @@ navLinks.forEach(link => {
     link.addEventListener('click', ()=>{collapse.classList.remove('show')});
 })
 
-/* tabs tracker */
-const currentTab = '';
-// window.addEventListener('scroll', console.log);
-// window.onscroll = function() {printScroll()};
-
-// function printScroll(){
-//     console.log(document.body.scrollTop || document.documentElement.scrollTop)
-// }
-
 //logo flying animation
 const g = document.querySelector("#g")
 const v = document.querySelector("#v")
@@ -109,12 +100,12 @@ const showAllProjects = () => {
 
 showAllBtn.addEventListener("click", showAllProjects);
 
-//scroll up btn function 
-const scroll_about = 677;
-const scroll_portfolio = 1481;
-const scroll_skills = 2618;
-const scroll_certificates = 3314;
-const scroll_conctactMe = 4130;
+//scrolls functions
+const scroll_about = [677, 1208];
+const scroll_portfolio = [1481, 2416];
+const scroll_skills = [2618, 3624];
+const scroll_certificates = [3314, 4832];
+const scroll_conctactMe = [4130, 6040];
 
 const aboutTab = document.querySelector('#aboutTab');
 const portfolioTab = document.querySelector('#portfolioTab');
@@ -131,28 +122,25 @@ let scrollValue = 0;
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+
     scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
 
-    resetActiveTab();
+    console.log('scrollValue:', scrollValue);
 
-    //aboutTab
-    if((scrollValue >= scroll_about) && (scrollValue < scroll_portfolio)){
+    resetActiveTab();
+    if((scrollValue >= scroll_about[0]) && (scrollValue <= scroll_about[1])){
         aboutTab.classList.add('activeTab');
     }
-    //portfolioTab
-    else if((scrollValue >= scroll_portfolio) && (scrollValue < scroll_skills)){
+    else if((scrollValue >= scroll_portfolio[0]) && (scrollValue <= scroll_portfolio[1])){
         portfolioTab.classList.add('activeTab');
     }
-    //skillsTab
-    else if((scrollValue >= scroll_skills) && (scrollValue < scroll_certificates)){
+    else if((scrollValue >= scroll_skills[0]) && (scrollValue <= scroll_skills[1])){
         skillsTab.classList.add('activeTab');
     }
-    //certTab
-    else if((scrollValue >= scroll_certificates) && (scrollValue < scroll_conctactMe)){
-        certTab.classList.add('activeTab');        
+    else if((scrollValue >= scroll_certificates[0]) && (scrollValue <= scroll_certificates[1])){
+        certTab.classList.add('activeTab');
     }
-    //contactTab
-    else if(scrollValue >= scroll_conctactMe){
+    else if(scrollValue >= scroll_conctactMe[0]){
         contactTab.classList.add('activeTab');
     }
 
@@ -160,10 +148,8 @@ function scrollFunction() {
         scrollUp.classList.remove("invisible");
         menuBar.style.backgroundColor = "rgb(6, 30, 51)";
     } else {
-
         scrollUp.classList.add("invisible");
         menuBar.style.backgroundColor = "";
-
     }
 }
 
@@ -174,14 +160,6 @@ const resetActiveTab = () => {
     certTab.classList.remove('activeTab');
     contactTab.classList.remove('activeTab');
 }
-
-
-
-
-
-
-
-
 
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
