@@ -103,7 +103,7 @@ showAllBtn.addEventListener("click", showAllProjects);
 
 //scrolls functions
 const scroll_about = [677, 1320];
-const scroll_portfolio = [1481, 2634];
+const scroll_portfolio = [1481, 2640];
 const scroll_skills = [2618, 3952];
 const scroll_certificates = [3314, 5270];
 const scroll_conctactMe = [4130, 6586];
