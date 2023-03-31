@@ -104,8 +104,8 @@ showAllBtn.addEventListener("click", showAllProjects);
 //scrolls functions
 const scroll_about = [677, 1320];
 const scroll_portfolio = [1481, 2640];
-const scroll_skills = [2618, 3952];
-const scroll_certificates = [3314, 5678];
+const scroll_skills = [2618, 3054];
+const scroll_certificates = [3314, 3911];
 const scroll_conctactMe = [4130, 6586];
 
 const aboutTab = document.querySelector('#aboutTab');
@@ -125,7 +125,7 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 
     scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
-    
+    console.log(scrollValue);
     resetActiveTab();
     if((scrollValue >= scroll_about[0]) && (scrollValue <= scroll_about[1])){
         aboutTab.classList.add('activeTab');
