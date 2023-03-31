@@ -480,6 +480,23 @@ div .project:hover {
 
 #allSkills{
     display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.skillGroup{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.skillGroupTitle{
+    font-size: 16px;
+}
+.subSkills{
+    display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -507,6 +524,25 @@ div .project:hover {
     background-color: var(--level-4);
 }
 
+.certificates{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.certView{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.certView:hover{
+    color: var(--highlight);
+}
 
 .invisible {
     display: none;

@@ -105,8 +105,8 @@ showAllBtn.addEventListener("click", showAllProjects);
 const scroll_about = [677, 1320];
 const scroll_portfolio = [1481, 2640];
 const scroll_skills = [2618, 3054];
-const scroll_certificates = [3314, 3911];
-const scroll_conctactMe = [4130, 6586];
+const scroll_certificates = [3314, 4570];
+const scroll_conctactMe = [4130, 5628];
 
 const aboutTab = document.querySelector('#aboutTab');
 const portfolioTab = document.querySelector('#portfolioTab');
