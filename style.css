@@ -471,6 +471,15 @@ div .project:hover {
     min-height: 100vh;
 }
 
+.skillsBoxes{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .ratingLegend{
     font-size: 14px;
 }
