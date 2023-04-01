@@ -104,9 +104,9 @@ showAllBtn.addEventListener("click", showAllProjects);
 //scrolls functions
 const scroll_about = [677, 1320];
 const scroll_portfolio = [1481, 2640];
-const scroll_skills = [2618, 3054];
-const scroll_certificates = [3314, 4570];
-const scroll_conctactMe = [4130, 5628];
+const scroll_skills = [2618, 3992];
+const scroll_certificates = [3314, 5270];
+const scroll_conctactMe = [4130, 6610];
 
 const aboutTab = document.querySelector('#aboutTab');
 const portfolioTab = document.querySelector('#portfolioTab');
@@ -166,6 +166,31 @@ function topFunction() {
 }
 
 scrollUp.addEventListener("click", topFunction);
+
+/* Skill functions */
+const showMoreSkills = document.querySelector('.showMoreSkills');
+const secundarySkillGroup = document.querySelectorAll('.secundarySkillGroup');
+const notStudiedSkill = document.querySelectorAll('.notStudiedSkill');
+let visibleSkill = false;
+
+const toogleMoreSkills = () => {
+    visibleSkill = !visibleSkill;
+    secundarySkillGroup.forEach(item=>{
+        item.classList.toggle('invisible');
+    });
+    
+    notStudiedSkill.forEach(item=>{
+        item.classList.toggle('invisible');
+    });
+    
+    if (visibleSkill){
+        showMoreSkills.innerText = 'Show less'
+    }else{
+        showMoreSkills.innerText = 'Show more'
+    }
+}
+
+showMoreSkills.addEventListener('click', toogleMoreSkills);
 
 /* show certificates */
 const irrelevatCertificates = document.querySelectorAll(".irrelevant");
