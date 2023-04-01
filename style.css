@@ -379,7 +379,6 @@ article{
     padding-top: 150px;
     padding-bottom: 200px;
     width: 100vw;
-    max-width: 1200px;
 }
 article h3, #contact, article h2{
     font-family: var(--logo-font);
@@ -501,6 +500,7 @@ div .project:hover {
     justify-content: center;
     align-items: center;
 }
+.showSkillsLegend
 .showMoreSkills{
     font-size: 14px;
 }
@@ -512,7 +512,16 @@ div .project:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding: 0 4px;
 }
+
+.skillGroup:nth-of-type(2n){
+    background-color: var(--level-2);
+}
+.skillGroup:nth-of-type(odd){
+    background-color: var(--level-4);
+}
+
 .skillGroupTitle{
     font-size: 16px;
 }
