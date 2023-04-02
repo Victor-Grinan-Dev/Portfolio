@@ -26,7 +26,7 @@ const Fly = (time) => {
     flying2.style.top = (Math.sin(angle + Math.PI) * 40 + 40) + "px";
     flying2.style.left = (Math.cos(angle + Math.PI) * 200 + 230) + "px";
     requestAnimationFrame(Fly, "animate");
-}
+};
 
 Fly(lastTime);
 
@@ -70,10 +70,10 @@ const animatePorfolio = () => {
 }
 
 const spinDeveloper = () => {
-    if(grinan.classList[0] === "deattach"){
-        developer.style.position = "absolute";
-        developer.classList.add("spin");
-    }
+    grinan.classList[0] === "deattach" && (
+        developer.style.position = "absolute",
+        developer.classList.add("spin")
+        )
 };
 
 victor.addEventListener("click", animatePorfolio);
@@ -91,12 +91,9 @@ const showAllProjects = () => {
     for (let proj of secundaries){
         proj.classList.toggle("invisible");
         
-    }
-    if(is_showing){
-        showAllBtn.textContent = "Show less";
-    }else{
-        showAllBtn.textContent = "Show all";
-    }
+    };
+    is_showing ? showAllBtn.textContent = "Show less" : showAllBtn.textContent = "Show all";
+   
 }
 
 showAllBtn.addEventListener("click", showAllProjects);
@@ -178,7 +175,7 @@ const toogleMoreSkills = () => {
     secundarySkillGroup.forEach(item=>{
         item.classList.toggle('invisible');
     });
-    
+
     notStudiedSkill.forEach(item=>{
         item.classList.toggle('invisible');
     });
@@ -192,6 +189,20 @@ const toogleMoreSkills = () => {
 
 showMoreSkills.addEventListener('click', toogleMoreSkills);
 
+//skill legend
+
+const showSkillsLegend = document.querySelector('.showSkillsLegend');
+const skillLegend = document.querySelector('.skillsLegend');
+let isShowLegend = false;
+const showSkillsLegendHandler = () => {
+    skillLegend.classList.toggle('invisible');
+    isShowLegend = !isShowLegend;
+    console.log(showSkillsLegend)
+    isShowLegend ? showSkillsLegend.innerText = 'Hide Legend' : showSkillsLegend.innerText = 'Show Legend';
+};
+
+showSkillsLegend.addEventListener('click', showSkillsLegendHandler);
+
 /* show certificates */
 const irrelevatCertificates = document.querySelectorAll(".irrelevant");
 const moreCertificatesBtn = document.querySelector(".moreCertificates");
@@ -204,11 +215,8 @@ const showAllCertificates = () => {
         cert.classList.toggle("invisible");
         
     }
-    if(is_certificateShowing){
-        moreCertificatesBtn.textContent = "Hide Irrelevant certificates";
-    }else{
-        moreCertificatesBtn.textContent = "Show Irrelevant certificates";
-    }
+    is_certificateShowing ? moreCertificatesBtn.textContent = "Hide Irrelevant certificates" : moreCertificatesBtn.textContent = "Show Irrelevant certificates";
+    
 }
 moreCertificatesBtn.addEventListener("click", showAllCertificates);
 
