@@ -22,7 +22,7 @@ class ProjectCard extends HTMLElement {
             </a> 
 
             <div class="description">
-                <h6 class="projectTitle"> ${title} </h6>
+                <h6 class="projectTitle"> "${title}" </h6>
                 <p class="descriptionText">${description}</p>
             </div>
 
@@ -33,3 +33,16 @@ class ProjectCard extends HTMLElement {
 if ('customElements' in window) {
 	customElements.define('greeting-message', ProjectCard);
 };
+
+
+/*
+        {
+            "id":"",
+            "title":"",
+            "type":"",
+            "link":"",
+            "imgUrl":"",
+            "description":"",
+            "sectionId":""
+        }
+*/
