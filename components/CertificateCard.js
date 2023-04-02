@@ -9,9 +9,8 @@ class CertificateCard extends HTMLElement {
      * @param {* image url} imgUrl 
      * @param {* string } description 
      */
-	constructor (id, title, link, sectionId) {
+	constructor (id, title, link) {
 		super();
-        this.sectionId = sectionId;
         this.innerHTML =
 		`<div id=${id} class="certificate">
             <div>    

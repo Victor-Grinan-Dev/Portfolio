@@ -79,25 +79,6 @@ const spinDeveloper = () => {
 victor.addEventListener("click", animatePorfolio);
 grinan.addEventListener("click", spinDeveloper);
 
-//hide/show projects
-const showAllBtn = document.querySelector("#showAll");
-const secundaries = document.querySelectorAll(".secundary");
-const projects = document.querySelectorAll(".projects");
-
-let is_showing = false;
-
-const showAllProjects = () => {
-    is_showing = !is_showing;
-    for (let proj of secundaries){
-        proj.classList.toggle("invisible");
-        
-    };
-    is_showing ? showAllBtn.textContent = "Show less" : showAllBtn.textContent = "Show all";
-   
-}
-
-showAllBtn.addEventListener("click", showAllProjects);
-
 //scrolls functions
 const scroll_about = [677, 1320];
 const scroll_portfolio = [1481, 2640];
@@ -165,8 +146,136 @@ function topFunction() {
 scrollUp.addEventListener("click", topFunction);
 /* Portfolio Projects */
 
-class ProjectCard extends HTMLElement {
+const schoolProjects = document.querySelector('.schoolProjects');
+const personalProjects = document.querySelector('.personalProjects');
 
+const section = {
+    schoolProjects:schoolProjects,
+    personalProjects:personalProjects
+}
+
+const projectsData=[
+    {
+        "id":"gradients",
+        "title":"Gradients",
+        "type":"secundary",
+        "link":"https://elegant-halva-fb3729.netlify.app/",
+        "imgUrl":"./images/02gradients.jpg",
+        "description":"Getting familiar with HTML & CSS",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"speedGame",
+        "title":"Speed Game",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/speed_game/",
+        "imgUrl":"./images/speedgame.jpg",
+        "description":"Using JS to handle the DOM",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"keeperApp",
+        "title":"Keeper App",
+        "type":"primary",
+        "link":"https://jocular-tapioca-476ffa.netlify.app/",
+        "imgUrl":"./images/keeperApp.jpg",
+        "description":"Using local storage & MUI styling",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"pokemons",
+        "title":"Pokedex",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/react_pokemons/",
+        "imgUrl":"./images/pokemons.jpg",
+        "description":"My first react ever, fetch data",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"foodApp",
+        "title":"Food App",
+        "type":"secundary",
+        "link":"https://github.com/Victor-Grinan-Dev/food-app3",
+        //https://victor-grinan-dev.github.io/food-app3/
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Pagination & Firebase CRUD",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"countriesApp",
+        "title":"Countries App",
+        "type":"primary",
+        "link":"https://victor-grinan-dev.github.io/countries_app1/",
+        "imgUrl":"./images/countries.jpg",
+        "description":"Introduction to redux",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"diceRoller",
+        "title":"Dice Roller",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/diceRoller",
+        "imgUrl":"./images/diceRoller.JPG",
+        "description":"My first HTML, CSS & JS",
+        "sectionId":"personalProjects"
+    },
+    { 
+        "id":"hexMap",
+        "title":"Hex Map",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/map-creator/",
+        "imgUrl":"./images/hexMap.JPG",
+        "description":"Guetting use to Mapping",
+        "sectionId":"personalProjects"
+    },
+    { 
+        "id":"turnTimer",
+        "title":"Turn Timer",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/blood_bowl_turn_timer/",
+        "imgUrl":"./images/turn_timer.JPG",
+        "description":"first site for my Hobby group",
+        "sectionId":"personalProjects"
+    },
+    { 
+        "id":"campaingTracker",
+        "title":"Campaign Tracker",
+        "type":"primary",
+        "link":"https://enchanting-taiyaki-964ff9.netlify.app/",
+        "imgUrl":"./images/campaign-tracker.png",
+        "description":"Demo day from school",
+        "sectionId":"personalProjects"
+    },
+    { 
+        "id":"theGame",
+        "title":"The Game",
+        "type":"primary",
+        "link":"https://github.com/Victor-Grinan-Dev/the_game",
+        "imgUrl":"./images/the_game.png",
+        "description":"the game from campaingTracker",
+        "sectionId":"personalProjects"
+    },
+    { 
+        "id":"theCubanShow",
+        "title":"The Cuban Show",
+        "type":"secundary",
+        "link":"https://thecubanshow.netlify.app/",
+        "imgUrl":"./images/thecubanshow.png",
+        "description":"First serious job for a friend (in progress)",
+        "sectionId":"personalProjects"
+    }
+    // { 
+    //     "id":"",
+    //     "title":"",
+    //     "type":"",
+    //     "link":"",
+    //     "imgUrl":"",
+    //     "description":"",
+    //     "sectionId":""
+    // }
+]
+
+class ProjectCard extends HTMLElement {
     /**
      * 
      * @param {* string} id 
@@ -176,10 +285,10 @@ class ProjectCard extends HTMLElement {
      * @param {* image url} imgUrl 
      * @param {* string } description 
      */
-	constructor (id, title, type, link, imgUrl, description, sectionId) {
+	constructor (id, title, type, link, imgUrl, description) {
 		super();
-        this.sectionId = sectionId;
-        this.innerHTML =
+
+        this.content =
 		`<div class="project ${type} flip-in ${type==='secundary' ? 'invisible' : "" }">
     
             <a href=${link} target='blank'>
@@ -198,12 +307,65 @@ class ProjectCard extends HTMLElement {
 };
 
 if ('customElements' in window) {
-	customElements.define('greeting-message', ProjectCard);
+	customElements.define('project-card', ProjectCard);
 };
 
+projectsData.forEach(project => {
+    const {id, title, type, link, imgUrl, description, sectionId} = project;
+    const newProject = new ProjectCard(id, title, type, link, imgUrl, description);
+    section[sectionId].innerHTML += newProject.content;
+});
 
+//hide/show projects
+const showAllBtn = document.querySelector("#showAll");
+const secundaries = document.querySelectorAll(".secundary");
+const projects = document.querySelectorAll(".projects");
+
+let is_showing = false;
+
+const showAllProjects = () => {
+    is_showing = !is_showing;
+    for (let proj of secundaries){
+        proj.classList.toggle("invisible");
+        
+    };
+    is_showing ? showAllBtn.textContent = "Show less" : showAllBtn.textContent = "Show all";
+   
+}
+
+showAllBtn.addEventListener("click", showAllProjects);
 
 /* Skill functions */
+class SkillCard extends HTMLElement {
+    /**
+     * 
+     * @param {string} id 
+     * @param {string} skillName 
+     * @param {int} stars 
+     * @param {string} imgUrl 
+     */
+	constructor (id, skillName, stars, imgUrl) {
+		super();
+        this.innerHTML =
+            `<div id=${id} class="skill">
+                <img class='techLogo' src="${imgUrl}" alt="icon">
+                <div class='skillValues'>
+                    <p class='skillTitle'>${skillName}</p>
+                    <p class='skillRating'>${'⭐' * stars}</p> 
+                    <div class="fill-bar"><div class="level" id="HTML-level"></div></div>
+                </div> 
+            </div>`;
+	}
+};
+
+if ('customElements' in window) {
+	customElements.define('skill-card', SkillCard);
+};
+
+const skillGroups = {
+
+}
+
 const showMoreSkills = document.querySelector('.showMoreSkills');
 const secundarySkillGroup = document.querySelectorAll('.secundarySkillGroup');
 const notStudiedSkill = document.querySelectorAll('.notStudiedSkill');
@@ -243,6 +405,37 @@ const showSkillsLegendHandler = () => {
 showSkillsLegend.addEventListener('click', showSkillsLegendHandler);
 
 /* show certificates */
+
+class CertificateCard extends HTMLElement {
+
+    /**
+     * 
+     * @param {* string} id 
+     * @param {* string} title 
+     * @param {* primary || secundary} type 
+     * @param {* project URL string} link 
+     * @param {* image url} imgUrl 
+     * @param {* string } description 
+     */
+	constructor (id, title, link) {
+		super();
+        this.innerHTML =
+		`<div id=${id} class="certificate">
+            <div>    
+                <a class="certView" href=${link} target="_blank">
+                    <span class="material-symbols-outlined">visibility</span>
+                    <span> ${title} </span>
+                </a>
+            </div>
+            <iframe src=${link} frameborder="0" />  
+        </div>`;
+	}
+};
+
+if ('customElements' in window) {
+	customElements.define('certificate-cards', CertificateCard);
+};
+
 const irrelevatCertificates = document.querySelectorAll(".irrelevant");
 const moreCertificatesBtn = document.querySelector(".moreCertificates");
 
