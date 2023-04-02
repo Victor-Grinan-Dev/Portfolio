@@ -122,7 +122,7 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 
     scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
-    console.log(scrollValue);
+    
     resetActiveTab();
     if((scrollValue >= scroll_about[0]) && (scrollValue <= scroll_about[1])){
         aboutTab.classList.add('activeTab');
