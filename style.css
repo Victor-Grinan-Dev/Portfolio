@@ -199,7 +199,7 @@ nav ul li a:hover {
 .lightsOn {
     position: absolute;
     color: #fff;
-    text-shadow: 0 0 20px #ff005b;
+    text-shadow: 0 0 20px var(--highlight);
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -507,6 +507,10 @@ div .project:hover {
     justify-content: center;
     align-items: center;
 }
+.skillBtns:first-child{
+    margin-right: 5px;
+}
+
 .showSkillsLegend
 .showMoreSkills{
     font-size: 14px;
