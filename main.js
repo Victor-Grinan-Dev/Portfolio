@@ -336,6 +336,40 @@ const showAllProjects = () => {
 showAllBtn.addEventListener("click", showAllProjects);
 
 /* Skill functions */
+const basicFrontend = document.querySelector('#basicFrontend');
+const advanceFrontend = document.querySelector('#advanceFrontend');
+const backendNode = document.querySelector('#backendNode');
+const backendPython = document.querySelector('#backendPython');
+const backendPHP = document.querySelector('#backendPHP');
+const embedSystems = document.querySelector('#embedSystems');
+const otherSkills = document.querySelector('#othersSkills');
+
+const skillGroups = {
+    basicFrontend:basicFrontend,
+    advanceFrontend:advanceFrontend,
+    backendNode:backendNode,
+    backendPython:backendPython,
+    backendPHP:backendPHP,
+    embedSystems:embedSystems,
+    otherSkills:otherSkills,
+} 
+
+const skillsData = [
+    {
+        id:"",
+        skillName:"",
+        stars:"",
+        imgUrl:"",
+        skillgroup:""
+    },
+    // {
+    //     id:"",
+    //     skillName:"",
+    //     stars:"",
+    //     imgUrl:"",
+    //     skillgroup:""
+    // }
+]
 class SkillCard extends HTMLElement {
     /**
      * 
@@ -361,10 +395,6 @@ class SkillCard extends HTMLElement {
 if ('customElements' in window) {
 	customElements.define('skill-card', SkillCard);
 };
-
-const skillGroups = {
-
-}
 
 const showMoreSkills = document.querySelector('.showMoreSkills');
 const secundarySkillGroup = document.querySelectorAll('.secundarySkillGroup');
