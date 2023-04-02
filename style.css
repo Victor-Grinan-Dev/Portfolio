@@ -36,6 +36,13 @@ body {
     flex-direction: column;
     justify-content: center;
     max-width: 100vw;
+    overflow-x: hidden;
+}  
+
+header,
+main,
+footer{
+    width: 100%;
 }
 
 .bgLevel0{
