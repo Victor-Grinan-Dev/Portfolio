@@ -79,25 +79,6 @@ const spinDeveloper = () => {
 victor.addEventListener("click", animatePorfolio);
 grinan.addEventListener("click", spinDeveloper);
 
-//hide/show projects
-const showAllBtn = document.querySelector("#showAll");
-const secundaries = document.querySelectorAll(".secundary");
-const projects = document.querySelectorAll(".projects");
-
-let is_showing = false;
-
-const showAllProjects = () => {
-    is_showing = !is_showing;
-    for (let proj of secundaries){
-        proj.classList.toggle("invisible");
-        
-    };
-    is_showing ? showAllBtn.textContent = "Show less" : showAllBtn.textContent = "Show all";
-   
-}
-
-showAllBtn.addEventListener("click", showAllProjects);
-
 //scrolls functions
 const scroll_about = [677, 1320];
 const scroll_portfolio = [1481, 2640];
@@ -163,8 +144,522 @@ function topFunction() {
 }
 
 scrollUp.addEventListener("click", topFunction);
+/* Portfolio Projects */
+
+const schoolProjects = document.querySelector('.schoolProjects');
+const personalProjects = document.querySelector('.personalProjects');
+
+const section = {
+    schoolProjects:schoolProjects,
+    personalProjects:personalProjects
+}
+
+const projectsData=[
+    {
+        "id":"gradients",
+        "title":"Gradients",
+        "type":"secundary",
+        "link":"https://elegant-halva-fb3729.netlify.app/",
+        "imgUrl":"./images/02gradients.jpg",
+        "description":"Getting familiar with HTML & CSS",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"speedGame",
+        "title":"Speed Game",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/speed_game/",
+        "imgUrl":"./images/speedgame.jpg",
+        "description":"Using JS to handle the DOM",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"keeperApp",
+        "title":"Keeper App",
+        "type":"primary",
+        "link":"https://jocular-tapioca-476ffa.netlify.app/",
+        "imgUrl":"./images/keeperApp.jpg",
+        "description":"Using local storage & MUI styling",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"pokemons",
+        "title":"Pokedex",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/react_pokemons/",
+        "imgUrl":"./images/pokemons.jpg",
+        "description":"My first react ever, fetch data",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"foodApp",
+        "title":"Food App",
+        "type":"secundary",
+        "link":"https://github.com/Victor-Grinan-Dev/food-app3",
+        //https://victor-grinan-dev.github.io/food-app3/
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Pagination & Firebase CRUD",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"countriesApp",
+        "title":"Countries App",
+        "type":"primary",
+        "link":"https://victor-grinan-dev.github.io/countries_app1/",
+        "imgUrl":"./images/countries.jpg",
+        "description":"Introduction to redux",
+        "sectionId":"schoolProjects"
+    },
+    {
+        "id":"diceRoller",
+        "title":"Dice Roller",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/diceRoller",
+        "imgUrl":"./images/diceRoller.JPG",
+        "description":"My first HTML, CSS & JS",
+        "sectionId":"personalProjects"
+    },
+    { 
+        "id":"hexMap",
+        "title":"Hex Map",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/map-creator/",
+        "imgUrl":"./images/hexMap.JPG",
+        "description":"Guetting use to Mapping",
+        "sectionId":"personalProjects"
+    },
+    { 
+        "id":"turnTimer",
+        "title":"Turn Timer",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/blood_bowl_turn_timer/",
+        "imgUrl":"./images/turn_timer.JPG",
+        "description":"first site for my Hobby group",
+        "sectionId":"personalProjects"
+    },
+    { 
+        "id":"campaingTracker",
+        "title":"Campaign Tracker",
+        "type":"primary",
+        "link":"https://enchanting-taiyaki-964ff9.netlify.app/",
+        "imgUrl":"./images/campaign-tracker.png",
+        "description":"Demo day from school",
+        "sectionId":"personalProjects"
+    },
+    { 
+        "id":"theGame",
+        "title":"The Game 🎥",
+        "type":"primary",
+        "link":"https://www.youtube.com/watch?v=YPBy4kEFNVQ",
+        "imgUrl":"./images/the_game.png",
+        "description":"The game from campaingTracker",
+        "sectionId":"personalProjects"
+    },
+    { 
+        "id":"theCubanShow",
+        "title":"The Cuban Show",
+        "type":"secundary",
+        "link":"https://thecubanshow.netlify.app/",
+        "imgUrl":"./images/thecubanshow.png",
+        "description":"First serious job for a friend (in progress)",
+        "sectionId":"personalProjects"
+    }
+    // { 
+    //     "id":"",
+    //     "title":"",
+    //     "type":"",
+    //     "link":"",
+    //     "imgUrl":"",
+    //     "description":"",
+    //     "sectionId":""
+    // }
+]
+
+class ProjectCard extends HTMLElement {
+    /**
+     * 
+     * @param {* string} id 
+     * @param {* string} title 
+     * @param {* primary || secundary} type 
+     * @param {* project URL string} link 
+     * @param {* image url} imgUrl 
+     * @param {* string } description 
+     */
+	constructor (id, title, type, link, imgUrl, description) {
+		super();
+
+        this.content =
+		`<div class="project ${type} flip-in ${type==='secundary' ? 'invisible' : "" }">
+    
+            <a href=${link} target='blank'>
+                <div id=${id} class="projectImg">
+                    <img src=${imgUrl} alt=${id} >
+                </div>
+            </a> 
+
+            <div class="description">
+                <h6 class="projectTitle"> "${title}" </h6>
+                <p class="descriptionText">${description}</p>
+            </div>
+
+        </div>`;
+	}
+};
+
+if ('customElements' in window) {
+	customElements.define('project-card', ProjectCard);
+};
+
+projectsData.forEach(project => {
+    const {id, title, type, link, imgUrl, description, sectionId} = project;
+    const newProject = new ProjectCard(id, title, type, link, imgUrl, description);
+    section[sectionId].innerHTML += newProject.content;
+});
+
+//hide/show projects
+const showAllBtn = document.querySelector("#showAll");
+const secundaries = document.querySelectorAll(".secundary");
+const projects = document.querySelectorAll(".projects");
+
+let is_showing = false;
+
+const showAllProjects = () => {
+    is_showing = !is_showing;
+    for (let proj of secundaries){
+        proj.classList.toggle("invisible");
+        
+    };
+    is_showing ? showAllBtn.textContent = "Show less" : showAllBtn.textContent = "Show all";
+   
+}
+
+showAllBtn.addEventListener("click", showAllProjects);
 
 /* Skill functions */
+const basicFrontend = document.querySelector('#basicFrontend div');
+const advanceFrontend = document.querySelector('#advanceFrontend div');
+const backendNode = document.querySelector('#backendNode div');
+const backendPython = document.querySelector('#backendPython div');
+const backendPHP = document.querySelector('#backendPHP div');
+const backendJava = document.querySelector('#backendJava div');
+const embedSystems = document.querySelector('#embedSystems div');
+const cms = document.querySelector('#cms div');
+const cicd = document.querySelector('#cicd div');
+const otherSkills = document.querySelector('#otherSkills div');
+
+const skillGroups = {
+    basicFrontend:basicFrontend,
+    advanceFrontend:advanceFrontend,
+    backendNode:backendNode,
+    backendPython:backendPython,
+    backendPHP:backendPHP,
+    backendJava:backendJava,
+    embedSystems:embedSystems,
+    cms:cms,
+    cicd:cicd,
+    otherSkills:otherSkills,
+} 
+
+const skillsData = [
+    {
+        id:"html",
+        skillName:"HTML",
+        stars:3,
+        imgUrl:"./icons/html.png",
+        skillgroup:"basicFrontend",
+        isInvisible:false
+    },
+    {
+        id:"css",
+        skillName:"CSS",
+        stars:3,
+        imgUrl:"./icons/css.png",
+        skillgroup:"basicFrontend",
+        isInvisible:false
+    },
+    {
+        id:"javascript",
+        skillName:"Javascript",
+        stars:3,
+        imgUrl:"./icons/javascript.png",
+        skillgroup:"basicFrontend",
+        isInvisible:false
+    },
+    {
+        id:"react",
+        skillName:"React",
+        stars:3,
+        imgUrl:"./icons/react.png",
+        skillgroup:"advanceFrontend",
+        isInvisible:false
+    },
+    {
+        id:"typescript",
+        skillName:"Typescript",
+        stars:2,
+        imgUrl:"./icons/typescript.png",
+        skillgroup:"advanceFrontend",
+        isInvisible:false
+    },
+    {
+        id:"nextjs",
+        skillName:"NextJs",
+        stars:2,
+        imgUrl:"./icons/next_js.png",
+        skillgroup:"advanceFrontend",
+        isInvisible:false
+    },
+    {
+        id:"node",
+        skillName:"Node",
+        stars:2,
+        imgUrl:"./icons/node.png",
+        skillgroup:"backendNode",
+        isInvisible:false
+    },
+    {
+        id:"express",
+        skillName:"Express",
+        stars:0,
+        imgUrl:"./icons/express.png",
+        skillgroup:"backendNode",
+        isInvisible:false
+    },
+
+    {
+        id:"python",
+        skillName:"Python",
+        stars:3,
+        imgUrl:"./icons/python.png",
+        skillgroup:"backendPython",
+        isInvisible:false
+    },
+    {
+        id:"django",
+        skillName:"Django",
+        stars:2,
+        imgUrl:"./icons/django.png",
+        skillgroup:"backendPython",
+        isInvisible:false
+    },
+    {
+        id:"flask",
+        skillName:"Flask",
+        stars:2,
+        imgUrl:"./icons/flask.png",
+        skillgroup:"backendPython",
+        isInvisible:false
+    },
+    {
+        id:"php",
+        skillName:"PHP",
+        stars:2,
+        imgUrl:"./icons/php.png",
+        skillgroup:"backendPHP",
+        isInvisible:false
+    },
+    {
+        id:"synfony",
+        skillName:"Synfony",
+        stars:2,
+        imgUrl:"./icons/symfony.png",
+        skillgroup:"backendPHP",
+        isInvisible:false
+    },
+    {
+        id:"laravel",
+        skillName:"Laravel",
+        stars:0,
+        imgUrl:"./icons/laravel.png",
+        skillgroup:"backendPHP",
+        isInvisible:true
+    },
+    {
+        id:"drupal",
+        skillName:"Drupal",
+        stars:1,
+        imgUrl:"./icons/drupal.png",
+        skillgroup:"cms",
+        isInvisible:false
+    },
+    {
+        id:"wordpress",
+        skillName:"Wordpress",
+        stars:0,
+        imgUrl:"./icons/word_press.png",
+        skillgroup:"cms",
+        isInvisible:false
+    },
+    {
+        id:"figma",
+        skillName:"Figma",
+        stars:3,
+        imgUrl:"./icons/figma.png",
+        skillgroup:"otherSkills",
+        isInvisible:false
+    },
+    {
+        id:"mysql",
+        skillName:"MySQL",
+        stars:2,
+        imgUrl:"./icons/mysql.png",
+        skillgroup:"otherSkills",
+        isInvisible:false
+    },
+    {
+        id:"git",
+        skillName:"Git",
+        stars:3,
+        imgUrl:"./icons/git.png",
+        skillgroup:"otherSkills",
+        isInvisible:false
+    },
+    {
+        id:"aws",
+        skillName:"AWS",
+        stars:2,
+        imgUrl:"./icons/aws.png",
+        skillgroup:"otherSkills",
+        isInvisible:false
+    },
+    {
+        id:"c",
+        skillName:"C",
+        stars:1,
+        imgUrl:"./icons/c.png",
+        skillgroup:"embedSystems",
+        isInvisible:false
+    },
+    {
+        id:"cpp",
+        skillName:"C++",
+        stars:1,
+        imgUrl:"./icons/c++.png",
+        skillgroup:"embedSystems",
+        isInvisible:false
+    },
+    {
+        id:"cs",
+        skillName:"C#",
+        stars:1,
+        imgUrl:"./icons/csharp.png",
+        skillgroup:"embedSystems",
+        isInvisible:false
+    },
+    {
+        id:"java",
+        skillName:"Java",
+        stars:1,
+        imgUrl:"./icons/java.png",
+        skillgroup:"backendJava",
+        isInvisible:false
+    },
+    {
+        id:"spring",
+        skillName:"Spring",
+        stars:1,
+        imgUrl:"./icons/spring.png",
+        skillgroup:"backendJava",
+        isInvisible:false
+    },
+    {
+        id:"kubernetes",
+        skillName:"Kubernetes",
+        stars:1,
+        imgUrl:"./icons/kubernetes.png",
+        skillgroup:"cicd",
+        isInvisible:false
+    },
+    {
+        id:"jenkins",
+        skillName:"Jenkins",
+        stars:1,
+        imgUrl:"./icons/jenkins.png",
+        skillgroup:"cicd",
+        isInvisible:false
+    },
+    {
+        id:"sonarcube",
+        skillName:"SonarQube",
+        stars:1,
+        imgUrl:"./icons/sonarqube.png",
+        skillgroup:"cicd",
+        isInvisible:false
+    },
+    // {
+    //     id:"",
+    //     skillName:"",
+    //     stars:,
+    //     imgUrl:"",
+    //     skillgroup:"",
+    //     isInvisible:false
+    // },
+]
+class SkillCard extends HTMLElement {
+    /**
+     * 
+     * @param {string} id 
+     * @param {string} skillName 
+     * @param {int} stars 
+     * @param {string} imgUrl 
+     */
+	constructor (id, skillName, stars, imgUrl, isInvisible) {
+		super();
+        this.content =
+            `<div id=${id} class="skill" ${isInvisible ? 'invisible' : null} >
+                <img class='techLogo' src="${imgUrl}" alt="icon">
+                <div class='skillValues'>
+                    <p class='skillTitle'>${skillName}</p>
+                    <p class='skillRating'>${stars > 0 ?"⭐".repeat(stars) : ' - '}</p> 
+                    <div class="fill-bar"><div class="level" id="HTML-level"></div></div>
+                </div> 
+            </div>`;
+	}
+};
+
+if ('customElements' in window) {
+	customElements.define('skill-card', SkillCard);
+};
+
+const renderData = () => {
+    renderSkills();
+    calculatePercent();
+}
+
+const renderSkills = () => {
+    skillsData.forEach(skill=>{
+        const {id, skillName, stars, imgUrl, skillgroup, isInvisible} = skill;
+        const newSkill = new SkillCard(id, skillName, stars, imgUrl, isInvisible);
+        skillGroups[skillgroup].innerHTML += newSkill?.content;
+    });
+};
+
+/* Calculate XP% per skill group */
+const allGroups = document.querySelectorAll('.skillGroup');
+const calculatePercent = () => {
+    let starText;
+    allGroups.forEach(group=>{
+        let stars = 0;
+        const overall = group.querySelector('.overall');
+        const skillRatings = group.querySelectorAll('.skillRating');
+        skillRatings.forEach(rating=>{
+            starText = rating.innerText;
+
+            for(const char of starText){
+               if(char === '⭐'){
+                stars +=1
+               }
+            }
+        });
+        const total = group.childElementCount * 5;
+        if(overall){
+            overall.innerText = `${Math.round((stars/total * 100) * 100) / 100}%`
+        };
+    });
+}
+
+renderData();
+
 const showMoreSkills = document.querySelector('.showMoreSkills');
 const secundarySkillGroup = document.querySelectorAll('.secundarySkillGroup');
 const notStudiedSkill = document.querySelectorAll('.notStudiedSkill');
@@ -197,26 +692,134 @@ let isShowLegend = false;
 const showSkillsLegendHandler = () => {
     skillLegend.classList.toggle('invisible');
     isShowLegend = !isShowLegend;
-    console.log(showSkillsLegend)
     isShowLegend ? showSkillsLegend.innerText = 'Hide Legend' : showSkillsLegend.innerText = 'Show Legend';
 };
 
 showSkillsLegend.addEventListener('click', showSkillsLegendHandler);
 
 /* show certificates */
-const irrelevatCertificates = document.querySelectorAll(".irrelevant");
-const moreCertificatesBtn = document.querySelector(".moreCertificates");
+
+class CertificateCard extends HTMLElement {
+    /**
+     * 
+     * @param {string} id 
+     * @param {string} title 
+     * @param {string} docLink 
+     */
+	constructor (id, title, docLink, isInvisible) {
+		super();
+        this.content =
+		`<div id=${id} class="certificate ${isInvisible ? 'irrelevant invisible' : ''}">
+            <div>    
+                <a class="certView" href=${docLink} target="_blank">
+                    <span class="material-symbols-outlined">visibility</span>
+                    <span> ${title} </span>
+                </a>
+            </div>
+            <iframe src=${docLink} frameborder="0" />  
+        </div>`;
+	}
+};
+
+if ('customElements' in window) {
+	customElements.define('certificate-cards', CertificateCard);
+};
+
+const mainCertificates = document.querySelector('.main-certificates');
+const onlineCertificates1 = document.querySelector('.online-certificates1');
+const onlineCertificates2 = document.querySelector('.online-certificates2');
+const othersCertificates = document.querySelector(".othersCertificates");
+
+const CertificateSections = {
+    mainCertificates:mainCertificates,
+    onlineCertificates1:onlineCertificates1,
+    onlineCertificates2:onlineCertificates2,
+    othersCertificates:othersCertificates,
+}
+
+const allCertificate = [
+    {
+        id:"pythonBasics",
+        title:'SDA - "Python From Scratch"',
+        docLink:"./documents/sda_certificate.pdf",
+        section:"mainCertificates",
+    },
+    // {
+    //     id:"hbc",
+    //     title:'',
+    //     docLink:"",
+    //     section:"mainCertificates",
+    //  
+    // },
+    {
+        id:"codeCommit",
+        title:'AWS - "CodeCommit"',
+        docLink:"./documents/AWS_CodeCommit_Course_Completion_Certificate.pdf",
+        section:"onlineCertificates1",
+    },
+    {
+        id:"DevOps",
+        title:'AWS - "DevOps"',
+        docLink:"./documents/AWS_DevOps_Course_Completion_Certificate.pdf",
+        section:"onlineCertificates1",
+    },
+    {
+        id:"EC2",
+        title:'AWS - "Elastic Compute Cloud"',
+        docLink:"./documents/AWS_EC2_Completion_Certificate.pdf",
+        section:"onlineCertificates1",
+    },
+    {
+        id:"Namespaces",
+        title:'SfCasts - "PHP Namespaces"',
+        docLink:"./documents/sfcasts-VictorGrinan-certificate-php-namespaces.pdf",
+        section:"onlineCertificates2",
+    },
+    {
+        id:"Symfony6",
+        title:'SfCasts - "Symfony 6"',
+        docLink:"./documents/sfcasts-VictorGrinan-certificate-harmonious-development-with-symfony-6.pdf",
+        section:"onlineCertificates2",
+    },
+    {
+        id:"Composer",
+        title:'SfCasts - "Composer"',
+        docLink:"./documents/sfcasts-VictorGrinan-certificate-composer.pdf",
+        section:"onlineCertificates2",
+    },
+    {
+        id:"Entrepreneurship",
+        title:'YH - "Entrepreneurship"',
+        docLink:"./documents/2015_yrittaja_todistus.pdf",
+        section:"othersCertificates",
+
+    },
+    {
+        id:"Investing",
+        title:'Udemy - "Investing in stocks"',
+        docLink:"./documents/UC-a13b9ecc-951b-4ff9-8856-ee83cca0f6cd.pdf",
+        section:"othersCertificates",
+    },
+]
+
+const renderCerts = () => {
+    allCertificate.forEach(cert => {
+        const {id, title, docLink, section} = cert;
+        const newCertCard = new CertificateCard(id, title, docLink);
+        CertificateSections[section].innerHTML += newCertCard.content;
+    })
+};
+renderCerts();
+
+
+const moreCertificatesBtn = document.querySelector(".moreCertificates");//btn
 
 let is_certificateShowing = false;
 
 const showAllCertificates = () => {
     is_certificateShowing = !is_certificateShowing;
-    for (let cert of irrelevatCertificates){
-        cert.classList.toggle("invisible");
-        
-    }
+    othersCertificates.classList.toggle('invisible');
     is_certificateShowing ? moreCertificatesBtn.textContent = "Hide Irrelevant certificates" : moreCertificatesBtn.textContent = "Show Irrelevant certificates";
-    
 }
 moreCertificatesBtn.addEventListener("click", showAllCertificates);
 

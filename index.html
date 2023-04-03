@@ -84,7 +84,7 @@
                 
                 <div id="welcome">
                     <h4 id="welcome-to" class="flying1">Welcome to </h4>
-                    <h1 class="flying2">"My <span class='portfolioWord'> Portfolio</span>"</h1>
+                    <h1 id='portfolio-word' class="flying2">"My <span class='portfolioWord'> Portfolio</span>"</h1>
                 </div>
             </div>
 
@@ -96,7 +96,7 @@
 
     <main id="starter">
     
-        <section id="content" >
+        
             
             <article id="aboutArticle" class="bgLevel1">
 
@@ -149,182 +149,16 @@
                 </p>
                 
             </article> 
+
             <article id="portfolio" class="bgLevel2">
                 <button class='showAll' id='showAll'> Show all </button>
                 <h3 id='portfolioTitle'> School Projects: </h3>
-                <div id="schoolProjects">
-                    
-                    <div class="project secundary flip-in invisible">
-    
-                        <a href="https://elegant-halva-fb3729.netlify.app/" target='blank'>
-                            <div id="gradientsImg" class="projectImg">
-                                <img src="./projectsImgs/02gradients.JPG" alt="gradientsImg" >
-                            </div>
-                        </a> 
-    
-                        <div class="description">
-                            <h6 class="projectTitle"> "Gradients" </h6>
-                            <p class="descriptionText">Getting familiar with HTML & CSS</p>
-                        </div>
-                    </div>
-                    
-                    <div class="project secundary flip-in invisible">
-                        
-                        <a href="https://victor-grinan-dev.github.io/speed_game/" target='blank'>
-                            <div id="speedGameImg" class="projectImg">
-                                <img src="./projectsImgs/speedgame.JPG" alt="speedGameImg">
-                            </div>
-                        </a>
-    
-                        <div class="description">
-                            <h6 class="projectTitle"> "Speed Game" </h6>
-                            <p class="descriptionText">Using JS to handle the DOM</p>
-                        </div>
-                        
-                    </div>
-
-                    
-                    <div class="project secundary flip-in invisible">
-                        
-                        <a href="https://victor-grinan-dev.github.io/react_pokemons/" target='blank'>
-                            <div id="pokedex" class="projectImg">
-                                <img src="./projectsImgs/pokemons.jpg" alt="pokedex"/>
-                            </div>
-                        </a>
-    
-                        <div class="description">
-                            <h4 class="projectTitle"> "Pokedex" </h4>
-                            <p class="descriptionText">My first react ever, fetch data</p>
-                        </div>
-                        
-                    </div>
-
-                    <div class="project flip-in hightligths">
-                        
-                        <a href="https://jocular-tapioca-476ffa.netlify.app/" target='blank'>
-                            <div id="pokedex" class="projectImg">
-                                <img src="./projectsImgs/keeperApp.jpg" alt="keeperApp" >
-                            </div>
-                        </a>
-    
-                        <div class="description ">
-                            <h4 class="projectTitle"> "Keeper App" </h4>
-                            <p class="descriptionText">Using local storage & MUI styling</p>
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="project secundary flip-in invisible">
-                
-                        <a href="05_todoList.html">
-                            <div id="foodApp" class="projectImg">
-                                <img src="./projectsImgs/test_Img.jpg" alt="foodApp" target='blank'>
-                            </div>
-                        </a>
-    
-                        <div class="description">
-                            <h4 class="projectTitle"> "Food App" </h4>
-                            <p class="descriptionText">Pagination & Firebase CRUD</p>
-                        </div>
-                        
-                    </div>
-                    <div class="project flip-in hightligths">
-                        
-                        <a href="https://victor-grinan-dev.github.io/countries_app1/" target='blank'>
-                            <div id="Countries" class="projectImg">
-                                <img src="./projectsImgs/countries.jpg" alt="Countries">
-                            </div>
-                        </a>
-    
-                        <div class="description">
-                            <h4 class="projectTitle "> "Countries App" </h4>
-                            <p class="descriptionText">Introduction to redux</p>
-                        </div>
-                        
-                    </div>
-
+                <div id="schoolProjects" class='schoolProjects'>
                 </div>
                 <h3> Personal Projects: </h3>
-                <div id="personalProjects">
-
-                    <div class="project secundary flip-in invisible">             
-                        <a href="https://victor-grinan-dev.github.io/diceRoller"/ target='blank'>
-                            <div id="diceRollerImg" class="projectImg">
-                                <img src="./projectsImgs/diceRoller.JPG" alt="diceRolling">
-                            </div>
-                        </a> 
-                        <div class="description">
-                            <h5 class="projectTitle">"Dice Roller"</h5>
-                            <p class="descriptionText">My first HTML, CSS & JS</p>
-                        </div>                       
-                    </div>
-    
-                    <div class="project secundary flip-in invisible">   
-                        <a href="https://victor-grinan-dev.github.io/map-creator/" target='blank'>
-                            <div id="hexMap" class="projectImg">
-                                <img src="./projectsImgs/hexMap.JPG" alt="hexMap">
-                            </div>
-                        </a>   
-                        <div class="description">
-                            <h5 class="projectTitle">"Hex Map"</h5>
-                            <p class="descriptionText">The beginning of Campaing tracker</p>                       
-                        </div>    
-                    </div>
-
-                    <div class="project secundary flip-in invisible">                    
-                        <a href="https://victor-grinan-dev.github.io/blood_bowl_turn_timer/" target='blank'>
-                            <div id="turnTimer" class="projectImg">
-                                <img src="./projectsImgs/turn_timer.JPG" alt="turnTimer">
-                            </div>
-                        </a>   
-                        <div class="description">
-                            <h5 class="projectTitle">"Turn Timer"</h5>
-                            <p class="descriptionText">An App for my Hobby group</p>
-                        </div>                        
-                    </div>
-
-                    <div class="project secundary flip-in invisible">                    
-                        <a href="https://victor-grinan-dev.github.io/maimis_hair_do/" target='blank'>
-                            <div id="HairDo" class="projectImg">
-                                <img src="./projectsImgs/mamis_hairdo.JPG" alt="HairDo">
-                            </div>
-                        </a>
-    
-                        <div class="description">
-                            <h5 class="projectTitle">"Mami's HairDo"</h5>
-                            <p class="descriptionText">Solved the "What color should I" from my wife</p>
-                        </div>                       
-                    </div>  
-
-                    <div class="project flip-in ">                    
-                        <a href="https://enchanting-taiyaki-964ff9.netlify.app/" target='blank'>
-                            <div id="campaingTracker" class="projectImg">
-                                <img src="./projectsImgs/campaign-tracker.png" alt="campaingTracker">
-                            </div>
-                        </a>
-    
-                        <div class="description hightligths">
-                            <h5 class="projectTitle">"Campaign Tracker"</h5>
-                            <p class="descriptionText">On going current app, for my hobbie group</p>
-                        </div>                       
-                    </div>  
-
-                    <div class="project secundary flip-in invisible">                    
-                        <a href="https://thecubanshow.netlify.app/" target='blank'>
-                            <div id="thecubanshow" class="projectImg">
-                                <img src="./projectsImgs/thecubanshow.png" alt="thecubanshow">
-                            </div>
-                        </a>
-    
-                        <div class="description hightligths">
-                            <h5 class="projectTitle">"The Cuban Show"</h5>
-                            <p class="descriptionText">First serious job for a friend (in progress)</p>
-                        </div>                       
-                    </div>  
+                <div id="personalProjects" class='personalProjects'>    
                 </div>
-
             </article>
-
 
             <article id="skillsBoxes" class="bgLevel3 skillsBoxes">
 
@@ -332,370 +166,96 @@
                     <h3 id="skills" class="subtitles"> Skills </h3>
                     <!--<p>I rated myself with my own system: </p>-->
                     <p class='ratingLegend skillsLegend invisible'> 5x⭐ = "God like"<br/> 4x⭐ =  "Senior level"<br/> 3x⭐ = "Developer Level" <br/>2x⭐ =  "junior Level"<br/> 1x⭐ =  "I have play with it" <br/> 0x⭐ =  "Haven't seen it yet"</p>
-                        <div class='skillBtns'>                   
-                            <button class='showSkillsLegend'>Show legend</button>  <button class='showMoreSkills'>More skills</button>
-                            <br> <br>
-                        </div>
+                    <div class='skillBtns'>                   
+                        <button class='showSkillsLegend'>Showlegend</button>  <button class='showMoreSkills'>More skills</button>
+                        <br> <br>
+                    </div>
                     <div id="allSkills">
-                        <div class="skillGroup ">
+
+                        <div class="skillGroup" id='basicFrontend'>
                             <h3 class="skillGroupTitle">Basic Frontend:</h3>
                             <div class="subSkills">
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/css.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>CSS</p>
-                                        <p class='skillRating'>⭐⭐⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="CSS-level"></div></div>
-                                    </div> 
-                                </div>
-                
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/html.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>HTML</p>
-                                        <p class='skillRating'>⭐⭐⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="HTML-level"></div></div>
-                                    </div> 
-                                </div>
-                
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/javascript.png" alt="icon" class="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Javascript</p>
-                                        <p class='skillRating'>⭐⭐⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="Javascript-level"></div></div>
-                                    </div> 
-                                </div>
+                                
                             </div>
-                            <div class="overall">60%</div> <!--15/9-->
+                            <div class="overall">😎</div> <!--15/9-->
                         </div>
-                        <div class="skillGroup ">
+
+                        <div class="skillGroup" id='advanceFrontend'>
                             <h3 class="skillGroupTitle">Advance Frontend:</h3>
                             <div class="subSkills">
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/react.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>React</p>
-                                        <p class='skillRating'> ⭐⭐⭐ </p> 
-                                        <div class="fill-bar"><div class="level" id="React-level"></div></div>
-                                    </div> 
-                                </div>
-        
-                                <div class="skill">
-                                    
-                                    <img class='techLogo' src="./icons/typescript.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Typescript</p>
-                                        <p class='skillRating'> ⭐⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="TS-level"></div></div>
-                                    </div> 
-                                </div>
-                                <div class="skill invisible ">
-                                    <img class='techLogo' src="./icons/vue.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Vue</p>
-                                        <p class='skillRating'> - </p> 
-                                        <div class="fill-bar"><div class="level" id="vue-level"></div></div>
-                                    </div> 
-                                </div>
-                                <div class="skill invisible">
-                                    <img class='techLogo' src="./icons/angular.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Angular</p>
-                                        <p class='skillRating'> - </p> 
-                                        <div class="fill-bar"><div class="level" id="angular-level"></div></div>
-                                    </div> 
-                                </div>
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/node.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Node</p>
-                                        <p class='skillRating'> ⭐⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="Node-level"></div></div>
-                                    </div> 
-                                </div>
+    
                             </div>
-                            <div class="overall">46%</div><!--7/15-->
+                            <div class="overall">😎</div><!--7/15-->
                         </div>
-                        <div class="skillGroup ">
-                            <h3 class="skillGroupTitle">Backend 1:</h3>
+                        <div class="skillGroup" id='backendNode'>
+                            <h3 class="skillGroupTitle">Backend Node:</h3>
                             <div class="subSkills">
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/python.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Python</p>
-                                        <p class='skillRating'>⭐⭐⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="Python-level"></div></div>
-                                    </div> 
-                                </div>
-                
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/django.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Django</p>
-                                        <p class='skillRating'>⭐⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="Django-level"></div></div>
-                                    </div> 
-                                </div>
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/flask.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Flask</p>
-                                        <p class='skillRating'>⭐⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="Flask-level"></div></div>
-                                    </div> 
-                                </div>
+    
                             </div>
-                            <div class="overall">46%</div><!--7/15-->
+                            <div class="overall">😎</div><!--2/10-->
                         </div>
-                        <div class="skillGroup ">
-                            <h3 class="skillGroupTitle">Backend 2:</h3>
+                        <div class="skillGroup" id='backendPython'>
+                            <h3 class="skillGroupTitle">Backend Python:</h3>
                             <div class="subSkills">
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/php.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>PHP</p>
-                                        <p class='skillRating'> ⭐⭐ </p> 
-                                        <div class="fill-bar"><div class="level" id="PHP-level"></div></div>
-                                    </div> 
-                                </div>
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/symfony.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Synfony</p>
-                                        <p class='skillRating'> ⭐⭐ </p> 
-                                        <div class="fill-bar"><div class="level" id="synfony-level"></div></div>
-                                    </div> 
-                                </div>
-                                <div class="skill notStudiedSkill invisible">
-                                    <img class='techLogo' src="./icons/laravel.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Laravel</p>
-                                        <p class='skillRating'> - </p> 
-                                        <div class="fill-bar"><div class="level" id="laravel-level"></div></div>
-                                    </div> 
-                                </div>
-                
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/drupal.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Drupal</p>
-                                        <p class='skillRating'> ⭐⭐ </p> 
-                                        <div class="fill-bar"><div class="level" id="Drupal-level"></div></div>
-                                    </div> 
-                                </div>
+                                
                             </div>
-                            <div class="overall">40%</div><!--6/15-->
+                            <div class="overall">😎</div><!--7/15-->
+                        </div>
+                        <div class="skillGroup" id='backendPHP'>
+                            <h3 class="skillGroupTitle">Backend PHP:</h3>
+                            <div class="subSkills">
+                                
+                            </div>
+                            <div class="overall">😎</div><!--4/15-->
                         </div>
     
-                        <div class="skillGroup secundarySkillGroup invisible">
-                            <h3 class="skillGroupTitle">Backend 3:</h3>
-                            <div class="subSkills">
-                                <div class="skill">
-    
-                                    <img class='techLogo' src="./icons/java.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Java</p>
-                                        <p class='skillRating'> ⭐ </p> 
-                                        <div class="fill-bar"><div class="level" id="java-level"></div></div>
-                                    </div> 
-                                </div>
-                                <div class="skill">
-                                    
-                                    <img class='techLogo' src="./icons/spring.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Spring</p>
-                                        <p class='skillRating'> ⭐ </p> 
-                                        <div class="fill-bar"><div class="level" id="java-level"></div></div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="overall">20%</div>
+                        <div class="skillGroup secundarySkillGroup invisible" id='backendJava'>
+                            <h3 class="skillGroupTitle">Backend Java:</h3>
+                            <div class="subSkills"></div>
+                            <div class="overall">😎</div>
                         </div>
-                        <div class="skillGroup secundarySkillGroup invisible">
+
+                        <div class="skillGroup secundarySkillGroup invisible" id='embedSystems'>
                             <h3 class="skillGroupTitle">Embed Systems:</h3>
-                            <div class="subSkills">
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/c.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'> C </p>
-                                        <p class='skillRating'>⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="C-level"></div></div>
-                                    </div> 
-                                </div>
-            
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/c++.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'> C++ </p>
-                                        <p class='skillRating'>⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="C-level"></div></div>
-                                    </div> 
-                                </div>
-            
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/csharp.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'> C# </p>
-                                        <p class='skillRating'>⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="C-level"></div></div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="overall">20%</div><!--3/15-->
+                            <div class="subSkills"></div>
+                            <div class="overall">😎</div><!--3/15-->
                         </div>
-                        
-                        <div class="skillGroup ">
-    
-                            <h3 class="skillGroupTitle">Others:</h3>
-    
-                            <div class="subSkills">
-                                <div class="skill">
-                                    <img class='techLogo' src="./icons/figma.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>Figma</p>
-                                        <p class='skillRating'>⭐⭐⭐</p> 
-                                        <div class="fill-bar"><div class="level" id="Figma-level"></div></div>
-                                    </div> 
-                                </div>
-    
-                            <div class="skill">
-                                <img class='techLogo' src="./icons/mysql.png" alt="icon">
-                                <div class='skillValues'>
-                                    <p class='skillTitle'>MySQL</p>
-                                    <p class='skillRating'>⭐⭐</p> 
-                                    <div class="fill-bar"><div class="level" id="MySQL-level"></div></div>
-                                </div> 
-                            </div>
-        
-                            <div class="skill">
-                                <img class='techLogo' src="./icons/git.png" alt="icon">
-                                <div class='skillValues'>
-                                    <p class='skillTitle'>Git</p>
-                                    <p class='skillRating'> ⭐⭐⭐ </p> 
-                                    <div class="fill-bar"><div class="level" id="Git-level"></div></div>
-                                </div> 
-                            </div>
-                            
-                            <div class="skill">
-                                <img class='techLogo' src="./icons/aws.png" alt="icon">
-                                    <div class='skillValues'>
-                                        <p class='skillTitle'>AWS</p>
-                                        <p class='skillRating'> ⭐⭐ </p> 
-                                        <div class="fill-bar"><div class="level" id="AWS-level"></div></div>
-                                    </div> 
-                                </div>
-                               
-                            </div> 
+
+                        <div class="skillGroup secundarySkillGroup invisible" id='cms'>
+                            <h3 class="skillGroupTitle">CMS's:</h3>
+                            <div class="subSkills"></div>
+                            <div class="overall">😎</div><!--1/10-->
+                        </div>
+                        <div class="skillGroup secundarySkillGroup invisible" id='cicd'>  
+                            <h3 class="skillGroupTitle">CI / CD:</h3>
+                            <div class="subSkills"></div> 
                             <div class="overall">😎</div> 
-                        </div>   
+                        </div>
+                        <div class="skillGroup" id='otherSkills'>  
+                            <h3 class="skillGroupTitle">Others:</h3>
+                            <div class="subSkills"></div> 
+                            <div>😎</div> 
+                        </div> 
+
                     </div> <!--allSkill end-->
-                </div>
-                
-                
-            </div>
-                    
+                </div>   
+            </div>       
         </div>
                     
             </article>
 
             <article id="certificates" class="bgLevel4">
                 <h3  class="subtitles"> certificates </h3>
-                <div class="main-certificates certificates">
-                
-                    <div class="certificate">
-                        <div>    
-                            <a class="certView" href="./data/sda_certificate.pdf" target="_blank">
-                                <span class="material-symbols-outlined">visibility</span>
-                                <span> SDA - "Python From Scratch" </span>
-                            </a>
-                            
-                        </div>
-                        <iframe src="./data/sda_certificate.pdf" frameborder="0">
-                            
-                        </iframe>
-                    </div>                     
-                </div>
-
-
-                </div>
-                <div class="online-certificates certificates">
-                    <div class="certificate">
-                        <div>    
-                            <a class="certView" href="./data//AWS CodeCommit Course Completion Certificate.pdf" target="_blank">
-                                <span class="material-symbols-outlined">visibility</span>
-                                <span> AWS - "CodeCommit" </span>
-                            </a>
-                        </div>
-                        <iframe class="aws" src="./data//AWS CodeCommit Course Completion Certificate.pdf" frameborder="0"></iframe>
-                    </div>
-
-                    <div class="certificate">
-                        <div>    
-                            <a class="certView" href="./data/AWS DevOps Course Completion Certificate.pdf" target="_blank">
-                                <span class="material-symbols-outlined">visibility</span>
-                                <span> AWS - "DevOps" </span>
-                            </a>
-                        </div>
-                        <iframe class="aws" src="./data/AWS DevOps Course Completion Certificate.pdf" frameborder="0"></iframe>
-                    </div>
-                    <div class="certificate">
-                        <div>    
-                            <a class="certView" href="./data/AWS Elastic Compute Cloud Course Completion Certificate.pdf" target="_blank">
-                                <span class="material-symbols-outlined">visibility</span>
-                                <span> AWS - "Elastic Compute Cloud" </span>
-                            </a>
-                        </div>
-                        <iframe class="aws" src="./data/AWS Elastic Compute Cloud Course Completion Certificate.pdf" frameborder="0"></iframe>
-                    </div>
-                </div>
-
-                <div class="online-certificates certificates">
-
-                    <div class="certificate">
-                        <div>    
-                            <a class="certView" href="./data/sfcasts-VictorGrinan-certificate-composer.pdf" target="_blank">
-                                <span class="material-symbols-outlined">visibility</span>
-                                <span> SfCasts - "Composer" </span>
-                            </a>
-                        </div>
-                        <iframe class="simfony" src="./data/sfcasts-VictorGrinan-certificate-composer.pdf" frameborder="0"></iframe>
-                    </div>
-
-                    <div class="certificate">
-                        <div>    
-                            <a class="certView" href="./data/sfcasts-VictorGrinan-certificate-harmonious-development-with-symfony-6.pdf" target="_blank">
-                                <span class="material-symbols-outlined">visibility</span>
-                                <span> SfCasts - "Symfony 6" </span>
-                            </a>
-                        </div>
-                        <iframe class="simfony" src="./data/sfcasts-VictorGrinan-certificate-harmonious-development-with-symfony-6.pdf" frameborder="0"></iframe>
-                    </div>
-
-                    <div class="certificate">
-                        <div>    
-                            <a class="certView" href="./data/sfcasts-VictorGrinan-certificate-php-namespaces.pdf" target="_blank">
-                                <span class="material-symbols-outlined">visibility</span>
-                                <span> SfCasts - "PHP Namespaces" </span>
-                            </a>
-                        </div>
-                        <iframe class="simfony" src="./data/sfcasts-VictorGrinan-certificate-php-namespaces.pdf" frameborder="0"></iframe>
-                    </div>
-
-                </div>
+                <div class="main-certificates certificates"></div>
+                <div class="online-certificates1 certificates"></div>
+                <div class="online-certificates2 certificates"></div>
                 <br>
                 <button class="moreCertificates">
                     Show Irrelevant certificates
                 </button>
                 <br>
-                <div class="othersCertificates certificates"><!--invisible-->
-                    <iframe class="aws irrelevant invisible" src="./data/2015 yrittaja todistus.pdf" frameborder="0"> Busisness Course </iframe>
-                    <iframe class="aws irrelevant invisible" src="./data/UC-a13b9ecc-951b-4ff9-8856-ee83cca0f6cd.pdf" frameborder="0"> Busisness Course </iframe>
-                </div>
-
+                <div class="othersCertificates certificates invisible"><!--invisible--></div>
             </article>
-        </section>
-
     </main>
 
     <footer class="footer bgLevel5">
@@ -705,7 +265,7 @@
             <div class="email">
 
                 <a href="https://mail.google.com/mail/u/0/#inbox" target="blank">
-                    <img src="icons/emai_color.png" alt="email" id="emailImg" class="icon">
+                    <img src="icons/email_color.png" alt="email" id="emailImg" class="icon">
                 </a>
 
                     <a href="https://mail.google.com/mail/u/0/#inbox" target="blank">
