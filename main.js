@@ -219,15 +219,7 @@ const projectsData=[
         "description":"My first HTML, CSS & JS",
         "sectionId":"personalProjects"
     },
-    { 
-        "id":"hexMap",
-        "title":"Hex Map",
-        "type":"secundary",
-        "link":"https://victor-grinan-dev.github.io/map-creator/",
-        "imgUrl":"./images/hexMap.JPG",
-        "description":"Guetting use to Mapping",
-        "sectionId":"personalProjects"
-    },
+
     { 
         "id":"turnTimer",
         "title":"Turn Timer",
@@ -238,12 +230,21 @@ const projectsData=[
         "sectionId":"personalProjects"
     },
     { 
+        "id":"hexMap",
+        "title":"Hex Map",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/map-creator/",
+        "imgUrl":"./images/hexMap.JPG",
+        "description":"Getting use to mapping in Js",
+        "sectionId":"personalProjects"
+    },
+    { 
         "id":"campaingTracker",
         "title":"Campaign Tracker",
         "type":"primary",
         "link":"https://enchanting-taiyaki-964ff9.netlify.app/",
         "imgUrl":"./images/campaign-tracker.png",
-        "description":"Demo day from school",
+        "description":"Demo day project from school",
         "sectionId":"personalProjects"
     },
     { 
@@ -252,7 +253,7 @@ const projectsData=[
         "type":"primary",
         "link":"https://www.youtube.com/watch?v=YPBy4kEFNVQ",
         "imgUrl":"./images/the_game.png",
-        "description":"The game from campaingTracker",
+        "description":"The game Part of Campaing Tracker",
         "sectionId":"personalProjects"
     },
     { 
