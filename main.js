@@ -160,7 +160,7 @@ const projectsData=[
         "title":"Gradients",
         "type":"secundary",
         "link":"https://elegant-halva-fb3729.netlify.app/",
-        "imgUrl":"./images/02gradients.jpg",
+        "imgUrl":"./images/02gradients.JPG",
         "description":"Getting familiar with HTML & CSS",
         "sectionId":"schoolProjects"
     },
@@ -169,7 +169,7 @@ const projectsData=[
         "title":"Speed Game",
         "type":"secundary",
         "link":"https://victor-grinan-dev.github.io/speed_game/",
-        "imgUrl":"./images/speedgame.jpg",
+        "imgUrl":"./images/speedgame.JPG",
         "description":"Using JS to handle the DOM",
         "sectionId":"schoolProjects"
     },
