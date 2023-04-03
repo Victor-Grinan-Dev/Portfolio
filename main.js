@@ -248,11 +248,11 @@ const projectsData=[
     },
     { 
         "id":"theGame",
-        "title":"The Game",
+        "title":"The Game 🎥",
         "type":"primary",
-        "link":"https://github.com/Victor-Grinan-Dev/the_game",
+        "link":"https://www.youtube.com/watch?v=YPBy4kEFNVQ",
         "imgUrl":"./images/the_game.png",
-        "description":"the game from campaingTracker",
+        "description":"The game from campaingTracker",
         "sectionId":"personalProjects"
     },
     { 
@@ -658,7 +658,6 @@ const calculatePercent = () => {
     });
 }
 
-
 renderData();
 
 const showMoreSkills = document.querySelector('.showMoreSkills');
@@ -701,27 +700,23 @@ showSkillsLegend.addEventListener('click', showSkillsLegendHandler);
 /* show certificates */
 
 class CertificateCard extends HTMLElement {
-
     /**
      * 
-     * @param {* string} id 
-     * @param {* string} title 
-     * @param {* primary || secundary} type 
-     * @param {* project URL string} link 
-     * @param {* image url} imgUrl 
-     * @param {* string } description 
+     * @param {string} id 
+     * @param {string} title 
+     * @param {string} docLink 
      */
-	constructor (id, title, link) {
+	constructor (id, title, docLink, isInvisible) {
 		super();
-        this.innerHTML =
-		`<div id=${id} class="certificate">
+        this.content =
+		`<div id=${id} class="certificate ${isInvisible ? 'irrelevant invisible' : ''}">
             <div>    
-                <a class="certView" href=${link} target="_blank">
+                <a class="certView" href=${docLink} target="_blank">
                     <span class="material-symbols-outlined">visibility</span>
                     <span> ${title} </span>
                 </a>
             </div>
-            <iframe src=${link} frameborder="0" />  
+            <iframe src=${docLink} frameborder="0" />  
         </div>`;
 	}
 };
@@ -730,19 +725,101 @@ if ('customElements' in window) {
 	customElements.define('certificate-cards', CertificateCard);
 };
 
-const irrelevatCertificates = document.querySelectorAll(".irrelevant");
-const moreCertificatesBtn = document.querySelector(".moreCertificates");
+const mainCertificates = document.querySelector('.main-certificates');
+const onlineCertificates1 = document.querySelector('.online-certificates1');
+const onlineCertificates2 = document.querySelector('.online-certificates2');
+const othersCertificates = document.querySelector(".othersCertificates");
+
+const CertificateSections = {
+    mainCertificates:mainCertificates,
+    onlineCertificates1:onlineCertificates1,
+    onlineCertificates2:onlineCertificates2,
+    othersCertificates:othersCertificates,
+}
+
+const allCertificate = [
+    {
+        id:"pythonBasics",
+        title:'SDA - "Python From Scratch"',
+        docLink:"./documents/sda_certificate.pdf",
+        section:"mainCertificates",
+    },
+    // {
+    //     id:"hbc",
+    //     title:'',
+    //     docLink:"",
+    //     section:"mainCertificates",
+    //  
+    // },
+    {
+        id:"codeCommit",
+        title:'AWS - "CodeCommit"',
+        docLink:"./documents/AWS_CodeCommit_Course_Completion_Certificate.pdf",
+        section:"onlineCertificates1",
+    },
+    {
+        id:"DevOps",
+        title:'AWS - "DevOps"',
+        docLink:"./documents/AWS_DevOps_Course_Completion_Certificate.pdf",
+        section:"onlineCertificates1",
+    },
+    {
+        id:"EC2",
+        title:'AWS - "Elastic Compute Cloud"',
+        docLink:"./documents/AWS_EC2_Completion_Certificate.pdf",
+        section:"onlineCertificates1",
+    },
+    {
+        id:"Namespaces",
+        title:'SfCasts - "PHP Namespaces"',
+        docLink:"./documents/sfcasts-VictorGrinan-certificate-php-namespaces.pdf",
+        section:"onlineCertificates2",
+    },
+    {
+        id:"Symfony6",
+        title:'SfCasts - "Symfony 6"',
+        docLink:"./documents/sfcasts-VictorGrinan-certificate-harmonious-development-with-symfony-6.pdf",
+        section:"onlineCertificates2",
+    },
+    {
+        id:"Composer",
+        title:'SfCasts - "Composer"',
+        docLink:"./documents/sfcasts-VictorGrinan-certificate-composer.pdf",
+        section:"onlineCertificates2",
+    },
+    {
+        id:"Entrepreneurship",
+        title:'YH - "Entrepreneurship"',
+        docLink:"./documents/2015_yrittaja_todistus.pdf",
+        section:"othersCertificates",
+
+    },
+    {
+        id:"Investing",
+        title:'Udemy - "Investing in stocks"',
+        docLink:"./documents/UC-a13b9ecc-951b-4ff9-8856-ee83cca0f6cd.pdf",
+        section:"othersCertificates",
+    },
+]
+
+const renderCerts = () => {
+    allCertificate.forEach(cert => {
+        const {id, title, docLink, section} = cert;
+        const newCertCard = new CertificateCard(id, title, docLink);
+        CertificateSections[section].innerHTML += newCertCard.content;
+    })
+};
+renderCerts();
+
+
+const moreCertificatesBtn = document.querySelector(".moreCertificates");//btn
 
 let is_certificateShowing = false;
 
 const showAllCertificates = () => {
     is_certificateShowing = !is_certificateShowing;
-    for (let cert of irrelevatCertificates){
-        cert.classList.toggle("invisible");
-        
-    }
+    othersCertificates.classList.toggle('invisible');
     is_certificateShowing ? moreCertificatesBtn.textContent = "Hide Irrelevant certificates" : moreCertificatesBtn.textContent = "Show Irrelevant certificates";
-    
 }
 moreCertificatesBtn.addEventListener("click", showAllCertificates);
 

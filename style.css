@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Explora&family=Inconsolata:wght@300&family=Lora:ital@1&family=Merriweather:ital@1&family=Montserrat&family=Noto+Serif&family=Quicksand:wght@300&family=Roboto&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Explora&family=Inconsolata:wght@300&family=Lora:ital@1&family=Merriweather:ital@1&family=Montserrat&family=Noto+Serif&family=Quicksand:wght@300&family=Roboto&family=Sacramento&family=Dancing+Script&family=Racing+Sans+One&family=Staatliches&display=swa');
 
 :root {/*root represent the html element*/
     --my-black: rgb(46, 46, 46);
@@ -16,12 +16,12 @@
     --general-font: lora;
     --logo-font: Bebas Neue;
     --parragraph-font: Montserrat;
+    --hand-write: Dancing Script;
 }
 
 /*reset*/
 *{
     color: var(--my-white);
-    font-family: var(--general-font);
     margin: 0;
     padding: 0;
 }
@@ -42,7 +42,7 @@ body {
 header,
 main,
 footer{
-    width: 100%;
+    width: 100vw;;
 }
 
 .bgLevel0{
@@ -64,12 +64,6 @@ footer{
     background-color: var(--level-5); 
 }
 
-@media only screen and (max-width: 375px){
-    body{
-        min-width: 375px;
-    }
-}
-
 /*HEADER*/
 header {
     background-color: var(--level-0);
@@ -77,6 +71,10 @@ header {
     height: 100vh;
     flex-direction: column;
     justify-content: center;
+}
+
+#intro{
+    font-family: 'Dancing Script', cursive;
 }
 
 /*logo*/
@@ -178,6 +176,7 @@ nav ul li a:hover {
     animation-name: appear;
     animation-iteration-count: initial;
     animation-duration: 1s;
+    font-size: 40px;
 }
 
 #my-name {
@@ -185,15 +184,18 @@ nav ul li a:hover {
     animation-iteration-count: initial;
     animation-duration: 2s;
     display: flex;
+    
 }
 
 #victor{
     margin-right: 2px;
     position: relative;
+    font-size: 40px;
 }
 #grinan {
     margin-left: 2px;
     position: relative;
+    font-size: 40px;
 }
 
 .lightsOn {
@@ -227,20 +229,25 @@ nav ul li a:hover {
     animation-name: appear;
     animation-iteration-count: initial;
     animation-duration: 3s;
+    font-size: 35px;
 }
 
 #welcome {
     animation-name: appear;
     animation-iteration-count: initial;
-    animation-duration: 3300ms;
+    animation-duration: 3.3s;
+
 }
 
 #welcome-to{
     color: #fff;
+    font-size: 40px;
+    font-family: var(--hand-write);
 }
 
-#portfolio{
+#portfolio-word{
     font-size: 60px;
+    font-family: var(--hand-write);
 }
 
 .invisible {
@@ -516,7 +523,7 @@ div .project:hover {
     font-size: 14px;
 }
 .skillGroup{
-    width: 95vw;
+    width: 90vw;
     max-width: 1200px; 
     display:flex;
     flex-direction: row;
