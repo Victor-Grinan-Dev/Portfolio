@@ -253,7 +253,7 @@ const projectsData=[
         "type":"primary",
         "link":"https://www.youtube.com/watch?v=YPBy4kEFNVQ",
         "imgUrl":"./images/the_game.png",
-        "description":"The game Part of Campaing Tracker",
+        "description":'Video of The game "Campaing Tracker"',
         "sectionId":"personalProjects"
     },
     { 
