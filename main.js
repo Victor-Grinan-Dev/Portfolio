@@ -336,13 +336,14 @@ const showAllProjects = () => {
 showAllBtn.addEventListener("click", showAllProjects);
 
 /* Skill functions */
-const basicFrontend = document.querySelector('#basicFrontend');
-const advanceFrontend = document.querySelector('#advanceFrontend');
-const backendNode = document.querySelector('#backendNode');
-const backendPython = document.querySelector('#backendPython');
-const backendPHP = document.querySelector('#backendPHP');
-const embedSystems = document.querySelector('#embedSystems');
-const otherSkills = document.querySelector('#othersSkills');
+const basicFrontend = document.querySelector('#basicFrontend div');
+const advanceFrontend = document.querySelector('#advanceFrontend div');
+const backendNode = document.querySelector('#backendNode div');
+const backendPython = document.querySelector('#backendPython div');
+const backendPHP = document.querySelector('#backendPHP div');
+const embedSystems = document.querySelector('#embedSystems div');
+const cms = document.querySelector('#cms div');
+const otherSkills = document.querySelector('#otherSkills div');
 
 const skillGroups = {
     basicFrontend:basicFrontend,
@@ -351,24 +352,182 @@ const skillGroups = {
     backendPython:backendPython,
     backendPHP:backendPHP,
     embedSystems:embedSystems,
+    cms:cms,
     otherSkills:otherSkills,
 } 
 
 const skillsData = [
     {
-        id:"",
-        skillName:"",
-        stars:"",
-        imgUrl:"",
-        skillgroup:""
+        id:"html",
+        skillName:"HTML",
+        stars:3,
+        imgUrl:"./icons/html.png",
+        skillgroup:"basicFrontend",
+        isInvisible:false
+    },
+    {
+        id:"css",
+        skillName:"CSS",
+        stars:3,
+        imgUrl:"./icons/css.png",
+        skillgroup:"basicFrontend",
+        isInvisible:false
+    },
+    {
+        id:"javascript",
+        skillName:"Javascript",
+        stars:3,
+        imgUrl:"./icons/javascript.png",
+        skillgroup:"basicFrontend",
+        isInvisible:false
+    },
+    {
+        id:"react",
+        skillName:"React",
+        stars:3,
+        imgUrl:"./icons/react.png",
+        skillgroup:"advanceFrontend",
+        isInvisible:false
+    },
+    {
+        id:"typescript",
+        skillName:"Typescript",
+        stars:2,
+        imgUrl:"./icons/typescript.png",
+        skillgroup:"advanceFrontend",
+        isInvisible:false
+    },
+    {
+        id:"nextjs",
+        skillName:"NextJs",
+        stars:2,
+        imgUrl:"./icons/next_js.png",
+        skillgroup:"advanceFrontend",
+        isInvisible:false
+    },
+    {
+        id:"node",
+        skillName:"Node",
+        stars:2,
+        imgUrl:"./icons/node.png",
+        skillgroup:"backendNode",
+        isInvisible:false
+    },
+    {
+        id:"express",
+        skillName:"Express",
+        stars:0,
+        imgUrl:"./icons/express.png",
+        skillgroup:"backendNode",
+        isInvisible:false
+    },
+
+    {
+        id:"python",
+        skillName:"Python",
+        stars:3,
+        imgUrl:"./icons/python.png",
+        skillgroup:"backendPython",
+        isInvisible:false
+    },
+    {
+        id:"django",
+        skillName:"Django",
+        stars:2,
+        imgUrl:"./icons/django.png",
+        skillgroup:"backendPython",
+        isInvisible:false
+    },
+    {
+        id:"flask",
+        skillName:"Flask",
+        stars:2,
+        imgUrl:"./icons/flask.png",
+        skillgroup:"backendPython",
+        isInvisible:false
+    },
+    {
+        id:"php",
+        skillName:"PHP",
+        stars:2,
+        imgUrl:"./icons/php.png",
+        skillgroup:"backendPHP",
+        isInvisible:false
+    },
+    {
+        id:"synfony",
+        skillName:"Synfony",
+        stars:2,
+        imgUrl:"./icons/symfony.png",
+        skillgroup:"backendPHP",
+        isInvisible:false
+    },
+    {
+        id:"laravel",
+        skillName:"Laravel",
+        stars:0,
+        imgUrl:"./icons/laravel.png",
+        skillgroup:"backendPHP",
+        isInvisible:true
+    },
+    {
+        id:"drupal",
+        skillName:"Drupal",
+        stars:1,
+        imgUrl:"./icons/drupal.png",
+        skillgroup:"cms",
+        isInvisible:false
+    },
+    {
+        id:"wordpress",
+        skillName:"Wordpress",
+        stars:0,
+        imgUrl:"./icons/word_press.png",
+        skillgroup:"cms",
+        isInvisible:false
+    },
+    {
+        id:"figma",
+        skillName:"Figma",
+        stars:3,
+        imgUrl:"./icons/figma.png",
+        skillgroup:"otherSkills",
+        isInvisible:false
+    },
+    {
+        id:"mysql",
+        skillName:"MySQL",
+        stars:2,
+        imgUrl:"./icons/mysql.png",
+        skillgroup:"otherSkills",
+        isInvisible:false
+    },
+    {
+        id:"git",
+        skillName:"Git",
+        stars:3,
+        imgUrl:"./icons/git.png",
+        skillgroup:"otherSkills",
+        isInvisible:false
+    },
+    {
+        id:"aws",
+        skillName:"AWS",
+        stars:2,
+        imgUrl:"./icons/aws.png",
+        skillgroup:"otherSkills",
+        isInvisible:false
     },
     // {
     //     id:"",
     //     skillName:"",
-    //     stars:"",
+    //     stars:,
     //     imgUrl:"",
-    //     skillgroup:""
-    // }
+    //     skillgroup:"",
+    //     isInvisible:false
+    // },
+
+
 ]
 class SkillCard extends HTMLElement {
     /**
@@ -378,14 +537,14 @@ class SkillCard extends HTMLElement {
      * @param {int} stars 
      * @param {string} imgUrl 
      */
-	constructor (id, skillName, stars, imgUrl) {
+	constructor (id, skillName, stars, imgUrl, isInvisible) {
 		super();
-        this.innerHTML =
-            `<div id=${id} class="skill">
+        this.content =
+            `<div id=${id} class="skill" ${isInvisible ? 'invisible' : null} >
                 <img class='techLogo' src="${imgUrl}" alt="icon">
                 <div class='skillValues'>
                     <p class='skillTitle'>${skillName}</p>
-                    <p class='skillRating'>${'⭐' * stars}</p> 
+                    <p class='skillRating'>${stars > 0 ?"⭐".repeat(stars) : ' - '}</p> 
                     <div class="fill-bar"><div class="level" id="HTML-level"></div></div>
                 </div> 
             </div>`;
@@ -395,6 +554,12 @@ class SkillCard extends HTMLElement {
 if ('customElements' in window) {
 	customElements.define('skill-card', SkillCard);
 };
+
+skillsData.forEach(skill=>{
+    const {id, skillName, stars, imgUrl, skillgroup, isInvisible} = skill;
+    const newSkill = new SkillCard(id, skillName, stars, imgUrl, isInvisible);
+    skillGroups[skillgroup].innerHTML += newSkill?.content;
+})
 
 const showMoreSkills = document.querySelector('.showMoreSkills');
 const secundarySkillGroup = document.querySelectorAll('.secundarySkillGroup');
@@ -428,7 +593,6 @@ let isShowLegend = false;
 const showSkillsLegendHandler = () => {
     skillLegend.classList.toggle('invisible');
     isShowLegend = !isShowLegend;
-    console.log(showSkillsLegend)
     isShowLegend ? showSkillsLegend.innerText = 'Hide Legend' : showSkillsLegend.innerText = 'Show Legend';
 };
 
