@@ -341,8 +341,10 @@ const advanceFrontend = document.querySelector('#advanceFrontend div');
 const backendNode = document.querySelector('#backendNode div');
 const backendPython = document.querySelector('#backendPython div');
 const backendPHP = document.querySelector('#backendPHP div');
+const backendJava = document.querySelector('#backendJava div');
 const embedSystems = document.querySelector('#embedSystems div');
 const cms = document.querySelector('#cms div');
+const cicd = document.querySelector('#cicd div');
 const otherSkills = document.querySelector('#otherSkills div');
 
 const skillGroups = {
@@ -351,8 +353,10 @@ const skillGroups = {
     backendNode:backendNode,
     backendPython:backendPython,
     backendPHP:backendPHP,
+    backendJava:backendJava,
     embedSystems:embedSystems,
     cms:cms,
+    cicd:cicd,
     otherSkills:otherSkills,
 } 
 
@@ -518,6 +522,70 @@ const skillsData = [
         skillgroup:"otherSkills",
         isInvisible:false
     },
+    {
+        id:"c",
+        skillName:"C",
+        stars:1,
+        imgUrl:"./icons/c.png",
+        skillgroup:"embedSystems",
+        isInvisible:false
+    },
+    {
+        id:"cpp",
+        skillName:"C++",
+        stars:1,
+        imgUrl:"./icons/c++.png",
+        skillgroup:"embedSystems",
+        isInvisible:false
+    },
+    {
+        id:"cs",
+        skillName:"C#",
+        stars:1,
+        imgUrl:"./icons/csharp.png",
+        skillgroup:"embedSystems",
+        isInvisible:false
+    },
+    {
+        id:"java",
+        skillName:"Java",
+        stars:1,
+        imgUrl:"./icons/java.png",
+        skillgroup:"backendJava",
+        isInvisible:false
+    },
+    {
+        id:"spring",
+        skillName:"Spring",
+        stars:1,
+        imgUrl:"./icons/spring.png",
+        skillgroup:"backendJava",
+        isInvisible:false
+    },
+    {
+        id:"kubernetes",
+        skillName:"Kubernetes",
+        stars:1,
+        imgUrl:"./icons/kubernetes.png",
+        skillgroup:"cicd",
+        isInvisible:false
+    },
+    {
+        id:"jenkins",
+        skillName:"Jenkins",
+        stars:1,
+        imgUrl:"./icons/jenkins.png",
+        skillgroup:"cicd",
+        isInvisible:false
+    },
+    {
+        id:"sonarcube",
+        skillName:"SonarQube",
+        stars:1,
+        imgUrl:"./icons/sonarqube.png",
+        skillgroup:"cicd",
+        isInvisible:false
+    },
     // {
     //     id:"",
     //     skillName:"",
@@ -526,8 +594,6 @@ const skillsData = [
     //     skillgroup:"",
     //     isInvisible:false
     // },
-
-
 ]
 class SkillCard extends HTMLElement {
     /**
@@ -555,11 +621,45 @@ if ('customElements' in window) {
 	customElements.define('skill-card', SkillCard);
 };
 
-skillsData.forEach(skill=>{
-    const {id, skillName, stars, imgUrl, skillgroup, isInvisible} = skill;
-    const newSkill = new SkillCard(id, skillName, stars, imgUrl, isInvisible);
-    skillGroups[skillgroup].innerHTML += newSkill?.content;
-})
+const renderData = () => {
+    renderSkills();
+    calculatePercent();
+}
+
+const renderSkills = () => {
+    skillsData.forEach(skill=>{
+        const {id, skillName, stars, imgUrl, skillgroup, isInvisible} = skill;
+        const newSkill = new SkillCard(id, skillName, stars, imgUrl, isInvisible);
+        skillGroups[skillgroup].innerHTML += newSkill?.content;
+    });
+};
+
+/* Calculate XP% per skill group */
+const allGroups = document.querySelectorAll('.skillGroup');
+const calculatePercent = () => {
+    let starText;
+    allGroups.forEach(group=>{
+        let stars = 0;
+        const overall = group.querySelector('.overall');
+        const skillRatings = group.querySelectorAll('.skillRating');
+        skillRatings.forEach(rating=>{
+            starText = rating.innerText;
+
+            for(const char of starText){
+               if(char === '⭐'){
+                stars +=1
+               }
+            }
+        });
+        const total = group.childElementCount * 5;
+        if(overall){
+            overall.innerText = `${Math.round((stars/total * 100) * 100) / 100}%`
+        };
+    });
+}
+
+
+renderData();
 
 const showMoreSkills = document.querySelector('.showMoreSkills');
 const secundarySkillGroup = document.querySelectorAll('.secundarySkillGroup');
