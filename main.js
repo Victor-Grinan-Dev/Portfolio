@@ -176,7 +176,7 @@ const projectsData=[
     {
         "id":"keeperApp",
         "title":"Keeper App",
-        "type":"primary",
+        "type":"secundary",
         "link":"https://jocular-tapioca-476ffa.netlify.app/",
         "imgUrl":"./images/keeperApp.jpg",
         "description":"Using local storage & MUI styling",
@@ -194,7 +194,7 @@ const projectsData=[
     {
         "id":"foodApp",
         "title":"Food App",
-        "type":"secundary",
+        "type":"primary",
         "link":"https://food-app4.netlify.app/",
         //https://victor-grinan-dev.github.io/food-app3/
         "imgUrl":"./images/feelit_cookit.png",
