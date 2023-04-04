@@ -195,7 +195,7 @@ const projectsData=[
         "id":"foodApp",
         "title":"Food App",
         "type":"secundary",
-        "link":"food-app4.netlify.app",
+        "link":"https://food-app4.netlify.app/",
         //https://victor-grinan-dev.github.io/food-app3/
         "imgUrl":"./images/test_Img.jpg",
         "description":"Pagination & Firebase CRUD",
