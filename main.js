@@ -197,7 +197,7 @@ const projectsData=[
         "type":"secundary",
         "link":"https://food-app4.netlify.app/",
         //https://victor-grinan-dev.github.io/food-app3/
-        "imgUrl":"./images/test_Img.jpg",
+        "imgUrl":"./images/feelit_cookit.png",
         "description":"Pagination & Firebase CRUD",
         "sectionId":"schoolProjects"
     },
