@@ -80,10 +80,10 @@ victor.addEventListener("click", animatePorfolio);
 grinan.addEventListener("click", spinDeveloper);
 
 //scrolls functions
-const scroll_about = [677, 1320];
+const scroll_about = [677, 1482];
 const scroll_portfolio = [1481, 2640];
-const scroll_skills = [2618, 3992];
-const scroll_certificates = [3314, 5270];
+const scroll_skills = [2618, 4324];
+const scroll_certificates = [4323, 5270];
 const scroll_conctactMe = [4130, 6610];
 
 const aboutTab = document.querySelector('#aboutTab');
