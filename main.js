@@ -162,7 +162,9 @@ const projectsData=[
         "link":"https://elegant-halva-fb3729.netlify.app/",
         "imgUrl":"./images/02gradients.JPG",
         "description":"Getting familiar with HTML & CSS",
-        "sectionId":"schoolProjects"
+        "sectionId":"schoolProjects",
+        "repoLink":"color_gradients",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     {
         "id":"speedGame",
@@ -171,7 +173,9 @@ const projectsData=[
         "link":"https://victor-grinan-dev.github.io/speed_game/",
         "imgUrl":"./images/speedgame.JPG",
         "description":"Using JS to handle the DOM",
-        "sectionId":"schoolProjects"
+        "sectionId":"schoolProjects",
+        "repoLink":"speed_game",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     {
         "id":"keeperApp",
@@ -180,7 +184,9 @@ const projectsData=[
         "link":"https://jocular-tapioca-476ffa.netlify.app/",
         "imgUrl":"./images/keeperApp.jpg",
         "description":"Using local storage & MUI styling",
-        "sectionId":"schoolProjects"
+        "sectionId":"schoolProjects",
+        "repoLink":"keeper_app",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     {
         "id":"pokemons",
@@ -189,7 +195,9 @@ const projectsData=[
         "link":"https://victor-grinan-dev.github.io/react_pokemons/",
         "imgUrl":"./images/pokemons.jpg",
         "description":"My first react ever, fetch data",
-        "sectionId":"schoolProjects"
+        "sectionId":"schoolProjects",
+        "repoLink":"react_pokemons ",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     {
         "id":"foodApp",
@@ -199,7 +207,9 @@ const projectsData=[
         //https://victor-grinan-dev.github.io/food-app3/
         "imgUrl":"./images/feelit_cookit.png",
         "description":"Pagination & Firebase CRUD",
-        "sectionId":"schoolProjects"
+        "sectionId":"schoolProjects",
+        "repoLink":"food-app4",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     {
         "id":"countriesApp",
@@ -208,7 +218,9 @@ const projectsData=[
         "link":"https://victor-grinan-dev.github.io/countries_app1/",
         "imgUrl":"./images/countries.jpg",
         "description":"Introduction to redux",
-        "sectionId":"schoolProjects"
+        "sectionId":"schoolProjects",
+        "repoLink":"countries_app1",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     {
         "id":"diceRoller",
@@ -217,7 +229,9 @@ const projectsData=[
         "link":"https://victor-grinan-dev.github.io/diceRoller",
         "imgUrl":"./images/diceRoller.JPG",
         "description":"My first HTML, CSS & JS",
-        "sectionId":"personalProjects"
+        "sectionId":"personalProjects",
+        "repoLink":"diceRoller",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
 
     { 
@@ -227,7 +241,9 @@ const projectsData=[
         "link":"https://victor-grinan-dev.github.io/blood_bowl_turn_timer/",
         "imgUrl":"./images/turn_timer.JPG",
         "description":"first site for my Hobby group",
-        "sectionId":"personalProjects"
+        "sectionId":"personalProjects",
+        "repoLink":"blood_bowl_turn_timer",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
         "id":"hexMap",
@@ -236,7 +252,9 @@ const projectsData=[
         "link":"https://victor-grinan-dev.github.io/map-creator/",
         "imgUrl":"./images/hexMap.JPG",
         "description":"Getting use to mapping in Js",
-        "sectionId":"personalProjects"
+        "sectionId":"personalProjects",
+        "repoLink":"map-creator",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
         "id":"campaingTracker",
@@ -245,7 +263,9 @@ const projectsData=[
         "link":"https://enchanting-taiyaki-964ff9.netlify.app/",
         "imgUrl":"./images/campaign-tracker.png",
         "description":"Demo day project from school",
-        "sectionId":"personalProjects"
+        "sectionId":"personalProjects",
+        "repoLink":"campaign-tracker-demo",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
         "id":"theGame",
@@ -254,7 +274,9 @@ const projectsData=[
         "link":"https://www.youtube.com/watch?v=YPBy4kEFNVQ",
         "imgUrl":"./images/the_game.png",
         "description":'Video of The game "Campaing Tracker"',
-        "sectionId":"personalProjects"
+        "sectionId":"personalProjects",
+        "repoLink":"the_game",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
         "id":"theCubanShow",
@@ -263,7 +285,9 @@ const projectsData=[
         "link":"https://thecubanshow.netlify.app/",
         "imgUrl":"./images/thecubanshow.png",
         "description":"First serious job for a friend (in progress)",
-        "sectionId":"personalProjects"
+        "sectionId":"personalProjects",
+        "repoLink":"the_cuban_show_ui",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
     }
     // { 
     //     "id":"",
@@ -286,7 +310,7 @@ class ProjectCard extends HTMLElement {
      * @param {* image url} imgUrl 
      * @param {* string } description 
      */
-	constructor (id, title, type, link, imgUrl, description) {
+	constructor (id, title, type, link, imgUrl, description, repoLink, repoSite) {
 		super();
 
         this.content =
@@ -303,6 +327,9 @@ class ProjectCard extends HTMLElement {
                 <p class="descriptionText">${description}</p>
             </div>
 
+            <a href="${repoSite}${repoLink}" target="blank">
+                <img src="${repoSite.includes('github') ? './icons/github.png' : './icons/gitlab.png'}" alt="githubRepo" class="repoLink">
+            </a>
         </div>`;
 	}
 };
@@ -312,8 +339,8 @@ if ('customElements' in window) {
 };
 
 projectsData.forEach(project => {
-    const {id, title, type, link, imgUrl, description, sectionId} = project;
-    const newProject = new ProjectCard(id, title, type, link, imgUrl, description);
+    const {id, title, type, link, imgUrl, description, sectionId, repoLink, repoSite} = project;
+    const newProject = new ProjectCard(id, title, type, link, imgUrl, description, repoLink, repoSite);
     section[sectionId].innerHTML += newProject.content;
 });
 

@@ -369,6 +369,14 @@ footer {
     width: 80vw;
 }
 
+.repoLink{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 35px;
+    width: 35px;
+}
+
 .some{
     display: inline-block;
     height: 50px;
