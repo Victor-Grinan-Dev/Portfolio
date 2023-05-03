@@ -744,7 +744,9 @@ class CertificateCard extends HTMLElement {
                     <span> ${title} </span>
                 </a>
             </div>
-            <iframe src=${docLink} frameborder="0" />  
+            <iframe src=${docLink} frameborder="0" class='document'
+                style="border-style: none;width: 100%; height: 120px;"
+            />  
         </div>`;
 	}
 };
@@ -772,13 +774,12 @@ const allCertificate = [
         docLink:"./documents/sda_certificate.pdf",
         section:"mainCertificates",
     },
-    // {
-    //     id:"hbc",
-    //     title:'',
-    //     docLink:"",
-    //     section:"mainCertificates",
-    //  
-    // },
+    {
+        id:"hbc",
+        title:'Qualification in Information Tech',
+        docLink:"./documents/HBC_graduation_certificate_small.pdf",
+        section:"mainCertificates",
+    },
     {
         id:"codeCommit",
         title:'AWS - "CodeCommit"',

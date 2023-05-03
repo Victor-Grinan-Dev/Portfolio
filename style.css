@@ -621,6 +621,12 @@ div .project:hover {
     justify-content: center;
 }
 
+.document{
+   width: 200px;
+   
+
+}
+
 .certView{
     display: flex;
     align-items: center;
