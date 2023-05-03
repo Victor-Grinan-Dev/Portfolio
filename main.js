@@ -448,7 +448,7 @@ const skillsData = [
     {
         id:"express",
         skillName:"Express",
-        stars:2,
+        stars:1,
         imgUrl:"./icons/express.png",
         skillgroup:"backendNode",
         isInvisible:false
