@@ -610,8 +610,10 @@ div .project:hover {
 /*certificates*/
 #certificates{
     background-color: var(--level-4);
+
 }
 
+.certificate,
 .certificates{
     width: 100vw;
     display: flex;
@@ -619,6 +621,13 @@ div .project:hover {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.certificate{
+    width: 30vw;
+    min-width: 280px;
+     flex-direction: column;
+     margin: 15px 0;
 }
 
 .document{

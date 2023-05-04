@@ -744,8 +744,7 @@ class CertificateCard extends HTMLElement {
                     <span> ${title} </span>
                 </a>
             </div>
-            <iframe src=${docLink} frameborder="0" class='document'
-                style="border-style: none;width: 100%; height: 120px;"
+            <img src=${docLink} frameborder="0" class='document'
             />  
         </div>`;
 	}
@@ -771,62 +770,62 @@ const allCertificate = [
     {
         id:"pythonBasics",
         title:'SDA - "Python From Scratch"',
-        docLink:"./documents/sda_certificate.pdf",
+        docLink:"./documents/sda_certificate.png",
         section:"mainCertificates",
     },
     {
         id:"hbc",
         title:'Qualification in Information Tech',
-        docLink:"./documents/HBC_graduation_certificate_small.pdf",
+        docLink:"./documents/HBC_graduation_certificate_small.png",
         section:"mainCertificates",
     },
     {
         id:"codeCommit",
         title:'AWS - "CodeCommit"',
-        docLink:"./documents/AWS_CodeCommit_Course_Completion_Certificate.pdf",
+        docLink:"./documents/AWS_CodeCommit_Course_Completion_Certificate.png",
         section:"onlineCertificates1",
     },
     {
         id:"DevOps",
         title:'AWS - "DevOps"',
-        docLink:"./documents/AWS_DevOps_Course_Completion_Certificate.pdf",
+        docLink:"./documents/AWS_DevOps_Course_Completion_Certificate.png",
         section:"onlineCertificates1",
     },
     {
         id:"EC2",
         title:'AWS - "Elastic Compute Cloud"',
-        docLink:"./documents/AWS_EC2_Completion_Certificate.pdf",
+        docLink:"./documents/AWS_EC2_Completion_Certificate.png",
         section:"onlineCertificates1",
     },
     {
         id:"Namespaces",
         title:'SfCasts - "PHP Namespaces"',
-        docLink:"./documents/sfcasts-VictorGrinan-certificate-php-namespaces.pdf",
+        docLink:"./documents/sfcasts-VictorGrinan-certificate-php-namespaces.png",
         section:"onlineCertificates2",
     },
     {
         id:"Symfony6",
         title:'SfCasts - "Symfony 6"',
-        docLink:"./documents/sfcasts-VictorGrinan-certificate-harmonious-development-with-symfony-6.pdf",
+        docLink:"./documents/sfcasts-VictorGrinan-certificate-harmonious-development-with-symfony-6.png",
         section:"onlineCertificates2",
     },
     {
         id:"Composer",
         title:'SfCasts - "Composer"',
-        docLink:"./documents/sfcasts-VictorGrinan-certificate-composer.pdf",
+        docLink:"./documents/sfcasts-VictorGrinan-certificate-composer.png",
         section:"onlineCertificates2",
     },
     {
         id:"Entrepreneurship",
         title:'YH - "Entrepreneurship"',
-        docLink:"./documents/2015_yrittaja_todistus.pdf",
+        docLink:"./documents/2015_yrittaja_todistus.png",
         section:"othersCertificates",
 
     },
     {
         id:"Investing",
         title:'Udemy - "Investing in stocks"',
-        docLink:"./documents/UC-a13b9ecc-951b-4ff9-8856-ee83cca0f6cd.pdf",
+        docLink:"./documents/UC-a13b9ecc-951b-4ff9-8856-ee83cca0f6cd.png",
         section:"othersCertificates",
     },
 ]
