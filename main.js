@@ -744,8 +744,10 @@ class CertificateCard extends HTMLElement {
                     <span> ${title} </span>
                 </a>
             </div>
-            <img src=${docLink} frameborder="0" class='document'
-            />  
+            <a class="certView" href=${docLink} target="_blank">
+                <img src=${docLink} frameborder="0" class='document'
+                />  
+            </a>
         </div>`;
 	}
 };
