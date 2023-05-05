@@ -739,12 +739,12 @@ class CertificateCard extends HTMLElement {
         this.content =
 		`<div id=${id} class="certificate ${isInvisible ? 'irrelevant invisible' : ''}">
             <div>    
-                <a class="certView" href=${docLink} target="_blank">
+                <a class="certView" href=${docLink} target="_blank" class='docLink'>
                     <span class="material-symbols-outlined">visibility</span>
                     <span> ${title} </span>
                 </a>
             </div>
-            <a class="certView" href=${docLink} target="_blank">
+            <a class="certView" href=${docLink} target="_blank" class='docLink'>
                 <img src=${docLink} frameborder="0" class='document'
                 />  
             </a>
