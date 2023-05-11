@@ -432,7 +432,7 @@ const skillsData = [
     {
         id:"nextjs",
         skillName:"NextJs",
-        stars:2,
+        stars:1,
         imgUrl:"./icons/next_js.png",
         skillgroup:"advanceFrontend",
         isInvisible:false
