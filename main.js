@@ -817,12 +817,12 @@ const allCertificate = [
         docLink:"./documents/sfcasts-VictorGrinan-certificate-composer.png",
         section:"onlineCertificates2",
     },
-    // {
-    //     id:"css",
-    //     title:'Discount Courses - "CSS"',
-    //     docLink:"./css.png",
-    //     section:"onlineCertificates2",
-    // },
+    {
+        id:"css",
+        title:'Discount Courses - "CSS"',
+        docLink:"./documents/disc_courses_css.png",
+        section:"onlineCertificates2",
+    },
     {
         id:"Entrepreneurship",
         title:'YH - "Entrepreneurship"',
