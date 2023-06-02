@@ -369,6 +369,7 @@ const advanceFrontend = document.querySelector('#advanceFrontend div');
 const backendNode = document.querySelector('#backendNode div');
 const backendPython = document.querySelector('#backendPython div');
 const backendPHP = document.querySelector('#backendPHP div');
+const cloudService = document.querySelector('#cloudService div');
 const backendJava = document.querySelector('#backendJava div');
 const embedSystems = document.querySelector('#embedSystems div');
 const cms = document.querySelector('#cms div');
@@ -381,6 +382,7 @@ const skillGroups = {
     backendNode:backendNode,
     backendPython:backendPython,
     backendPHP:backendPHP,
+    cloudService:cloudService,
     backendJava:backendJava,
     embedSystems:embedSystems,
     cms:cms,
@@ -512,6 +514,32 @@ const skillsData = [
         skillgroup:"backendPHP",
         isInvisible:true
     },
+
+    {
+        id:"aws",
+        skillName:"AWS",
+        stars:2,
+        imgUrl:"./icons/aws.png",
+        skillgroup:"cloudService",
+        isInvisible:false
+    },
+    {
+        id:"firebase",
+        skillName:"Firebase",
+        stars:2,
+        imgUrl:"./icons/firebase.png",
+        skillgroup:"cloudService",
+        isInvisible:false
+    },
+    {
+        id:"azure",
+        skillName:"Azure",
+        stars:0,
+        imgUrl:"./icons/azure.png",
+        skillgroup:"cloudService",
+        isInvisible:true
+    },
+
     {
         id:"drupal",
         skillName:"Drupal",
@@ -552,22 +580,7 @@ const skillsData = [
         skillgroup:"otherSkills",
         isInvisible:false
     },
-    {
-        id:"aws",
-        skillName:"AWS",
-        stars:2,
-        imgUrl:"./icons/aws.png",
-        skillgroup:"otherSkills",
-        isInvisible:false
-    },
-    {
-        id:"firebase",
-        skillName:"Firebase",
-        stars:2,
-        imgUrl:"./icons/firebase.png",
-        skillgroup:"otherSkills",
-        isInvisible:false
-    },
+
     {
         id:"c",
         skillName:"C",
