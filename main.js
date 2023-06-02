@@ -413,6 +413,7 @@ const skillsData = [
         skillgroup:"basicFrontend",
         isInvisible:false
     },
+
     {
         id:"react",
         skillName:"React",
@@ -430,6 +431,14 @@ const skillsData = [
         isInvisible:false
     },
     {
+        id:"sass",
+        skillName:"Sass",
+        stars:3,
+        imgUrl:"./icons/sass.png",
+        skillgroup:"advanceFrontend",
+        isInvisible:false
+    },
+    {
         id:"nextjs",
         skillName:"NextJs",
         stars:1,
@@ -437,6 +446,7 @@ const skillsData = [
         skillgroup:"advanceFrontend",
         isInvisible:false
     },
+
     {
         id:"node",
         skillName:"Node",
@@ -547,6 +557,14 @@ const skillsData = [
         skillName:"AWS",
         stars:2,
         imgUrl:"./icons/aws.png",
+        skillgroup:"otherSkills",
+        isInvisible:false
+    },
+    {
+        id:"firebase",
+        skillName:"Firebase",
+        stars:2,
+        imgUrl:"./icons/firebase.png",
         skillgroup:"otherSkills",
         isInvisible:false
     },
