@@ -282,7 +282,7 @@ const projectsData=[
         "id":"theCubanShow",
         "title":"The Cuban Show",
         "type":"secundary",
-        "link":"https://thecubanshow.netlify.app/",
+        "link":"https://thecubanshow.com/",
         "imgUrl":"./images/thecubanshow.png",
         "description":"First serious job for a friend (in progress)",
         "sectionId":"personalProjects",
