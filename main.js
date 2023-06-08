@@ -441,6 +441,14 @@ const skillsData = [
         isInvisible:false
     },
     {
+        id:"tailwind",
+        skillName:"Tailwind",
+        stars:2,
+        imgUrl:"./icons/tailwind.png",
+        skillgroup:"advanceFrontend",
+        isInvisible:false
+    },
+    {
         id:"nextjs",
         skillName:"NextJs",
         stars:1,
