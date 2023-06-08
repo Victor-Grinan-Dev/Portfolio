@@ -855,6 +855,12 @@ const allCertificate = [
         section:"onlineCertificates2",
     },
     {
+        id:"sass",
+        title:'Udemy - "Advanced CSS" - "SASS"',
+        docLink:"./documents/udemy_advanced_sass.jpg",
+        section:"onlineCertificates2",
+    },
+    {
         id:"Entrepreneurship",
         title:'YH - "Entrepreneurship"',
         docLink:"./documents/2015_yrittaja_todistus.png",
