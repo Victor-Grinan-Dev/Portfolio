@@ -159,7 +159,7 @@ const projectsData=[
         "id":"gradients",
         "title":"Gradients",
         "type":"secundary",
-        "link":"https://elegant-halva-fb3729.netlify.app/",
+        "link":"https://victor-grinan-dev.github.io/color_gradients/",
         "imgUrl":"./images/02gradients.JPG",
         "description":"Getting familiar with HTML & CSS",
         "sectionId":"schoolProjects",
