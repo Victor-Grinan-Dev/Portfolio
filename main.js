@@ -366,6 +366,7 @@ showAllBtn.addEventListener("click", showAllProjects);
 /* Skill functions */
 const basicFrontend = document.querySelector('#basicFrontend div');
 const advanceFrontend = document.querySelector('#advanceFrontend div');
+const advanceFrontend2 = document.querySelector('#advanceFrontend2 div');
 const backendNode = document.querySelector('#backendNode div');
 const backendPython = document.querySelector('#backendPython div');
 const backendPHP = document.querySelector('#backendPHP div');
@@ -379,6 +380,7 @@ const otherSkills = document.querySelector('#otherSkills div');
 const skillGroups = {
     basicFrontend:basicFrontend,
     advanceFrontend:advanceFrontend,
+    advanceFrontend2:advanceFrontend2,
     backendNode:backendNode,
     backendPython:backendPython,
     backendPHP:backendPHP,
@@ -437,7 +439,7 @@ const skillsData = [
         skillName:"Sass",
         stars:3,
         imgUrl:"./icons/sass.png",
-        skillgroup:"advanceFrontend",
+        skillgroup:"advanceFrontend2",
         isInvisible:false
     },
     {
@@ -445,7 +447,15 @@ const skillsData = [
         skillName:"Tailwind",
         stars:2,
         imgUrl:"./icons/tailwind.png",
-        skillgroup:"advanceFrontend",
+        skillgroup:"advanceFrontend2",
+        isInvisible:false
+    },
+    {
+        id:"jquery",
+        skillName:"jquery",
+        stars:1,
+        imgUrl:"./icons/jquery.png",
+        skillgroup:"advanceFrontend2",
         isInvisible:false
     },
     {
