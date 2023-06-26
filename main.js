@@ -2,13 +2,19 @@
 //collapse menu
 const collapse = document.querySelector(".collapse");
 const navLinks = document.querySelectorAll('.nav-link');
+const menuBtn = document.querySelector('.navbar-toggler');
 
 collapse.style.backgroundColor="white";
 collapse.style.padding="10px";
 
+const removeShow = () => {
+    collapse.classList.remove('show');
+}
+
 navLinks.forEach(link => {
-    link.addEventListener('click', ()=>{collapse.classList.remove('show')});
+    link.addEventListener('click', removeShow );
 })
+
 
 //logo flying animation
 const g = document.querySelector("#g")
@@ -142,6 +148,8 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// menuBtn.addEventListener('blur', removeShow);
 
 scrollUp.addEventListener("click", topFunction);
 /* Portfolio Projects */
@@ -364,7 +372,8 @@ const showAllProjects = () => {
 showAllBtn.addEventListener("click", showAllProjects);
 
 /* Skill functions */
-const basicFrontend = document.querySelector('#basicFrontend div');
+const basicFrontend = document.querySelector('#basicFrontend div'); 
+const frameworks = document.querySelector('#frameworks div');
 const advanceFrontend = document.querySelector('#advanceFrontend div');
 const advanceFrontend2 = document.querySelector('#advanceFrontend2 div');
 const backendNode = document.querySelector('#backendNode div');
@@ -379,6 +388,7 @@ const otherSkills = document.querySelector('#otherSkills div');
 
 const skillGroups = {
     basicFrontend:basicFrontend,
+    frameworks:frameworks,
     advanceFrontend:advanceFrontend,
     advanceFrontend2:advanceFrontend2,
     backendNode:backendNode,
@@ -423,9 +433,35 @@ const skillsData = [
         skillName:"React",
         stars:3,
         imgUrl:"./icons/react.png",
-        skillgroup:"advanceFrontend",
+        skillgroup:"frameworks",
         isInvisible:false
     },
+    {
+        id:"vue",
+        skillName:"Vue",
+        stars:2,
+        imgUrl:"./icons/vue.png",
+        skillgroup:"frameworks",
+        isInvisible:false
+    },
+
+    // {
+    //     id:"nextjs",
+    //     skillName:"NextJs",
+    //     stars:1,
+    //     imgUrl:"./icons/next_js.png",
+    //     skillgroup:"frameworks",
+    //     isInvisible:false
+    // },
+
+    // {
+    //     id:"angular",
+    //     skillName:"Angular",
+    //     stars:1,
+    //     imgUrl:"./icons/angular.png",
+    //     skillgroup:"frameworks",
+    //     isInvisible: true
+    // },
     {
         id:"typescript",
         skillName:"Typescript",
@@ -434,6 +470,16 @@ const skillsData = [
         skillgroup:"advanceFrontend",
         isInvisible:false
     },
+
+    {
+        id:"jquery",
+        skillName:"jquery",
+        stars:1,
+        imgUrl:"./icons/jquery.png",
+        skillgroup:"advanceFrontend",
+        isInvisible:false
+    },
+
     {
         id:"sass",
         skillName:"Sass",
@@ -451,21 +497,23 @@ const skillsData = [
         isInvisible:false
     },
     {
-        id:"jquery",
-        skillName:"jquery",
-        stars:1,
-        imgUrl:"./icons/jquery.png",
+        id:"bootstrap",
+        skillName:"Bootstrap",
+        stars:2,
+        imgUrl:"./icons/bootstrap.png",
         skillgroup:"advanceFrontend2",
         isInvisible:false
     },
     {
-        id:"nextjs",
-        skillName:"NextJs",
-        stars:1,
-        imgUrl:"./icons/next_js.png",
-        skillgroup:"advanceFrontend",
+        id:"material_ui",
+        skillName:"MUI",
+        stars:2,
+        imgUrl:"./icons/material_ui.png",
+        skillgroup:"advanceFrontend2",
         isInvisible:false
     },
+
+
 
     {
         id:"node",
@@ -719,18 +767,20 @@ const calculatePercent = () => {
         let stars = 0;
         const overall = group.querySelector('.overall');
         const skillRatings = group.querySelectorAll('.skillRating');
+        const skills = group.querySelector('.subSkills')
         skillRatings.forEach(rating=>{
             starText = rating.innerText;
 
             for(const char of starText){
                if(char === '⭐'){
-                stars +=1
+                stars++
                }
             }
         });
-        const total = group.childElementCount * 5;
+        const total = skills.childElementCount * 5;
         if(overall){
-            overall.innerText = `${Math.round((stars/total * 100) * 100) / 100}%`
+            // overall.innerText = `${Math.round((stars/total * 100) * 100) / 100}%`
+            overall.innerText = `${stars}/${total}`
         };
     });
 }
