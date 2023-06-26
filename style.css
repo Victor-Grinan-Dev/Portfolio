@@ -417,7 +417,8 @@ article h3, #contact, article h2{
 
 #portfolio,
 #schoolProjects,
-#personalProjects {
+#personalProjects,
+#internet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

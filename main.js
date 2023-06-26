@@ -156,10 +156,12 @@ scrollUp.addEventListener("click", topFunction);
 
 const schoolProjects = document.querySelector('.schoolProjects');
 const personalProjects = document.querySelector('.personalProjects');
+const internet = document.querySelector('#internet');
 
 const section = {
     schoolProjects:schoolProjects,
-    personalProjects:personalProjects
+    personalProjects:personalProjects,
+    internet:internet,
 }
 
 const projectsData=[
@@ -297,7 +299,117 @@ const projectsData=[
         "sectionId":"personalProjects",
         "repoLink":"the_cuban_show_ui",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
-    }
+    },
+    { 
+        "id":"tailwindGallery",
+        "title":"Tailwind Gallery",
+        "type":"secundary",
+        "link":"https://image-gallery-react-nu.vercel.app/",
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Tailwind learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"tailwindGallery",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"tailwindPrices",
+        "title":"Tailwind Price cards",
+        "type":"secundary",
+        "link":"https://card-price.vercel.app/",
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Tailwind learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"tailwindPrices",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"tailwindLogin",
+        "title":"Tailwind Login Modal",
+        "type":"secundary",
+        "link":"https://login-modal-rho.vercel.app/",
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Tailwind learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"tailwindLogin",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"tailwindProduct",
+        "title":"Tailwind Product Modal",
+        "type":"secundary",
+        "link":"https://product-modal-react.vercel.app/",
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Tailwind learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"tailwindProduct",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"tailwindLandingPage",
+        "title":"Tailwind Landing Page",
+        "type":"secundary",
+        "link":"https://landing-page-react-jet.vercel.app/",
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Tailwind learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"tailwindLandingPage",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"tailwindLoopstudios",
+        "title":"Loopstudios",
+        "type":"primary",
+        "link":"https://loopstodios-react.vercel.app/",
+        "imgUrl":"./images/loopstudios.png",
+        "description":"Tailwind learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"tailwindLandingPage",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"tailwindShortly",
+        "title":"Shortly",
+        "type":"primary",
+        "link":"https://shortly-react-nine.vercel.app/",
+        "imgUrl":"./images/shortly.png",
+        "description":"Tailwind learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"tailwindShortly",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"natour",
+        "title":"Natour",
+        "type":"secundary",
+        "link":"https://natour-eta.vercel.app/",
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Saas learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"natour",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"nexter",
+        "title":"Nexter",
+        "type":"secundary",
+        "link":"https://nexter-ui.vercel.app/",
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Saas learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"nexter",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"trillo",
+        "title":"Trillo",
+        "type":"secundary",
+        "link":"https://trillo-nu.vercel.app/",
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Saas learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"trillo",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
     // { 
     //     "id":"",
     //     "title":"",
@@ -319,7 +431,7 @@ class ProjectCard extends HTMLElement {
      * @param {* image url} imgUrl 
      * @param {* string } description 
      */
-	constructor (id, title, type, link, imgUrl, description, repoLink, repoSite, video) {
+	constructor (id, title, type, link, imgUrl, description, repoLink, repoSite) {
 		super();
 
         this.content =
