@@ -277,9 +277,10 @@ const projectsData=[
     },
     { 
         "id":"theGame",
-        "title":"The Game 🎥",
+        "title":"The Game",
         "type":"primary",
-        "link":"https://www.youtube.com/watch?v=YPBy4kEFNVQ",
+        "link":"https://classy-vacherin-e654f9.netlify.app/",
+        "video":"https://www.youtube.com/watch?v=YPBy4kEFNVQ",
         "imgUrl":"./images/the_game.png",
         "description":'Video of The game "Campaing Tracker"',
         "sectionId":"personalProjects",
@@ -318,7 +319,7 @@ class ProjectCard extends HTMLElement {
      * @param {* image url} imgUrl 
      * @param {* string } description 
      */
-	constructor (id, title, type, link, imgUrl, description, repoLink, repoSite) {
+	constructor (id, title, type, link, imgUrl, description, repoLink, repoSite, video) {
 		super();
 
         this.content =
@@ -338,6 +339,7 @@ class ProjectCard extends HTMLElement {
             <a href="${repoSite}${repoLink}" target="blank">
                 <img src="${repoSite.includes('github') ? './icons/github.png' : './icons/gitlab.png'}" alt="githubRepo" class="repoLink">
             </a>
+            
         </div>`;
 	}
 };
