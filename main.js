@@ -378,6 +378,39 @@ const projectsData=[
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
+        "id":"testimonialGrid",
+        "title":"Testimonial Grid",
+        "type":"secundary",
+        "link":"https://testimonial-grid-alpha.vercel.app/",
+        "imgUrl":"./images/testimonialGrid.png",
+        "description":"Tailwind learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"testimonialGrid",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"fylo",
+        "title":"Tailwind Fylo",
+        "type":"secundary",
+        "link":"/",
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Tailwind learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"fylo",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
+        "id":"bookmarkManager",
+        "title":"Testimonial Bookmark Manager",
+        "type":"secundary",
+        "link":"/",
+        "imgUrl":"./images/test_Img.jpg",
+        "description":"Tailwind learning exercise, no func.",
+        "sectionId":"internet",
+        "repoLink":"bookmarkManager",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+    },
+    { 
         "id":"natour",
         "title":"Saas Natour",
         "type":"secundary",
@@ -410,6 +443,7 @@ const projectsData=[
         "repoLink":"trillo",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
+
     // { 
     //     "id":"",
     //     "title":"",
