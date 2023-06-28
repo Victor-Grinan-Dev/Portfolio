@@ -303,7 +303,7 @@ const projectsData=[
     { 
         "id":"tailwindLoopstudios",
         "title":"Tailwind Loopstudios",
-        "type":"primary",
+        "type":"secundary",
         "link":"https://loopstodios-react.vercel.app/",
         "imgUrl":"./images/loopstudios.png",
         "description":"Tailwind learning exercise, no func.",
@@ -313,7 +313,7 @@ const projectsData=[
     },
     { 
         "id":"tailwindShortly",
-        "title":"Shortly",
+        "title":"Tailwind Shortly",
         "type":"secundary",
         "link":"https://shortly-react-nine.vercel.app/",
         "imgUrl":"./images/shortly.png",
@@ -402,7 +402,7 @@ const projectsData=[
     { 
         "id":"bookmarkManager",
         "title":"Tailwind Bookmark Manager",
-        "type":"secundary",
+        "type":"primary",
         "link":"https://bookmark-manager-react.vercel.app/",
         "imgUrl":"./images/bookmark.png",
         "description":"Tailwind learning exercise, no func.",
