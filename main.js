@@ -1077,6 +1077,12 @@ const allCertificate = [
         section:"onlineCertificates2",
     },
     {
+        id:"tailwind",
+        title:'Udemy - "Tailwind',
+        docLink:"./documents/udemy_tailwind.jpg",
+        section:"onlineCertificates2",
+    },
+    {
         id:"Entrepreneurship",
         title:'YH - "Entrepreneurship"',
         docLink:"./documents/2015_yrittaja_todistus.png",
