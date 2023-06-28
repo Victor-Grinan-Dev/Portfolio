@@ -174,7 +174,8 @@ const projectsData=[
         "description":"Getting familiar with HTML & CSS",
         "sectionId":"schoolProjects",
         "repoLink":"color_gradients",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["html", "js", "css"],
     },
     {
         "id":"speedGame",
@@ -185,7 +186,8 @@ const projectsData=[
         "description":"Using JS to handle the DOM",
         "sectionId":"schoolProjects",
         "repoLink":"speed_game",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["html", "js", "css"],
     },
     {
         "id":"keeperApp",
@@ -196,7 +198,8 @@ const projectsData=[
         "description":"Using local storage & MUI styling",
         "sectionId":"schoolProjects",
         "repoLink":"keeper_app",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react"],
     },
     {
         "id":"pokemons",
@@ -207,7 +210,8 @@ const projectsData=[
         "description":"My first react ever, fetch data",
         "sectionId":"schoolProjects",
         "repoLink":"react_pokemons ",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react"],
     },
     {
         "id":"foodApp",
@@ -219,7 +223,8 @@ const projectsData=[
         "description":"Pagination & Firebase CRUD",
         "sectionId":"schoolProjects",
         "repoLink":"food-app4",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "firebase"],
     },
     {
         "id":"countriesApp",
@@ -230,7 +235,8 @@ const projectsData=[
         "description":"Introduction to redux",
         "sectionId":"schoolProjects",
         "repoLink":"countries_app1",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react"],
     },
     {
         "id":"diceRoller",
@@ -241,7 +247,8 @@ const projectsData=[
         "description":"My first HTML, CSS & JS",
         "sectionId":"personalProjects",
         "repoLink":"diceRoller",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["html", "js", "css"],
     },
 
     { 
@@ -253,7 +260,8 @@ const projectsData=[
         "description":"first site for my Hobby group",
         "sectionId":"personalProjects",
         "repoLink":"blood_bowl_turn_timer",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["html", "js", "css"],
     },
     { 
         "id":"hexMap",
@@ -264,7 +272,8 @@ const projectsData=[
         "description":"Getting use to mapping in Js",
         "sectionId":"personalProjects",
         "repoLink":"map-creator",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["html", "js", "css"],
     },
     { 
         "id":"campaingTracker",
@@ -275,7 +284,8 @@ const projectsData=[
         "description":"Demo day project from school",
         "sectionId":"personalProjects",
         "repoLink":"campaign-tracker-demo",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react"],
     },
     { 
         "id":"theGame",
@@ -287,7 +297,8 @@ const projectsData=[
         "description":'Video of The game "Campaing Tracker"',
         "sectionId":"personalProjects",
         "repoLink":"the_game",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react"],
     },
     { 
         "id":"theCubanShow",
@@ -298,7 +309,8 @@ const projectsData=[
         "description":"First serious job for a friend (in progress)",
         "sectionId":"personalProjects",
         "repoLink":"the_cuban_show_ui",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "firebase"],
     },
     { 
         "id":"tailwindLoopstudios",
@@ -309,7 +321,8 @@ const projectsData=[
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"loopstudio-react",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "tailwind"],
     },
     { 
         "id":"tailwindShortly",
@@ -320,7 +333,8 @@ const projectsData=[
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"shortly-react",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "tailwind"],
     },
     { 
         "id":"tailwindGallery",
@@ -331,7 +345,8 @@ const projectsData=[
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"image-gallery-react",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "tailwind"],
     },
     { 
         "id":"tailwindPrices",
@@ -342,7 +357,8 @@ const projectsData=[
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"price-cards-react",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "tailwind"],
     },
     { 
         "id":"tailwindLogin",
@@ -353,7 +369,8 @@ const projectsData=[
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"login-modal-react",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "tailwind"],
     },
     { 
         "id":"tailwindProduct",
@@ -364,7 +381,8 @@ const projectsData=[
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"product-modal-react",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "tailwind"],
     },
     { 
         "id":"tailwindLandingPage",
@@ -375,7 +393,8 @@ const projectsData=[
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"landing-page-react",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "tailwind"],
     },
     { 
         "id":"testimonialGrid",
@@ -386,7 +405,8 @@ const projectsData=[
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"testimonial-grid",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "tailwind"],
     },
     { 
         "id":"fylo",
@@ -397,7 +417,8 @@ const projectsData=[
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"fylo-react",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "tailwind"],
     },
     { 
         "id":"bookmarkManager",
@@ -408,7 +429,8 @@ const projectsData=[
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"bookmark-manager-react",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["react", "tailwind"],
     },
     { 
         "id":"natour",
@@ -419,7 +441,8 @@ const projectsData=[
         "description":"Saas learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"natour",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["saas"],
     },
     { 
         "id":"nexter",
@@ -430,7 +453,8 @@ const projectsData=[
         "description":"Saas learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"nexter-ui",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["saas"],
     },
     { 
         "id":"trillo",
@@ -441,7 +465,8 @@ const projectsData=[
         "description":"Saas learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"trillo",
-        "repoSite":"https://github.com/Victor-Grinan-Dev/"
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "technologies":["saas"],
     },
 
     // { 
