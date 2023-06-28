@@ -649,12 +649,19 @@ div .project:hover {
    width: 200px;
 }
 
+.docLink{
+    filter:grayscale(1);
+ }
+
 .docLink:hover{
    box-shadow: 0 0 10px white;
+   transform:scale(1.1);
+   filter:grayscale(0);
 }
 
 .certView{
     display: flex;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
     text-decoration: none;
