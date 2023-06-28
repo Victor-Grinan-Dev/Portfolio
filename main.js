@@ -308,7 +308,7 @@ const projectsData=[
         "imgUrl":"./images/loopstudios.png",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"tailwindLandingPage",
+        "repoLink":"loopstudio-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
@@ -319,7 +319,7 @@ const projectsData=[
         "imgUrl":"./images/shortly.png",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"tailwindShortly",
+        "repoLink":"shortly-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
@@ -330,7 +330,7 @@ const projectsData=[
         "imgUrl":"./images/gallery.png",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"tailwindGallery",
+        "repoLink":"image-gallery-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
@@ -341,7 +341,7 @@ const projectsData=[
         "imgUrl":"./images/priceCards.png",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"tailwindPrices",
+        "repoLink":"price-cards-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
@@ -352,7 +352,7 @@ const projectsData=[
         "imgUrl":"./images/login.png",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"tailwindLogin",
+        "repoLink":"login-modal-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
@@ -363,7 +363,7 @@ const projectsData=[
         "imgUrl":"./images/product.png",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"tailwindProduct",
+        "repoLink":"product-modal-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
@@ -374,18 +374,18 @@ const projectsData=[
         "imgUrl":"./images/landing.png",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"tailwindLandingPage",
+        "repoLink":"landing-page-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
         "id":"testimonialGrid",
-        "title":"Testimonial Grid",
+        "title":"Tailwind Testimonial Grid",
         "type":"secundary",
         "link":"https://testimonial-grid-alpha.vercel.app/",
         "imgUrl":"./images/testimonialGrid.png",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"testimonialGrid",
+        "repoLink":"testimonial-grid",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
@@ -396,18 +396,18 @@ const projectsData=[
         "imgUrl":"./images/test_Img.jpg",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"fylo",
+        "repoLink":"fylo-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
         "id":"bookmarkManager",
-        "title":"Testimonial Bookmark Manager",
+        "title":"Tailwind Bookmark Manager",
         "type":"secundary",
         "link":"/",
         "imgUrl":"./images/test_Img.jpg",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"bookmarkManager",
+        "repoLink":"bookmark-manager-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
@@ -429,7 +429,7 @@ const projectsData=[
         "imgUrl":"./images/nexter.png",
         "description":"Saas learning exercise, no func.",
         "sectionId":"internet",
-        "repoLink":"nexter",
+        "repoLink":"nexter-ui",
         "repoSite":"https://github.com/Victor-Grinan-Dev/"
     },
     { 
