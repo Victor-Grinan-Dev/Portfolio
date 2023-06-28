@@ -302,7 +302,7 @@ const projectsData=[
     },
     { 
         "id":"tailwindLoopstudios",
-        "title":"Loopstudios",
+        "title":"Tailwind Loopstudios",
         "type":"primary",
         "link":"https://loopstodios-react.vercel.app/",
         "imgUrl":"./images/loopstudios.png",
@@ -314,7 +314,7 @@ const projectsData=[
     { 
         "id":"tailwindShortly",
         "title":"Shortly",
-        "type":"primary",
+        "type":"secundary",
         "link":"https://shortly-react-nine.vercel.app/",
         "imgUrl":"./images/shortly.png",
         "description":"Tailwind learning exercise, no func.",
@@ -391,7 +391,7 @@ const projectsData=[
     { 
         "id":"fylo",
         "title":"Tailwind Fylo",
-        "type":"secundary",
+        "type":"primary",
         "link":"https://vercel.com/victor-grinan-dev/fylo-react",
         "imgUrl":"./images/fylo.png",
         "description":"Tailwind learning exercise, no func.",
@@ -403,8 +403,8 @@ const projectsData=[
         "id":"bookmarkManager",
         "title":"Tailwind Bookmark Manager",
         "type":"secundary",
-        "link":"/",
-        "imgUrl":"./images/test_Img.jpg",
+        "link":"https://bookmark-manager-react.vercel.app/",
+        "imgUrl":"./images/bookmark.png",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"bookmark-manager-react",
