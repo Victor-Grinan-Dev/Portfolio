@@ -393,7 +393,7 @@ const projectsData=[
         "title":"Tailwind Fylo",
         "type":"secundary",
         "link":"https://vercel.com/victor-grinan-dev/fylo-react",
-        "imgUrl":"./images/test_Img.jpg",
+        "imgUrl":"./images/fylo.png",
         "description":"Tailwind learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"fylo-react",
