@@ -175,7 +175,8 @@ const projectsData=[
         "sectionId":"schoolProjects",
         "repoLink":"color_gradients",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["html", "js", "css"],
+        "framework":"html",
+        "technologies":["javascript", "css"],
     },
     {
         "id":"speedGame",
@@ -183,11 +184,12 @@ const projectsData=[
         "type":"secundary",
         "link":"https://victor-grinan-dev.github.io/speed_game/",
         "imgUrl":"./images/speedgame.JPG",
-        "description":"Using JS to handle the DOM",
+        "description":"Using javascript to handle the DOM",
         "sectionId":"schoolProjects",
         "repoLink":"speed_game",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["html", "js", "css"],
+        "framework":"html",
+        "technologies":["javascript", "css"],
     },
     {
         "id":"keeperApp",
@@ -199,7 +201,8 @@ const projectsData=[
         "sectionId":"schoolProjects",
         "repoLink":"keeper_app",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react"],
+        "framework":"react",
+        "technologies":["material_ui"],
     },
     {
         "id":"pokemons",
@@ -211,7 +214,8 @@ const projectsData=[
         "sectionId":"schoolProjects",
         "repoLink":"react_pokemons ",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react"],
+        "framework":"react",
+        "technologies":[],
     },
     {
         "id":"foodApp",
@@ -224,7 +228,8 @@ const projectsData=[
         "sectionId":"schoolProjects",
         "repoLink":"food-app4",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "firebase"],
+        "framework":"react",
+        "technologies":["firebase"],
     },
     {
         "id":"countriesApp",
@@ -236,7 +241,8 @@ const projectsData=[
         "sectionId":"schoolProjects",
         "repoLink":"countries_app1",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react"],
+        "framework":"react",
+        "technologies":["redux", "bootstrap"],
     },
     {
         "id":"diceRoller",
@@ -244,11 +250,12 @@ const projectsData=[
         "type":"secundary",
         "link":"https://victor-grinan-dev.github.io/diceRoller",
         "imgUrl":"./images/diceRoller.JPG",
-        "description":"My first HTML, CSS & JS",
+        "description":"My first HTML, CSS & javascript",
         "sectionId":"personalProjects",
         "repoLink":"diceRoller",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["html", "js", "css"],
+        "framework":"html",
+        "technologies":["javascript", "css"],
     },
 
     { 
@@ -261,7 +268,8 @@ const projectsData=[
         "sectionId":"personalProjects",
         "repoLink":"blood_bowl_turn_timer",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["html", "js", "css"],
+        "framework":"html",
+        "technologies":["javascript", "css"],
     },
     { 
         "id":"hexMap",
@@ -269,11 +277,12 @@ const projectsData=[
         "type":"secundary",
         "link":"https://victor-grinan-dev.github.io/map-creator/",
         "imgUrl":"./images/hexMap.JPG",
-        "description":"Getting use to mapping in Js",
+        "description":"Getting use to mapping in javascript",
         "sectionId":"personalProjects",
         "repoLink":"map-creator",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["html", "js", "css"],
+        "framework":"html",
+        "technologies":["javascript", "css"],
     },
     { 
         "id":"campaingTracker",
@@ -285,7 +294,8 @@ const projectsData=[
         "sectionId":"personalProjects",
         "repoLink":"campaign-tracker-demo",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react"],
+        "framework":"react",
+        "technologies":["redux"],
     },
     { 
         "id":"theGame",
@@ -298,7 +308,8 @@ const projectsData=[
         "sectionId":"personalProjects",
         "repoLink":"the_game",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react"],
+        "framework":"react",
+        "technologies":["redux"],
     },
     { 
         "id":"theCubanShow",
@@ -310,7 +321,8 @@ const projectsData=[
         "sectionId":"personalProjects",
         "repoLink":"the_cuban_show_ui",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "firebase"],
+        "framework":"react",
+        "technologies":["firebase", "redux"],
     },
     { 
         "id":"tailwindLoopstudios",
@@ -322,7 +334,8 @@ const projectsData=[
         "sectionId":"internet",
         "repoLink":"loopstudio-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "tailwind"],
+        "framework":"react",
+        "technologies":["tailwind"],
     },
     { 
         "id":"tailwindShortly",
@@ -334,7 +347,8 @@ const projectsData=[
         "sectionId":"internet",
         "repoLink":"shortly-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "tailwind"],
+        "framework":"react",
+        "technologies":["tailwind"],
     },
     { 
         "id":"tailwindGallery",
@@ -346,7 +360,8 @@ const projectsData=[
         "sectionId":"internet",
         "repoLink":"image-gallery-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "tailwind"],
+        "framework":"react",
+        "technologies":["tailwind"],
     },
     { 
         "id":"tailwindPrices",
@@ -358,7 +373,8 @@ const projectsData=[
         "sectionId":"internet",
         "repoLink":"price-cards-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "tailwind"],
+        "framework":"react",
+        "technologies":["tailwind"],
     },
     { 
         "id":"tailwindLogin",
@@ -370,7 +386,8 @@ const projectsData=[
         "sectionId":"internet",
         "repoLink":"login-modal-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "tailwind"],
+        "framework":"react",
+        "technologies":["tailwind"],
     },
     { 
         "id":"tailwindProduct",
@@ -382,7 +399,8 @@ const projectsData=[
         "sectionId":"internet",
         "repoLink":"product-modal-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "tailwind"],
+        "framework":"react", 
+        "technologies":["tailwind"],
     },
     { 
         "id":"tailwindLandingPage",
@@ -394,7 +412,8 @@ const projectsData=[
         "sectionId":"internet",
         "repoLink":"landing-page-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "tailwind"],
+        "framework":"react", 
+        "technologies":["tailwind"],
     },
     { 
         "id":"testimonialGrid",
@@ -406,7 +425,8 @@ const projectsData=[
         "sectionId":"internet",
         "repoLink":"testimonial-grid",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "tailwind"],
+        "framework":"react", 
+        "technologies":["tailwind"],
     },
     { 
         "id":"fylo",
@@ -418,7 +438,8 @@ const projectsData=[
         "sectionId":"internet",
         "repoLink":"fylo-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "tailwind"],
+        "framework":"react", 
+        "technologies":["tailwind"],
     },
     { 
         "id":"bookmarkManager",
@@ -430,43 +451,60 @@ const projectsData=[
         "sectionId":"internet",
         "repoLink":"bookmark-manager-react",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["react", "tailwind"],
+        "framework":"react", 
+        "technologies":["tailwind"],
     },
     { 
         "id":"natour",
-        "title":"Saas Natour",
+        "title":"Sass Natour",
         "type":"secundary",
         "link":"https://natour-eta.vercel.app/",
         "imgUrl":"./images/natour.png",
-        "description":"Saas learning exercise, no func.",
+        "description":"Sass learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"natour",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["saas"],
+        "framework":"html",
+        "technologies":["sass"],
     },
     { 
         "id":"nexter",
-        "title":"Saas Nexter",
+        "title":"Sass Nexter",
         "type":"secundary",
         "link":"https://nexter-ui.vercel.app/",
         "imgUrl":"./images/nexter.png",
-        "description":"Saas learning exercise, no func.",
+        "description":"Sass learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"nexter-ui",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["saas"],
+        "framework":"html",
+        "technologies":["sass"],
     },
     { 
         "id":"trillo",
-        "title":"Saas Trillo",
+        "title":"Sass Trillo",
         "type":"secundary",
         "link":"https://trillo-nu.vercel.app/",
         "imgUrl":"./images/trillo.png",
-        "description":"Saas learning exercise, no func.",
+        "description":"Sass learning exercise, no func.",
         "sectionId":"internet",
         "repoLink":"trillo",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
-        "technologies":["saas"],
+        "framework":"html",
+        "technologies":["sass"],
+    },
+    { 
+        "id":"first vue",
+        "title":"My First Vue",
+        "type":"secundary",
+        "link":"https://victor-grinan-dev.github.io/my-first-vue-app/",
+        "imgUrl":"./images/my_first_vue.png",
+        "description":"First steps in vue fram work using CDN.",
+        "sectionId":"internet",
+        "repoLink":"my-first-vue-app",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "framework":"vue",
+        "technologies":["html", "javascript", "css"]
     },
 
     // { 
@@ -490,7 +528,7 @@ class ProjectCard extends HTMLElement {
      * @param {* image url} imgUrl 
      * @param {* string } description 
      */
-	constructor (id, title, type, link, imgUrl, description, repoLink, repoSite) {
+	constructor (id, title, type, link, imgUrl, description, repoLink, repoSite, framework, technologies) {
 		super();
 
         this.content =
@@ -510,6 +548,14 @@ class ProjectCard extends HTMLElement {
             <a href="${repoSite}${repoLink}" target="blank">
                 <img src="${repoSite.includes('github') ? './icons/github.png' : './icons/gitlab.png'}" alt="githubRepo" class="repoLink">
             </a>
+
+           <div class="technologies-container">   
+            <img src="./icons/${framework}.png" alt="githubRepo" class="framework">
+            ${technologies.map((tech, i)=> (
+                ` <img key=${i} src="./icons/${tech}.png" alt="githubRepo" class="tecnologies">`
+            ))}
+           </div>
+           
             
         </div>`;
 	}
@@ -520,8 +566,8 @@ if ('customElements' in window) {
 };
 
 projectsData.forEach(project => {
-    const {id, title, type, link, imgUrl, description, sectionId, repoLink, repoSite} = project;
-    const newProject = new ProjectCard(id, title, type, link, imgUrl, description, repoLink, repoSite);
+    const {id, title, type, link, imgUrl, description, sectionId, repoLink, repoSite, framework, technologies} = project;
+    const newProject = new ProjectCard(id, title, type, link, imgUrl, description, repoLink, repoSite, framework, technologies);
     section[sectionId].innerHTML += newProject.content;
 });
 
@@ -619,10 +665,10 @@ const skillsData = [
     },
 
     // {
-    //     id:"nextjs",
-    //     skillName:"NextJs",
+    //     id:"nextjavascript",
+    //     skillName:"Nextjavascript",
     //     stars:1,
-    //     imgUrl:"./icons/next_js.png",
+    //     imgUrl:"./icons/next_javascript.png",
     //     skillgroup:"frameworks",
     //     isInvisible:false
     // },

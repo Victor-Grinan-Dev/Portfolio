@@ -377,6 +377,27 @@ footer {
     height: 35px;
     width: 35px;
 }
+.technologies-container{
+    margin-left:5px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 50%;
+    left: 0;
+}
+
+.framework{
+    height: 30px;
+    width: 30px;
+}
+
+
+.tecnologies{
+    height: 15px;
+    width: 15px;
+}
 
 .some{
     display: inline-block;
