@@ -499,7 +499,7 @@ const projectsData=[
         "type":"secundary",
         "link":"https://victor-grinan-dev.github.io/my-first-vue-app/",
         "imgUrl":"./images/my_first_vue.png",
-        "description":"First steps in vue fram work using CDN.",
+        "description":"First steps in vue framework using CDN.",
         "sectionId":"internet",
         "repoLink":"my-first-vue-app",
         "repoSite":"https://github.com/Victor-Grinan-Dev/",
@@ -1079,12 +1079,16 @@ if ('customElements' in window) {
 const mainCertificates = document.querySelector('.main-certificates');
 const onlineCertificates1 = document.querySelector('.online-certificates1');
 const onlineCertificates2 = document.querySelector('.online-certificates2');
+const onlineCertificates3 = document.querySelector('.online-certificates3');
+const onlineCertificates4 = document.querySelector('.online-certificates4');
 const othersCertificates = document.querySelector(".othersCertificates");
 
 const CertificateSections = {
     mainCertificates:mainCertificates,
     onlineCertificates1:onlineCertificates1,
     onlineCertificates2:onlineCertificates2,
+    onlineCertificates3:onlineCertificates3,
+    onlineCertificates4:onlineCertificates4,
     othersCertificates:othersCertificates,
 }
 
@@ -1139,21 +1143,27 @@ const allCertificate = [
     },
     {
         id:"css",
-        title:'Discount Courses - "CSS"',
+        title:'DCourses - "CSS"',
         docLink:"./documents/disc_courses_css.png",
-        section:"onlineCertificates2",
+        section:"onlineCertificates3",
+    },
+    {
+        id:"vue",
+        title:'DCourses - "Vue"',
+        docLink:"./documents/Vue_Fundamentals.png",
+        section:"onlineCertificates3",
     },
     {
         id:"sass",
         title:'Udemy - "Advanced CSS" - "SASS"',
         docLink:"./documents/udemy_advanced_sass.jpg",
-        section:"onlineCertificates2",
+        section:"onlineCertificates4",
     },
     {
         id:"tailwind",
         title:'Udemy - "Tailwind',
         docLink:"./documents/udemy_tailwind.jpg",
-        section:"onlineCertificates2",
+        section:"onlineCertificates4",
     },
     {
         id:"Entrepreneurship",
