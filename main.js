@@ -506,6 +506,19 @@ const projectsData=[
         "framework":"vue",
         "technologies":["html", "javascript", "css"]
     },
+    { 
+        "id":"random-user-generator-vue",
+        "title":"Random User Generator",
+        "type":"secundary",
+        "link":"https://random-user-generator-vue.vercel.app/",
+        "imgUrl":"./images/random-user-gen.png",
+        "description":"Fetching api in vue framework using CDN.",
+        "sectionId":"internet",
+        "repoLink":"random-user-generator-vue",
+        "repoSite":"https://github.com/Victor-Grinan-Dev/",
+        "framework":"vue",
+        "technologies":["html", "javascript", "css"]
+    },
 
     // { 
     //     "id":"",
