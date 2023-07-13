@@ -597,7 +597,7 @@ class ProjectCard extends HTMLElement {
             <img src="./icons/${framework}.png" alt="githubRepo" class="framework">
             ${technologies.map(
               (tech, i) =>
-                ` <img key=${i} src="./icons/${tech}.png" alt="githubRepo" class="tecnologies">`
+                ` <img key=${i} src="./icons/${tech}.png" alt="githubRepo" class="technologies">`
             )}
            </div>
            
