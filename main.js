@@ -159,18 +159,20 @@ scrollUp.addEventListener("click", topFunction);
 const schoolProjects = document.querySelector(".schoolProjects");
 const personalProjects = document.querySelector(".personalProjects");
 const internet = document.querySelector("#internet");
+const freelancer = document.querySelector("#freelancer");
 
 const section = {
   schoolProjects: schoolProjects,
   personalProjects: personalProjects,
   internet: internet,
+  freelancer: freelancer,
 };
 
 const projectsData = [
   {
     id: "gradients",
     title: "Gradients",
-    type: "secundary",
+    type: "primary",
     link: "https://victor-grinan-dev.github.io/color_gradients/",
     imgUrl: "./images/02gradients.JPG",
     description: "Getting familiar with HTML & CSS",
@@ -183,7 +185,7 @@ const projectsData = [
   {
     id: "speedGame",
     title: "Speed Game",
-    type: "secundary",
+    type: "primary",
     link: "https://victor-grinan-dev.github.io/speed_game/",
     imgUrl: "./images/speedgame.JPG",
     description: "Using javascript to handle the DOM",
@@ -196,7 +198,7 @@ const projectsData = [
   {
     id: "keeperApp",
     title: "Keeper App",
-    type: "secundary",
+    type: "primary",
     link: "https://jocular-tapioca-476ffa.netlify.app/",
     imgUrl: "./images/keeperApp.jpg",
     description: "Using local storage & MUI styling",
@@ -209,7 +211,7 @@ const projectsData = [
   {
     id: "pokemons",
     title: "Pokedex",
-    type: "secundary",
+    type: "primary",
     link: "https://victor-grinan-dev.github.io/react_pokemons/",
     imgUrl: "./images/pokemons.jpg",
     description: "My first react ever, fetch data",
@@ -249,7 +251,7 @@ const projectsData = [
   {
     id: "diceRoller",
     title: "Dice Roller",
-    type: "secundary",
+    type: "primary",
     link: "https://victor-grinan-dev.github.io/diceRoller",
     imgUrl: "./images/diceRoller.JPG",
     description: "My first HTML, CSS & javascript",
@@ -263,7 +265,7 @@ const projectsData = [
   {
     id: "turnTimer",
     title: "Turn Timer",
-    type: "secundary",
+    type: "primary",
     link: "https://victor-grinan-dev.github.io/blood_bowl_turn_timer/",
     imgUrl: "./images/turn_timer.JPG",
     description: "first site for my Hobby group",
@@ -276,7 +278,7 @@ const projectsData = [
   {
     id: "hexMap",
     title: "Hex Map",
-    type: "secundary",
+    type: "primary",
     link: "https://victor-grinan-dev.github.io/map-creator/",
     imgUrl: "./images/hexMap.JPG",
     description: "Getting use to mapping in javascript",
@@ -306,7 +308,7 @@ const projectsData = [
     link: "https://classy-vacherin-e654f9.netlify.app/",
     video: "https://www.youtube.com/watch?v=YPBy4kEFNVQ",
     imgUrl: "./images/the_game.png",
-    description: 'Video of The game "Campaing Tracker"',
+    description: 'The demo of the game "Campaing Tracker"',
     sectionId: "personalProjects",
     repoLink: "the_game",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
@@ -314,22 +316,50 @@ const projectsData = [
     technologies: ["redux"],
   },
   {
+    id: "40k-tool",
+    title: "40k-Tool",
+    type: "primary",
+    link: "https://40k-tool.vercel.app/",
+    video: "",
+    imgUrl: "./images/40ktool.png",
+    description: "Work in progress to help my gaming comunity",
+    sectionId: "personalProjects",
+    repoLink: "the_game",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "react",
+    technologies: ["redux", "sass"],
+  },
+  {
     id: "theCubanShow",
     title: "The Cuban Show",
-    type: "secundary",
+    type: "primary",
     link: "https://thecubanshow.com/",
     imgUrl: "./images/thecubanshow.png",
     description: "First serious job for a friend (in progress)",
-    sectionId: "personalProjects",
+    sectionId: "freelancer",
     repoLink: "the_cuban_show_ui",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["firebase", "redux"],
   },
   {
+    id: "Kerttu",
+    title: "Kerttu",
+    type: "primary",
+    link: "https://kerttu.vercel.app/",
+    video: "",
+    imgUrl: "./images/kerttu.png",
+    description: "A friend request for her daugther's bd",
+    sectionId: "freelancer",
+    repoLink: "the_game",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "Html",
+    technologies: ["javascript", "sass"],
+  },
+  {
     id: "tailwindLoopstudios",
     title: "Tailwind Loopstudios",
-    type: "secundary",
+    type: "primary",
     link: "https://loopstodios-react.vercel.app/",
     imgUrl: "./images/loopstudios.png",
     description: "Tailwind learning exercise, no func.",
@@ -342,7 +372,7 @@ const projectsData = [
   {
     id: "tailwindShortly",
     title: "Tailwind Shortly",
-    type: "secundary",
+    type: "primary",
     link: "https://shortly-react-nine.vercel.app/",
     imgUrl: "./images/shortly.png",
     description: "Tailwind learning exercise, no func.",
@@ -355,7 +385,7 @@ const projectsData = [
   {
     id: "tailwindGallery",
     title: "Tailwind Gallery",
-    type: "secundary",
+    type: "primary",
     link: "https://image-gallery-react-nu.vercel.app/",
     imgUrl: "./images/gallery.png",
     description: "Tailwind learning exercise, no func.",
@@ -368,7 +398,7 @@ const projectsData = [
   {
     id: "tailwindPrices",
     title: "Tailwind Price cards",
-    type: "secundary",
+    type: "primary",
     link: "https://card-price.vercel.app/",
     imgUrl: "./images/priceCards.png",
     description: "Tailwind learning exercise, no func.",
@@ -381,7 +411,7 @@ const projectsData = [
   {
     id: "tailwindLogin",
     title: "Tailwind Login Modal",
-    type: "secundary",
+    type: "primary",
     link: "https://login-modal-rho.vercel.app/",
     imgUrl: "./images/login.png",
     description: "Tailwind learning exercise, no func.",
@@ -394,7 +424,7 @@ const projectsData = [
   {
     id: "tailwindProduct",
     title: "Tailwind Product Modal",
-    type: "secundary",
+    type: "primary",
     link: "https://product-modal-react.vercel.app/",
     imgUrl: "./images/product.png",
     description: "Tailwind learning exercise, no func.",
@@ -407,7 +437,7 @@ const projectsData = [
   {
     id: "tailwindLandingPage",
     title: "Tailwind Landing Page",
-    type: "secundary",
+    type: "primary",
     link: "https://landing-page-react-jet.vercel.app/",
     imgUrl: "./images/landing.png",
     description: "Tailwind learning exercise, no func.",
@@ -420,7 +450,7 @@ const projectsData = [
   {
     id: "testimonialGrid",
     title: "Tailwind Testimonial Grid",
-    type: "secundary",
+    type: "primary",
     link: "https://testimonial-grid-alpha.vercel.app/",
     imgUrl: "./images/testimonialGrid.png",
     description: "Tailwind learning exercise, no func.",
@@ -459,7 +489,7 @@ const projectsData = [
   {
     id: "natour",
     title: "Sass Natour",
-    type: "secundary",
+    type: "primary",
     link: "https://natour-eta.vercel.app/",
     imgUrl: "./images/natour.png",
     description: "Sass learning exercise, no func.",
@@ -472,7 +502,7 @@ const projectsData = [
   {
     id: "nexter",
     title: "Sass Nexter",
-    type: "secundary",
+    type: "primary",
     link: "https://nexter-ui.vercel.app/",
     imgUrl: "./images/nexter.png",
     description: "Sass learning exercise, no func.",
@@ -485,7 +515,7 @@ const projectsData = [
   {
     id: "trillo",
     title: "Sass Trillo",
-    type: "secundary",
+    type: "primary",
     link: "https://trillo-nu.vercel.app/",
     imgUrl: "./images/trillo.png",
     description: "Sass learning exercise, no func.",
@@ -498,7 +528,7 @@ const projectsData = [
   {
     id: "first vue",
     title: "My First Vue",
-    type: "secundary",
+    type: "primary",
     link: "https://victor-grinan-dev.github.io/my-first-vue-app/",
     imgUrl: "./images/my_first_vue.png",
     description: "First steps in vue framework using CDN.",
@@ -511,7 +541,7 @@ const projectsData = [
   {
     id: "random-user-generator-vue",
     title: "Random User Generator",
-    type: "secundary",
+    type: "primary",
     link: "https://random-user-generator-vue.vercel.app/",
     imgUrl: "./images/random-user-gen.png",
     description: "Fetching api in vue framework using CDN.",
@@ -524,7 +554,7 @@ const projectsData = [
   {
     id: "vue_monster_slayer",
     title: "Monster Slayer",
-    type: "secundary",
+    type: "primary",
     link: "https://vue-monster-slayer-beta.vercel.app/",
     imgUrl: "./images/vue-monster-slayer.png",
     description: "Dominating the DOM with Vue.",
@@ -545,6 +575,25 @@ const projectsData = [
   //     "sectionId":""
   // }
 ];
+
+/* Accordion handler */
+const accordion = document.getElementsByClassName("accordion");
+const allPanels = document.querySelectorAll(".panel");
+
+for (let i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function (e) {
+    const panel = this.nextElementSibling;
+    for (let onePanel of allPanels) {
+      if (onePanel !== this.nextElementSibling) onePanel.style.maxHeight = null;
+    }
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
 
 class ProjectCard extends HTMLElement {
   /**
@@ -569,6 +618,34 @@ class ProjectCard extends HTMLElement {
     technologies
   ) {
     super();
+
+    this.internetContent = `
+    <div class="internetProjectsContainer" id=${id}>
+      <div class="small-img-container">
+          <a href=${link}>
+            <img src=${imgUrl} alt=${id} class="small-project-img">
+          </a>
+      </div>
+      <div class="small-tech-container">
+      <img src="./icons/${framework}.png" alt="githubRepo" class="small-framework">
+      ${technologies.map(
+        (tech, i) =>
+          `<img key=${i} src="./icons/${tech}.png" alt=${tech} class="small-tech-img">`
+      )}
+      </div>
+      
+          <a href=${link}><p class="small-project-title">${title}</p></a>
+      
+      
+      <a href="${repoSite}${repoLink}" target="blank">
+          <img src="${
+            repoSite.includes("github")
+              ? "./icons/github.png"
+              : "./icons/gitlab.png"
+          }" alt="${repoSite}" class="small-tech-img">
+      </a>
+    </div>
+    `;
 
     this.content = `<div class="project ${type} flip-in ${
       type === "secundary" ? "invisible" : ""
@@ -636,7 +713,11 @@ projectsData.forEach((project) => {
     framework,
     technologies
   );
-  section[sectionId].innerHTML += newProject.content;
+  if (sectionId === "internet") {
+    section[sectionId].innerHTML += newProject.internetContent;
+  } else {
+    section[sectionId].innerHTML += newProject.content;
+  }
 });
 
 //hide/show projects
@@ -646,17 +727,17 @@ const projects = document.querySelectorAll(".projects");
 
 let is_showing = false;
 
-const showAllProjects = () => {
-  is_showing = !is_showing;
-  for (let proj of secundaries) {
-    proj.classList.toggle("invisible");
-  }
-  is_showing
-    ? (showAllBtn.textContent = "Show less")
-    : (showAllBtn.textContent = "Show all");
-};
+// const showAllProjects = () => {
+//   is_showing = !is_showing;
+//   for (let proj of secundaries) {
+//     proj.classList.toggle("invisible");
+//   }
+//   is_showing
+//     ? (showAllBtn.textContent = "Show less")
+//     : (showAllBtn.textContent = "Show all");
+// };
 
-showAllBtn.addEventListener("click", showAllProjects);
+// showAllBtn.addEventListener("click", showAllProjects);
 
 /* Skill functions */
 const basicFrontend = document.querySelector("#basicFrontend div");
