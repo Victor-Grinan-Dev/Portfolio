@@ -259,6 +259,10 @@ nav ul li a:hover {
   visibility: hidden;
 }
 
+.hand-write {
+  text-shadow: 5px 5px 5px black;
+}
+
 /*back up btn*/
 #up {
   bottom: 20px;
@@ -517,14 +521,22 @@ article h3,
 article h2,
 #contact {
   /* color: var(--highlight); */
-  font-family: var(--hand-write);
+  font-family: var(--logo-font);
   font-size: 50px;
-  text-shadow: 0 0 10px var(--highlight);
+  text-shadow: 0 0 10px black;
 }
 
 /*PROJECT*/
 #projectsArticle {
   background-color: rgb(33, 56, 71);
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: white;
+}
+.portfolio-link:hover {
+  color: white;
 }
 
 #portfolio,
