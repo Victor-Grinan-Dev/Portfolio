@@ -637,7 +637,7 @@ class ProjectCard extends HTMLElement {
     this.internetContent = `
     <div class="internetProjectsContainer" id=${id}>
       <div class="small-img-container">
-          <a href=${link}>
+          <a href=${link} target='blank'>
             <img src=${imgUrl} alt=${id} class="small-project-img">
           </a>
       </div>
