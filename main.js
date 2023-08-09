@@ -579,6 +579,19 @@ const projectsData = [
     framework: "vue",
     technologies: ["html", "javascript", "css"],
   },
+  {
+    id: "resource_manager",
+    title: "Resource Manager",
+    type: "primary",
+    link: "https://resource-manager-xi.vercel.app/",
+    imgUrl: "./images/vue-resorce-manager.png",
+    description: "Learning components and app structure in Vue.",
+    sectionId: "internet",
+    repoLink: "resource-manager",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "vue",
+    technologies: ["html", "javascript", "css"],
+  },
 
   // {
   //     "id":"",
@@ -692,8 +705,6 @@ class ProjectCard extends HTMLElement {
                 ` <img key=${i} src="./icons/${tech}.png" alt="githubRepo" class="technologies">`
             )}
            </div>
-           
-            
         </div>`;
   }
 }
