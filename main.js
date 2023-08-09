@@ -592,6 +592,19 @@ const projectsData = [
     framework: "vue",
     technologies: ["html", "javascript", "css"],
   },
+  {
+    id: "survey_app",
+    title: "Survey App",
+    type: "primary",
+    link: "https://survey-app-lyart-ten.vercel.app/",
+    imgUrl: "./images/survey-app.png",
+    description: "POST & GET from Firebase DB",
+    sectionId: "internet",
+    repoLink: "survey-app",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "vue",
+    technologies: ["html", "javascript", "css", "axios", "firebase"],
+  },
 
   // {
   //     "id":"",
