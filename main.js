@@ -219,7 +219,7 @@ const projectsData = [
     repoLink: "react_pokemons ",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
-    technologies: [],
+    technologies: ["axios"],
   },
   {
     id: "foodApp",
@@ -233,7 +233,7 @@ const projectsData = [
     repoLink: "food-app4",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
-    technologies: ["firebase"],
+    technologies: ["axios", "firebase"],
   },
   {
     id: "countriesApp",
@@ -246,7 +246,7 @@ const projectsData = [
     repoLink: "countries_app1",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
-    technologies: ["redux", "bootstrap"],
+    technologies: ["redux", "axios", "bootstrap"],
   },
   {
     id: "diceRoller",
@@ -355,7 +355,7 @@ const projectsData = [
     repoLink: "the_cuban_show_ui",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
-    technologies: ["firebase", "redux"],
+    technologies: ["firebase", "axios", "redux"],
   },
   {
     id: "Kerttu",
