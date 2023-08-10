@@ -613,7 +613,7 @@ const projectsData = [
     imgUrl: "./images/teams-&-users.png",
     description: "Routing in Vue",
     sectionId: "internet",
-    repoLink: "teams-&-users",
+    repoLink: "teams---users",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css", "axios", "firebase"],
