@@ -605,6 +605,19 @@ const projectsData = [
     framework: "vue",
     technologies: ["html", "javascript", "css", "axios", "firebase"],
   },
+  {
+    id: "teams-&-users",
+    title: "Teams & Users",
+    type: "primary",
+    link: "https://teams-users.vercel.app/",
+    imgUrl: "./images/teams-&-users.png",
+    description: "Routing in Vue",
+    sectionId: "internet",
+    repoLink: "teams-&-users",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "vue",
+    technologies: ["html", "javascript", "css", "axios", "firebase"],
+  },
 
   // {
   //     "id":"",
