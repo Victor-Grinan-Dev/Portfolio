@@ -368,8 +368,8 @@ const projectsData = [
     sectionId: "freelancer",
     repoLink: "the_game",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
-    framework: "Html",
-    technologies: ["javascript", "sass"],
+    framework: "html",
+    technologies: ["js", "sass"],
   },
   {
     id: "tailwindLoopstudios",
