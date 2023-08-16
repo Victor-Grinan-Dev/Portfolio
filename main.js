@@ -369,7 +369,7 @@ const projectsData = [
     repoLink: "the_game",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
-    technologies: ["js", "sass"],
+    technologies: ["javascript", "sass"],
   },
   {
     id: "tailwindLoopstudios",
