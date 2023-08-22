@@ -631,6 +631,19 @@ const projectsData = [
     framework: "vue",
     technologies: ["html", "javascript", "css"],
   },
+  {
+    id: "vuex_online_store",
+    title: "Vue Online Store",
+    type: "primary",
+    link: "https://vuex-online-store.vercel.app/products",
+    imgUrl: "./images/vuex-online-store.png",
+    description: "Learning VUEX",
+    sectionId: "internet",
+    repoLink: "vuex-online-store",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "vue",
+    technologies: ["vuex", "html", "javascript", "css"],
+  },
 
   // {
   //     "id":"",
