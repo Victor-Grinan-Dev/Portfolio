@@ -652,7 +652,7 @@ const projectsData = [
     imgUrl: "./images/vue_coach_finder.png",
     description: "Learning VUEX",
     sectionId: "internet",
-    repoLink: "vuex-online-store",
+    repoLink: "project-06-coach-finder-vue",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["vuex", "html", "javascript", "css"],
