@@ -181,6 +181,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["javascript", "css"],
+    deployed:'github'
   },
   // {
   //   id: "speedGame",
@@ -194,6 +195,7 @@ const projectsData = [
   //   repoSite: "https://github.com/Victor-Grinan-Dev/",
   //   framework: "html",
   //   technologies: ["javascript", "css"],
+  // deployed:'github'
   // },
   {
     id: "keeperApp",
@@ -207,6 +209,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["material_ui"],
+    deployed:'netlify'
   },
   {
     id: "pokemons",
@@ -220,6 +223,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["axios"],
+    deployed:'github'
   },
   {
     id: "foodApp",
@@ -234,6 +238,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["axios", "firebase"],
+    deployed:'netlify'
   },
   {
     id: "countriesApp",
@@ -247,6 +252,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["redux", "axios", "bootstrap"],
+    deployed:'github'
   },
   {
     id: "diceRoller",
@@ -260,6 +266,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["javascript", "css"],
+    deployed:'github'
   },
 
   {
@@ -274,6 +281,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["javascript", "css"],
+    deployed:'github'
   },
   {
     id: "hexMap",
@@ -287,6 +295,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["javascript", "css"],
+    deployed:'github'
   },
   {
     id: "mapCreator",
@@ -301,6 +310,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["redux"],
+    deployed:'netlify'
   },
   // {
   //   id: "unit_creator",
@@ -315,6 +325,7 @@ const projectsData = [
   //   repoSite: "https://github.com/Victor-Grinan-Dev/",
   //   framework: "react",
   //   technologies: ["redux"],
+  //   deployed:'netlify'
   // },
   {
     id: "theGame",
@@ -329,6 +340,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["redux"],
+    deployed:'netlify'
   },
   {
     id: "40k-tool",
@@ -343,6 +355,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["redux", "sass"],
+    deployed:'vercel'
   },
   {
     id: "theCubanShow",
@@ -356,6 +369,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["firebase", "axios", "redux"],
+    deployed:'netlify'
   },
   {
     id: "Kerttu",
@@ -370,6 +384,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["javascript", "sass"],
+    deployed:'vercel'
   },
   {
     id: "tailwindLoopstudios",
@@ -383,6 +398,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
+    deployed:'vercel'
   },
   {
     id: "tailwindShortly",
@@ -396,6 +412,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
+    deployed:'vercel'
   },
   {
     id: "tailwindGallery",
@@ -409,6 +426,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
+    deployed:'vercel'
   },
   {
     id: "tailwindPrices",
@@ -422,6 +440,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
+    deployed:'vercel'
   },
   {
     id: "tailwindLogin",
@@ -435,6 +454,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
+    deployed:'vercel'
   },
   {
     id: "tailwindProduct",
@@ -448,6 +468,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
+    deployed:'vercel'
   },
   {
     id: "tailwindLandingPage",
@@ -461,6 +482,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
+    deployed:'vercel'
   },
   {
     id: "testimonialGrid",
@@ -474,6 +496,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
+    deployed:'vercel'
   },
   {
     id: "fylo",
@@ -487,6 +510,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
+    deployed:'vercel'
   },
   {
     id: "bookmarkManager",
@@ -500,6 +524,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
+    deployed:'vercel'
   },
   {
     id: "natour",
@@ -513,6 +538,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["sass"],
+    deployed:'vercel'
   },
   {
     id: "nexter",
@@ -526,6 +552,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["sass"],
+    deployed:'vercel'
   },
   {
     id: "trillo",
@@ -539,6 +566,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["sass"],
+    deployed:'vercel'
   },
   {
     id: "first vue",
@@ -552,6 +580,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css"],
+    deployed:'github'
   },
   {
     id: "random-user-generator-vue",
@@ -565,6 +594,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css"],
+    deployed:'vercel'
   },
   {
     id: "vue_monster_slayer",
@@ -578,6 +608,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/vue_guide/tree/main/",
     framework: "vue",
     technologies: ["html", "javascript", "css"],
+    deployed:'vercel'
   },
   {
     id: "resource_manager",
@@ -591,6 +622,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css"],
+    deployed:'vercel'
   },
   {
     id: "survey_app",
@@ -604,6 +636,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css", "axios", "firebase"],
+    deployed:'vercel'
   },
   // {
   //   id: "teams-&-users",
@@ -617,6 +650,7 @@ const projectsData = [
   //   repoSite: "https://github.com/Victor-Grinan-Dev/",
   //   framework: "vue",
   //   technologies: ["html", "javascript", "css", "axios", "firebase"],
+  //   deployed:'vercel'
   // },
   {
     id: "vue_animations",
@@ -630,6 +664,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css"],
+    deployed:'vercel'
   },
   {
     id: "vuex_online_store",
@@ -643,19 +678,22 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["vuex", "html", "javascript", "css"],
+    deployed:'vercel'
   },
   {
     id: "vuex_coach_finder",
     title: "Vue Coach Finder",
     type: "primary",
-    link: "https://vue-coach-finder.vercel.app/coaches",
+    link: "https://coaches-fdce3.web.app/coaches",
+    // link: "https://vue-coach-finder.vercel.app/coaches",
     imgUrl: "./images/vue_coach_finder.png",
     description: "Learning VUEX",
     sectionId: "internet",
     repoLink: "project-06-coach-finder-vue",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
-    technologies: ["vuex", "html", "javascript", "css"],
+    technologies: ["vuex", "html", "javascript", "css", "firebase"],
+    deployed:'vercel'
   },
   // {
   //     "id":"",
@@ -707,7 +745,8 @@ class ProjectCard extends HTMLElement {
     repoLink,
     repoSite,
     framework,
-    technologies
+    technologies,
+    deployed
   ) {
     super();
 
@@ -719,11 +758,12 @@ class ProjectCard extends HTMLElement {
           </a>
       </div>
       <div class="small-tech-container">
-      <img src="./icons/${framework}.png" alt="githubRepo" class="small-framework">
+      <img src="./icons/${framework}.png" alt="githubRepo" class="tiny-framework">
       ${technologies.map(
         (tech, i) =>
-          `<img key=${i} src="./icons/${tech}.png" alt=${tech} class="small-tech-img">`
+          `<img key=${i} src="./icons/${tech}.png" alt=${tech} class="tiny-tech-img">`
       )}
+      <img  src="./icons/${deployed}.png" alt=${deployed} class="tiny-tech-img">
       </div>
       
           <a href=${link}><p class="small-project-title">${title}</p></a>
@@ -790,6 +830,7 @@ projectsData.forEach((project) => {
     repoSite,
     framework,
     technologies,
+    deployed,
   } = project;
   const newProject = new ProjectCard(
     id,
@@ -801,7 +842,8 @@ projectsData.forEach((project) => {
     repoLink,
     repoSite,
     framework,
-    technologies
+    technologies,
+    deployed,
   );
   if (sectionId === "internet") {
     section[sectionId].innerHTML += newProject.internetContent;
