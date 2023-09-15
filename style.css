@@ -376,6 +376,37 @@ button {
   padding: 3px;
   box-shadow: 0 0 5px black;
 }
+
+.internet-filters{
+  width: 100vw;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.filter-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3px;
+}
+
+.filter-all{
+  padding: 2px 5px;
+  border-radius: 2px;
+  background-color: var(--level-5);
+}
+
+.active{
+  background-color: var(--highlight);
+}
+/* .filter-item:hover{
+  background-color: var(--highlight);
+} */
+
 .internetProjectsContainer a {
   text-decoration: none;
   text-align: center;
