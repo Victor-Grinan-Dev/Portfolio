@@ -256,7 +256,7 @@ nav ul li a:hover {
 }
 
 .invisible {
-  visibility: hidden;
+  display: none;
 }
 
 .hand-write {
@@ -376,6 +376,47 @@ button {
   padding: 3px;
   box-shadow: 0 0 5px black;
 }
+.internetContent{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: aquamarine; */
+}
+.internet-filters{
+  width: 100vw;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.filter-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3px;
+}
+
+.filter-all{
+  padding: 2px 5px;
+  border-radius: 2px;
+  background-color: var(--level-5);
+}
+
+.active{
+  background-color: var(--highlight);
+}
+/* .filter-item:hover{
+  background-color: var(--highlight);
+} */
+
+.scrollable{
+  overflow-y: scroll;
+}
+
+/*internet cards*/
 .internetProjectsContainer a {
   text-decoration: none;
   text-align: center;
@@ -473,6 +514,35 @@ footer {
   height: 35px;
   width: 35px;
 }
+
+.deployTech
+{
+  position: absolute;
+  right: 45px;
+  bottom: 18px;
+  height: 15px;
+  width: 15px;
+}
+
+.deployedLink{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(156, 156, 156, 0.362);
+  border-radius: 10px;
+}
+
+.tiny-text{
+  color: black;
+  font-size: 6px;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 .technologies-container {
   margin-left: 5px;
   position: absolute;
@@ -875,3 +945,4 @@ div .project:hover {
   align-items: center;
   justify-content: center;
 }
+
