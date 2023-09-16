@@ -868,7 +868,6 @@ const selectChilds = (filterParam) => {
       if(filterParam === 'all'){
         child.classList.remove('invisible');
       }else if(child.classList.contains(filterParam)){
-        console.log(child.id)
         child.classList.remove('invisible');
       }else{
         child.classList.add('invisible');
