@@ -515,13 +515,34 @@ footer {
   width: 35px;
 }
 
-.deployedLink{
+.deployTech
+{
   position: absolute;
-  bottom: 5px;
-  right: 35px;
+  right: 45px;
+  bottom: 18px;
   height: 15px;
   width: 15px;
 }
+
+.deployedLink{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(156, 156, 156, 0.362);
+  border-radius: 10px;
+}
+
+.tiny-text{
+  color: black;
+  font-size: 6px;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 .technologies-container {
   margin-left: 5px;
   position: absolute;
@@ -924,3 +945,4 @@ div .project:hover {
   align-items: center;
   justify-content: center;
 }
+
