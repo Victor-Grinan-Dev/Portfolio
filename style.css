@@ -256,7 +256,7 @@ nav ul li a:hover {
 }
 
 .invisible {
-  visibility: hidden;
+  display: none;
 }
 
 .hand-write {

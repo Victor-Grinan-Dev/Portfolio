@@ -154,11 +154,11 @@ function topFunction() {
 // menuBtn.addEventListener('blur', removeShow);
 
 scrollUp.addEventListener("click", topFunction);
-/* Portfolio Projects */
 
+/* Portfolio Projects */
 const schoolProjects = document.querySelector(".schoolProjects");
 const personalProjects = document.querySelector(".personalProjects");
-const internet = document.querySelector("#internet");
+const internet = document.querySelector("#internetProjects");
 const freelancer = document.querySelector("#freelancer");
 
 const section = {
@@ -168,6 +168,7 @@ const section = {
   freelancer: freelancer,
 };
 
+//TODO: move projects data to database
 const projectsData = [
   {
     id: "gradients",
@@ -751,7 +752,7 @@ class ProjectCard extends HTMLElement {
     super();
 
     this.internetContent = `
-    <div class="internetProjectsContainer" id=${id}>
+    <div class="internetProjectsContainer intChild ${framework} ${technologies.map(tech=>(` ${tech}`))}" id=${id}>
       <div class="small-img-container">
           <a href=${link} target='blank'>
             <img src=${imgUrl} alt=${id} class="small-project-img">
@@ -801,6 +802,12 @@ class ProjectCard extends HTMLElement {
                     : "./icons/gitlab.png"
                 }" alt="githubRepo" class="repoLink">
             </a>
+            <span class="deployTech">
+              <a href="https://${deployed}.com/" target="blank" class="deployedLink">  
+                <p class="tiny-text">deploy</p>              
+                <img  src="./icons/${deployed}.png" alt=${deployed} class="tiny-tech-img ">
+              </a>
+            </span>
 
            <div class="technologies-container">   
             <img src="./icons/${framework}.png" alt="githubRepo" class="framework">
@@ -843,7 +850,7 @@ projectsData.forEach((project) => {
     repoSite,
     framework,
     technologies,
-    deployed,
+    deployed,  
   );
   if (sectionId === "internet") {
     section[sectionId].innerHTML += newProject.internetContent;
@@ -852,6 +859,31 @@ projectsData.forEach((project) => {
   }
 });
 
+
+const techFilters = document.querySelectorAll('.tech_filter');
+
+const selectChilds = (filterParam) => {
+  const internetChilds = document.querySelectorAll('.intChild')
+    internetChilds.forEach(child => {
+      if(filterParam === 'all'){
+        child.classList.remove('invisible');
+      }else if(child.classList.contains(filterParam)){
+        console.log(child.id)
+        child.classList.remove('invisible');
+      }else{
+        child.classList.add('invisible');
+      }
+    });
+}
+
+const changeFilter = (value) => {
+  selectChilds(value);
+}
+
+techFilters.forEach(techFilter => {
+  techFilter.addEventListener('change', ()=>changeFilter(techFilter.value));
+})
+
 //hide/show projects
 const showAllBtn = document.querySelector("#showAll");
 const secundaries = document.querySelectorAll(".secundary");
@@ -859,17 +891,7 @@ const projects = document.querySelectorAll(".projects");
 
 let is_showing = false;
 
-// const showAllProjects = () => {
-//   is_showing = !is_showing;
-//   for (let proj of secundaries) {
-//     proj.classList.toggle("invisible");
-//   }
-//   is_showing
-//     ? (showAllBtn.textContent = "Show less")
-//     : (showAllBtn.textContent = "Show all");
-// };
-
-// showAllBtn.addEventListener("click", showAllProjects);
+//TODO: a show all projects at once feature with search and filter
 
 /* Skill functions */
 const basicFrontend = document.querySelector("#basicFrontend div");
@@ -901,7 +923,7 @@ const skillGroups = {
   cicd: cicd,
   otherSkills: otherSkills,
 };
-
+//todo: move skills data to database
 const skillsData = [
   {
     id: "html",
@@ -1280,7 +1302,6 @@ const calculatePercent = () => {
     });
     const total = skills.childElementCount * 5;
     if (overall) {
-      // overall.innerText = `${Math.round((stars/total * 100) * 100) / 100}%`
       overall.innerText = `${stars}/${total}`;
     }
   });
@@ -1376,6 +1397,8 @@ const CertificateSections = {
   onlineCertificates4: onlineCertificates4,
   othersCertificates: othersCertificates,
 };
+
+//todo: move certificates to database
 
 const allCertificate = [
   {

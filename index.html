@@ -166,52 +166,44 @@
                 <div id="freelancer" class='freelancer panel'></div>
 
                 <h3 class="accordion" id='portfolioTitle'> <a href="#portfolio" class="portfolio-link"> Other Internet Projects > </a> </h3>
-                <div id="internet" class='internet panel'>
+                <div id="internet" class='panel '>
                     <div class='internet-filters' >
-                        <span class='filter-item'>
-                        <div class="filter-all active">All</div>
-                       </span> 
+                      
+                       <span class='filter-item'>
+                        <label for="react">All</label>
+                         <input type="radio" class='tech_filter' name='tech_filter' value='all' checked>
+                       </span>
                        <span class='filter-item'>
                         <img src="./icons/react.png" alt="filter-img" class='tiny-tech-img'>
                         <label for="react">React</label>
-                         <input name='react' type="checkbox">
+                         <input type="radio" class='tech_filter' name='tech_filter' value='react'>
                        </span> 
                        <span class='filter-item'>
                          <img src="./icons/tailwind.png" alt="filter-img" class='tiny-tech-img'>
                          <label for="tailwind">Tailwind</label>
-                         <input name='tailwind' type="checkbox">
+                         <input type="radio" class='tech_filter' name='tech_filter' value='tailwind'>
                        </span>
                         <span class='filter-item'>
                              <img src="./icons/sass.png" alt="filter-img" class='tiny-tech-img'>
                          <label for="scss">SCSS</label>
-                         <input name='scss' type="checkbox">
+                         <input  type="radio" class='tech_filter' name='tech_filter' value='sass'>
                        </span>
                         <span class='filter-item'>
                              <img src="./icons/vue.png" alt="filter-img" class='tiny-tech-img'>
                          <label for="vue">Vue</label>
-                         <input name='vue' type="checkbox">
+                         <input type="radio" class='tech_filter' name='tech_filter' value='vue'>
                        </span>
-                        <span class='filter-item'>
+                    <!--
+                                            <span class='filter-item'>
                              <img src="./icons/vuex.png" alt="filter-img" class='tiny-tech-img'>
                          <label for="vuex">Vuex</label>
-                         <input name='vuex' type="checkbox">
+                         <input name='vuex' type="radio" name='tech_filter' value='vuex'>
                        </span>
+                    -->
                     </div>
-<!--                    <div class="internetProjectsContainer">
-                        <div class="small-img-container">
-                            <a href="/"><img src="/images/test_Img.jpg" alt="test" class="small-project-img"></a>
-                        </div>
-                        <div class="small-tech-container">
-                            <img src="/icons/html.png" alt="html" class="small-tech-img">
-                            <img src="/icons/javascript.png" alt="js" class="small-tech-img">
-                            <img src="/icons/css.png" alt="css" class="small-tech-img">
-                        </div>
-                        
-                            <a href="/"><p class="small-project-title">internet name</p></a>
-                        
-                        <a href="/"><img src="/icons/github.png" alt="css" class="small-tech-img"></a>
-                    
-                    </div>-->
+                    <div id="internetProjects" class='internet'>
+                        <!-- INTERNET PROJECTS -->
+                    </div>
                 </div>
 
             </article>
