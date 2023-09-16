@@ -376,7 +376,12 @@ button {
   padding: 3px;
   box-shadow: 0 0 5px black;
 }
-
+.internetContent{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: aquamarine; */
+}
 .internet-filters{
   width: 100vw;
   margin-bottom: 15px;
@@ -407,6 +412,11 @@ button {
   background-color: var(--highlight);
 } */
 
+.scrollable{
+  overflow-y: scroll;
+}
+
+/*internet cards*/
 .internetProjectsContainer a {
   text-decoration: none;
   text-align: center;
@@ -503,6 +513,14 @@ footer {
   right: 0;
   height: 35px;
   width: 35px;
+}
+
+.deployedLink{
+  position: absolute;
+  bottom: 5px;
+  right: 35px;
+  height: 15px;
+  width: 15px;
 }
 .technologies-container {
   margin-left: 5px;
