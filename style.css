@@ -350,7 +350,7 @@ button {
 
 .panel {
   width: 100%;
-  padding: 0 18px;
+  /* padding: 0 18px; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -363,7 +363,7 @@ button {
 .internetProjectsContainer {
   width: 95vw;
   max-width: 550px;
-  min-width: 270px;
+  min-width: 265px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -375,6 +375,17 @@ button {
   margin-bottom: 5px;
   padding: 3px;
   box-shadow: 0 0 5px black;
+}
+
+.internetProjects{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 60vh;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
 }
 .internetContent{
   display: flex;
