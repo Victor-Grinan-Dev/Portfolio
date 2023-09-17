@@ -10,10 +10,13 @@
 }
 .carousel {
     position: relative;
-    height: 500px;
-    width: 450px;
+    width: 95vw;
+    height: 95vw;
+    max-height: 450px;
+    max-width: 470px;
     margin: 0 auto;
-    /* display: flex; */
+    display: flex;
+    align-items: center;
 }
 .carousell__button {
     position: absolute;
@@ -32,8 +35,10 @@
 .carousel__track-container {
     
     /* padding: 10px; */
-    height: 100%;
-    width: 450px;
+    width: 95vw;
+    height: 95vw;
+    max-width: 450px;
+    max-height: 450px;
     position: relative;
     overflow: hidden;
 }
@@ -41,17 +46,28 @@
 .carousel__track {
    padding: 0;
    margin: 0;
-    list-style: none;
-   
+   list-style: none;
+   transition: all 500ms ease-in;
 }
 .carousel__slide {
     position: absolute;
     background-color: lightgreen;
     top:0 ;
     bottom: 0;
-    width: 450px;
-    height: 450px;
-    /* display: none; */
+    width: 90vw;
+    height: 90vw;
+    max-width: 450px;
+    max-height: 450px; 
+}
+
+.slide1{
+    background-color: aqua;
+}
+.slide2{
+    background-color: rgb(25, 0, 255);
+}
+.slide3{
+    background-color: rgb(221, 255, 0);
 }
 
 .current_slide {
@@ -83,4 +99,8 @@
 
 .current_dot {
     background: var(--grey-1);
+}
+
+.is-hidden{
+    visibility: hidden;
 }
