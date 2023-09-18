@@ -1,8 +1,36 @@
 const track = document.querySelector('.carousel__track');
-const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel__button--right');
 const prevButton = document.querySelector('.carousel__button--left');
 const dotsNav = document.querySelector('.carousel__nav');
+
+/** IMAGES */
+const awsCodeCommit = "/documents/AWS_CodeCommit_Course_Completion_Certificate.png";
+const awsDevops = "/documents/AWS_DevOps_Course_Completion_Certificate.png";
+const awsEC2="/documents/AWS_EC2_Completion_Certificate.png";
+const sda = "/documents/sda_certificate.png";
+const hbc = "/documents/HBC_graduation_certificate_small.png";
+
+const images = [
+    awsCodeCommit,
+    awsDevops,
+    awsEC2,
+    sda,
+    hbc,
+];
+
+images.forEach((image, i) => {
+    console.log(i===0);
+    track.innerHTML += `
+        <li id="slide${i}" name="slide${i}" class="carousel__slide slide${i} ${i === 0 ? "current_slide" : null}">
+            <img src="${image}" alt="slide${i}" class="carousel__image"/>
+        </li>
+    `;
+    dotsNav.innerHTML += `
+        <button class="carousel__indicator ${i === 0? "current_dot" : ""} "></button
+    `
+});
+
+const slides = Array.from(track.children);
 const dots = Array.from(dotsNav.children);
 
 const slideWidth = slides[0].getBoundingClientRect().width;
@@ -39,6 +67,7 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 
 nextButton.addEventListener('click', e => {
     const currentSlide = track.querySelector('.current_slide');
+    console.log(track)
     const nextSlide = currentSlide.nextElementSibling;
     const targetIndex = slides.findIndex(slide => slide === nextSlide);
     const currentDot = dotsNav.querySelector('.current_dot');
