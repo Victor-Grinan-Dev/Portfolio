@@ -364,7 +364,7 @@ const projectsData = [
     type: "primary",
     link: "https://thecubanshow.com/",
     imgUrl: "./images/thecubanshow.png",
-    description: "First serious job for a friend (in progress)",
+    description: "First serious job for a friend",
     sectionId: "freelancer",
     repoLink: "the_cuban_show_ui",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
@@ -705,6 +705,21 @@ const projectsData = [
   //     "description":"",
   //     "sectionId":""
   // }
+    {
+    id: "malditos_dice",
+    title: "Malditos Dice",
+    type: "primary",
+    link: "https://malditos-dice.vercel.app/",
+    video: "",
+    imgUrl: "./images/malditos-dice.png",
+    description: "For my hobby club (in progress)",
+    sectionId: "freelancer",
+    repoLink: "hobby-app",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "vue",
+    technologies: ["vuex", "tailwind", "firebase"],
+    deployed:'vercel'
+  },
 ];
 
 /* Accordion handler */
