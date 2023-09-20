@@ -9,19 +9,34 @@ const awsDevops = "/documents/AWS_DevOps_Course_Completion_Certificate.png";
 const awsEC2="/documents/AWS_EC2_Completion_Certificate.png";
 const sda = "/documents/sda_certificate.png";
 const hbc = "/documents/HBC_graduation_certificate_small.png";
+const dcCSS = "/documents/disc_courses_css.png";
+const dcVue = "/documents/Vue_Fundamentals.png";
+const udemySCSS = "/documents/udemy_advanced_sass.jpg";
+const udemyTailwind = "/documents/udemy_tailwind.jpg";
+const sfcComposer = "/documents/sfcasts-VictorGrinan-certificate-composer.png";
+const sfcHarmonious = "/documents/sfcasts-VictorGrinan-certificate-harmonious-development-with-symfony-6.png";
+const sfcNameSpaces = "/documents/sfcasts-VictorGrinan-certificate-php-namespaces.png";
+
 
 const images = [
+    hbc,
+    sda,
     awsCodeCommit,
     awsDevops,
     awsEC2,
-    sda,
-    hbc,
+    dcCSS,
+    dcVue,
+    udemySCSS,
+    udemyTailwind,
+    sfcComposer,
+    sfcHarmonious,
+    sfcNameSpaces,
 ];
 
 images.forEach((image, i) => {
     console.log(i===0);
     track.innerHTML += `
-        <li id="slide${i}" name="slide${i}" class="carousel__slide slide${i} ${i === 0 ? "current_slide" : null}">
+        <li id="slide${i}" name="slide${i}" class="carousel__slide slide${i} ${i === 0 ? "current_slide" : ""}">
             <img src="${image}" alt="slide${i}" class="carousel__image"/>
         </li>
     `;

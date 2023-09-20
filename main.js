@@ -1358,22 +1358,20 @@ class CertificateCard extends HTMLElement {
    */
   constructor(id, title, docLink, isInvisible) {
     super();
-    this.content = `<div id=${id} class="certificate ${
-      isInvisible ? "irrelevant invisible" : ""
-    }">
-            <div>    
-                <a class="certView" href=${docLink} target="_blank" >
-                    
-                    <div> ${title} </div>
-                    <div> 
-                        <img src=${docLink} frameborder="0" class='document docLink'/>  
-                    </div>
-                </a>
+    this.content = `
+      <div id=${id} class="certificate ${isInvisible ? "irrelevant invisible" : ""}">
+        <div>    
+          <a class="certView" href=${docLink} target="_blank" >
+            <div> 
+              ${title} 
             </div>
-            
-               
-            
-        </div>`;
+            <div> 
+              <img src=${docLink} frameborder="0" class='document docLink'/>  
+            </div>
+          </a>
+        </div>
+      </div>
+    `;
   }
 }
 
