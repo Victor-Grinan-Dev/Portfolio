@@ -34,7 +34,7 @@ const images = [
 ];
 
 images.forEach((image, i) => {
-    console.log(i===0);
+    // console.log(i===0);
     track.innerHTML += `
         <li id="slide${i}" name="slide${i}" class="carousel__slide slide${i} ${i === 0 ? "current_slide" : ""}">
             <img src="${image}" alt="slide${i}" class="carousel__image"/>
@@ -80,9 +80,9 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
     targetSlide.classList.add('current_slide');
 }
 
-nextButton.addEventListener('click', e => {
+nextButton.addEventListener('click', () => {
     const currentSlide = track.querySelector('.current_slide');
-    console.log(track)
+    // console.log(track)
     const nextSlide = currentSlide.nextElementSibling;
     const targetIndex = slides.findIndex(slide => slide === nextSlide);
     const currentDot = dotsNav.querySelector('.current_dot');
@@ -92,7 +92,7 @@ nextButton.addEventListener('click', e => {
     updateDots(currentDot, targetDot);
 });
 
-prevButton.addEventListener('click', e => {
+prevButton.addEventListener('click', () => {
     const currentSlide = track.querySelector('.current_slide');
     const prevSlide = currentSlide.previousElementSibling;
     const targetIndex = slides.findIndex(slide => slide === prevSlide);
