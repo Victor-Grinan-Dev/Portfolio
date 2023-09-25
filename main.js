@@ -199,12 +199,26 @@ const projectsData = [
   // deployed:'github'
   // },
   {
+    id: "pokemons",
+    title: "Pokedex",
+    type: "primary",
+    link: "https://victor-grinan-dev.github.io/react_pokemons/",
+    imgUrl: "./images/pokemons.jpg",
+    description: "Learning to fetch and display data",
+    sectionId: "schoolProjects",
+    repoLink: "react_pokemons ",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "react",
+    technologies: ["axios"],
+    deployed:'github'
+  },
+    {
     id: "keeperApp",
     title: "Keeper App",
     type: "primary",
     link: "https://jocular-tapioca-476ffa.netlify.app/",
     imgUrl: "./images/keeperApp.jpg",
-    description: "Using local storage & MUI styling",
+    description: "Combining the use of local storage & MUI styling",
     sectionId: "schoolProjects",
     repoLink: "keeper_app",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
@@ -213,27 +227,13 @@ const projectsData = [
     deployed:'netlify'
   },
   {
-    id: "pokemons",
-    title: "Pokedex",
-    type: "primary",
-    link: "https://victor-grinan-dev.github.io/react_pokemons/",
-    imgUrl: "./images/pokemons.jpg",
-    description: "My first react ever, fetch data",
-    sectionId: "schoolProjects",
-    repoLink: "react_pokemons ",
-    repoSite: "https://github.com/Victor-Grinan-Dev/",
-    framework: "react",
-    technologies: ["axios"],
-    deployed:'github'
-  },
-  {
     id: "foodApp",
     title: "Food App",
     type: "primary",
     link: "https://food-app4.netlify.app/",
     //https://victor-grinan-dev.github.io/food-app3/
     imgUrl: "./images/feelit_cookit.png",
-    description: "Pagination & Firebase CRUD",
+    description: "Handling a CRUD",
     sectionId: "schoolProjects",
     repoLink: "food-app4",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
