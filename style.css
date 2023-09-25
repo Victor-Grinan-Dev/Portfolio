@@ -12,6 +12,10 @@
   --my-white: rgb(255, 255, 255);
   --highlight: rgb(206, 93, 93);
   --highlight2: 2px 2px 10px rgb(140, 255, 249);
+
+  --grey-1:rgba(62, 62, 62, 0.7);
+  --grey-2:rgba(149, 148, 148, 0.5);
+
   --hi-font: Sacramento;
   --title-font: Roboto;
   --subtitle-font: Roboto;
@@ -886,6 +890,102 @@ div .project:hover {
 
 .certView:hover {
   color: var(--highlight);
+}
+
+/*certificate carousel*/
+
+.carousel {
+    position: relative;
+    width: 95vw;
+    height: 95vw;
+    max-height: 450px;
+    max-width: 470px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.carousell__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.carousell__button--right {
+    right: -40px;
+}
+.carousell__button--left {
+    left: -40px;
+}
+.carousel__track-container {
+    width: 95vw;
+    height: 95vw;
+    max-width: 450px;
+    max-height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   transition: all 500ms ease-in;
+}
+.carousel__slide {
+    /* position: absolute;
+    top:0 ;
+    bottom: 0;
+    width: 90vw;
+    height: 90vw;
+    max-width: 450px;
+    max-height: 450px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+    
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    width: 53vw;
+    height: 90vh;
+    /* max-width: 450px; */
+    /* max-height: 450px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.carousel__image{
+    width: 90%;
+    object-fit: cover;
+}
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+.carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--grey-2);
+    margin: 5px;
+    cursor: pointer;
+}
+
+.current_dot {
+    background: var(--grey-1);
+}
+
+.is-hidden{
+    visibility: hidden;
 }
 
 .invisible {
