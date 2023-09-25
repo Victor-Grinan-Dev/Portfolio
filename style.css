@@ -330,7 +330,11 @@ button {
 #content {
   background-color: var(--level-2);
 }
+/*ABOUT SECTION*/
 
+.about{
+  font-size: 16px;
+}
 /* Projects accordion */
 
 .accordion {
