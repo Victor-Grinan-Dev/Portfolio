@@ -82,11 +82,11 @@ victor.addEventListener("click", animatePorfolio);
 grinan.addEventListener("click", spinDeveloper);
 
 //scrolls functions
-const scroll_about = [677, 1482];
-const scroll_portfolio = [1481, 2640];
-const scroll_skills = [2618, 4324];
-const scroll_certificates = [4323, 5270];
-const scroll_conctactMe = [4130, 6610];
+const scroll_about = [980, 2021];
+const scroll_portfolio = [2021, 3004];
+const scroll_skills = [3004, 3404];
+const scroll_certificates = [3404, 4400];
+const scroll_conctactMe = [4400, 6610];
 
 const aboutTab = document.querySelector("#aboutTab");
 const portfolioTab = document.querySelector("#portfolioTab");
@@ -107,6 +107,8 @@ window.onscroll = function () {
 function scrollFunction() {
   scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
 
+  // console.log(scrollValue)
+  
   resetActiveTab();
   if (scrollValue >= scroll_about[0] && scrollValue <= scroll_about[1]) {
     aboutTab.classList.add("activeTab");
@@ -1096,7 +1098,7 @@ const skillsData = [
     stars: 2,
     imgUrl: "./icons/php.png",
     skillgroup: "backendPHP",
-    isInvisible: false,
+    isInvisible: true,
   },
   {
     id: "synfony",
@@ -1104,7 +1106,7 @@ const skillsData = [
     stars: 2,
     imgUrl: "./icons/symfony.png",
     skillgroup: "backendPHP",
-    isInvisible: false,
+    isInvisible: true,
   },
   {
     id: "laravel",
@@ -1181,6 +1183,14 @@ const skillsData = [
     isInvisible: false,
   },
 
+  {
+    id: "dotnet",
+    skillName: ".Net",
+    stars: 0,
+    imgUrl: "./icons/dot_net.png",
+    skillgroup: "embedSystems",
+    isInvisible: false,
+  },
   {
     id: "c",
     skillName: "C",
@@ -1522,8 +1532,8 @@ const showAllCertificates = () => {
 };
 moreCertificatesBtn.addEventListener("click", showAllCertificates);
 
-/*certificates carousell */
-
+/*certificates carousel */
+const carousel = document.querySelector('.carousel')
 const track = document.querySelector('.carousel__track');
 const nextButton = document.querySelector('.carousel__button--right');
 const prevButton = document.querySelector('.carousel__button--left');
@@ -1538,7 +1548,7 @@ allCertificate.forEach((cert, i) => {
         </li>
     `;
     dotsNav.innerHTML += `
-        <div class="carousel__indicator ${i === 0? "current_dot" : ""} "></div
+        <button class="carousel__indicator ${i === 0? "current_dot" : ""} "></button
     `
 });
 
@@ -1579,7 +1589,6 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 
 nextButton.addEventListener('click', () => {
     const currentSlide = track.querySelector('.current_slide');
-    // console.log(track)
     const nextSlide = currentSlide.nextElementSibling;
     const targetIndex = slides.findIndex(slide => slide === nextSlide);
     const currentDot = dotsNav.querySelector('.current_dot');
@@ -1613,6 +1622,28 @@ dotsNav.addEventListener('click', e =>{
     updateDots(currentDot, targetDot);
     hideShowArrows(targetIndex);
 });
+
+/* SHOW certificates Mode */
+const gallery = document.querySelector('.gallery');
+const galleryBtn = document.querySelector('.certDisplayMode');
+
+let showAsGallery = false;
+
+const toggleModeCert = () => {
+    carousel.classList.toggle('invisible');
+    gallery.classList.toggle('invisible');
+
+    showAsGallery = !showAsGallery;
+
+    if(showAsGallery){
+      galleryBtn.innerText = 'Show as carousel';
+    }else{
+      galleryBtn.innerText = 'Show as gallery';
+    }
+   
+};
+
+galleryBtn.addEventListener('click', toggleModeCert);
 
 /* copyrights */
 const year = new Date();
