@@ -587,8 +587,8 @@ footer {
 
 .some {
   display: inline-block;
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
   object-fit: cover;
 }
 
@@ -901,14 +901,28 @@ div .project:hover {
 .carousel__track,
 .carousel__slide,
 .carousel__image{
-    height: 80vh;
+    height: 55vh;
     max-height: 600px;
     max-width: 470px;
 }
 
+.carousel__track,
+.carousel__track-container,
+.carousel__slide,
+.carousel__image,
+.carousel__nav{
+  width: 100%;
+}
+.carousel__track,
+.carousel__slide{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
 .carousel {
     position: relative;
-    width: 95vw;
+    width: 98vw;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -928,16 +942,8 @@ div .project:hover {
     left: -40px;
 }
 .carousel__track-container {
-    width: 95vw;
     position: relative;
     overflow: hidden;
-}
-
-.carousel__track,
-.carousel__slide,
-.carousel__image,
-.carousel__nav{
-  width: 100%;
 }
 
 .carousel__track {
@@ -946,17 +952,11 @@ div .project:hover {
    list-style: none;
    transition: all 500ms ease-in;
    position:relative;
-   display: flex;
-   align-items: center;
-   justify-content: center;
 }
 .carousel__slide {   
     position: absolute;
     top: auto;
     bottom: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .carousel__image{
@@ -971,15 +971,15 @@ div .project:hover {
 .carousel__indicator {
     border: 0;
     border-radius: 50%;
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     background: var(--grey-2);
-    margin: 5px;
+    margin: 0.5vw;
     cursor: pointer;
 }
 
 .current_dot {
-    background: var(--grey-1);
+    background: var(--highlight);
 }
 /**********************************/
 
