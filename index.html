@@ -140,12 +140,12 @@
                 </p>
                 <div>
                     <a href="./documents/cv_2023_image.png" target="_blank">
-                        <button>
+                        <button class='appButton'>
                             <span class="material-symbols-outlined">visibility</span>
                         </button>
                     </a>
                     <a href="./documents/cv_victor_grinan_2023.pdf" target="_blank" download='cv_victor_grinan'>
-                        <button>
+                        <button class='appButton'>
                             <span class="material-symbols-outlined">download</span>
                         </button>
                     </a>
@@ -238,7 +238,7 @@
                     "Developer Level" <br />2x⭐ = "junior Level"<br /> 1x⭐ = "I have play with it" <br /> 0x⭐ = "Haven't
                     seen it yet"</p>
                 <div class='skillBtns'>
-                    <button class='showSkillsLegend'>Show legend</button> <button class='showMoreSkills'>More
+                    <button class='showSkillsLegend appButton'>Show legend</button> <button class='showMoreSkills appButton'>More
                         skills</button>
                     <br> <br>
                 </div>
@@ -288,14 +288,14 @@
                         </div>
                         <div class="overall">😎</div><!--7/15-->
                     </div>
-                    <div class="skillGroup" id='backendPHP'>
+                    <div class="skillGroup invisible" id='backendPHP'>
                         <h3 class="skillGroupTitle">Backend PHP:</h3>
                         <div class="subSkills">
 
                         </div>
                         <div class="overall">😎</div><!--4/15-->
                     </div>
-                    <div class="skillGroup" id='cloudService'>
+                    <div class="skillGroup invisible" id='cloudService'>
                         <h3 class="skillGroupTitle">Cloud Service:</h3>
                         <div class="subSkills">
 
@@ -340,29 +340,37 @@
 
         <article id="certificates" class="bgLevel4">
             <h2 class="section-title"> Certificates </h2>
-            <div class="main-certificates certificates"></div>
-            <div class="online-certificates1 certificates"></div>
-            <div class="online-certificates2 certificates"></div>
-            <div class="online-certificates3 certificates"></div>
-            <div class="online-certificates4 certificates"></div>
+            <button class='appButton certDisplayMode'> Show as gallery </button>
             <br>
-            <button class="moreCertificates">
-                Show Irrelevant certificates
-            </button>
-            <br>
-            <div class="othersCertificates certificates invisible">
-                <!--invisible-->
-            </div>
+            <span class="gallery invisible">
+                <div class="main-certificates certificates"></div>
+                <div class="online-certificates1 certificates"></div>
+                <div class="online-certificates2 certificates"></div>
+                <div class="online-certificates3 certificates"></div>
+                <div class="online-certificates4 certificates"></div>
+
+                <br>
+                <button class="moreCertificates appButton">
+                    Show Irrelevant certificates
+                </button>
+                <br>
+
+                <div class="othersCertificates certificates invisible">
+                    <!--invisible-->
+                </div>
+            </span>
+
+
 
             <div class="carousel">
-                <button class="carousel__button carousel__button--left is-hidden">&#60;</button>
+                <button class="appButton carousel__button carousel__button--left is-hidden">&#60;</button>
                     <div class="carousel__track-container">
                         <ul class="carousel__track"></ul>
                         <div class="carousel__nav"></div>
                     </div>
-                <button class="carousel__button carousel__button--right">&#62;</button>
+                <button class="appButton carousel__button carousel__button--right">&#62;</button>
             </div>
-            
+
         </article>
     </main>
 
@@ -409,7 +417,7 @@
             <p id="love">Made with ❤️ from Finland</p>
         </section>
 
-        <button id="scrollUp" class="scrollUp invisible"><span class="material-symbols-outlined">
+        <button id="scrollUp appButton" class="scrollUp invisible"><span class="material-symbols-outlined">
                 arrow_upward
             </span></button>
 
