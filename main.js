@@ -1544,7 +1544,9 @@ allCertificate
 allCertificate.forEach((cert, i) => {
     track.innerHTML += `
         <li id="slide${i}" name="slide${i}" class="carousel__slide slide${i} ${i === 0 ? "current_slide" : ""}">
-            <img src="${cert.docLink}" alt="slide${cert.id}" class="carousel__image"/>
+            <a href="${cert.docLink}" target="blank">
+              <img src="${cert.docLink}" alt="slide${cert.id}" class="carousel__image"/>
+            </a>
         </li>
     `;
     dotsNav.innerHTML += `
