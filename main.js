@@ -108,7 +108,7 @@ function scrollFunction() {
   scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
 
   // console.log(scrollValue)
-  
+
   resetActiveTab();
   if (scrollValue >= scroll_about[0] && scrollValue <= scroll_about[1]) {
     aboutTab.classList.add("activeTab");
@@ -184,7 +184,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["javascript", "css"],
-    deployed:'github'
+    deployed: "github",
   },
   // {
   //   id: "speedGame",
@@ -212,9 +212,9 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["axios"],
-    deployed:'github'
+    deployed: "github",
   },
-    {
+  {
     id: "keeperApp",
     title: "Keeper App",
     type: "primary",
@@ -226,7 +226,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["material_ui"],
-    deployed:'netlify'
+    deployed: "netlify",
   },
   {
     id: "foodApp",
@@ -241,7 +241,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["axios", "firebase"],
-    deployed:'netlify'
+    deployed: "netlify",
   },
   {
     id: "countriesApp",
@@ -255,7 +255,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["redux", "axios", "bootstrap"],
-    deployed:'github'
+    deployed: "github",
   },
   {
     id: "diceRoller",
@@ -269,7 +269,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["javascript", "css"],
-    deployed:'github'
+    deployed: "github",
   },
 
   {
@@ -284,7 +284,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["javascript", "css"],
-    deployed:'github'
+    deployed: "github",
   },
   {
     id: "hexMap",
@@ -298,7 +298,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["javascript", "css"],
-    deployed:'github'
+    deployed: "github",
   },
   {
     id: "mapCreator",
@@ -313,7 +313,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["redux"],
-    deployed:'netlify'
+    deployed: "netlify",
   },
   // {
   //   id: "unit_creator",
@@ -343,7 +343,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["redux"],
-    deployed:'netlify'
+    deployed: "netlify",
   },
   {
     id: "40k-tool",
@@ -358,7 +358,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["redux", "sass"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "theCubanShow",
@@ -372,7 +372,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["firebase", "axios", "redux"],
-    deployed:'netlify'
+    deployed: "netlify",
   },
   {
     id: "Kerttu",
@@ -387,7 +387,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["javascript", "sass"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "tailwindLoopstudios",
@@ -401,7 +401,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "tailwindShortly",
@@ -415,7 +415,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "tailwindGallery",
@@ -429,7 +429,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "tailwindPrices",
@@ -443,7 +443,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "tailwindLogin",
@@ -457,7 +457,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "tailwindProduct",
@@ -471,7 +471,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "tailwindLandingPage",
@@ -485,7 +485,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "testimonialGrid",
@@ -499,7 +499,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "fylo",
@@ -513,7 +513,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "bookmarkManager",
@@ -527,7 +527,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["tailwind"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "natour",
@@ -541,7 +541,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["sass"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "nexter",
@@ -555,7 +555,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["sass"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "trillo",
@@ -569,7 +569,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",
     technologies: ["sass"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "first vue",
@@ -583,7 +583,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css"],
-    deployed:'github'
+    deployed: "github",
   },
   {
     id: "random-user-generator-vue",
@@ -597,7 +597,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "vue_monster_slayer",
@@ -611,7 +611,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/vue_guide/tree/main/",
     framework: "vue",
     technologies: ["html", "javascript", "css"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "resource_manager",
@@ -625,7 +625,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "survey_app",
@@ -639,7 +639,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css", "axios", "firebase"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   // {
   //   id: "teams-&-users",
@@ -667,7 +667,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["html", "javascript", "css"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "vuex_online_store",
@@ -681,7 +681,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["vuex", "html", "javascript", "css"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   {
     id: "vuex_coach_finder",
@@ -696,7 +696,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["vuex", "html", "javascript", "css", "firebase"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
   // {
   //     "id":"",
@@ -707,7 +707,7 @@ const projectsData = [
   //     "description":"",
   //     "sectionId":""
   // }
-    {
+  {
     id: "malditos_dice",
     title: "Malditos Dice",
     type: "primary",
@@ -720,7 +720,7 @@ const projectsData = [
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
     technologies: ["vuex", "tailwind", "firebase"],
-    deployed:'vercel'
+    deployed: "vercel",
   },
 ];
 
@@ -769,7 +769,9 @@ class ProjectCard extends HTMLElement {
     super();
 
     this.internetContent = `
-    <div class="internetProjectsContainer intChild ${framework} ${technologies.map(tech=>(` ${tech}`))}" id=${id}>
+    <div class="internetProjectsContainer intChild ${framework} ${technologies.map(
+      (tech) => ` ${tech}`
+    )}" id=${id}>
       <div class="small-img-container">
           <a href=${link} target='blank'>
             <img src=${imgUrl} alt=${id} class="small-project-img">
@@ -867,7 +869,7 @@ projectsData.forEach((project) => {
     repoSite,
     framework,
     technologies,
-    deployed,  
+    deployed
   );
   if (sectionId === "internet") {
     section[sectionId].innerHTML += newProject.internetContent;
@@ -876,29 +878,28 @@ projectsData.forEach((project) => {
   }
 });
 
-
-const techFilters = document.querySelectorAll('.tech_filter');
+const techFilters = document.querySelectorAll(".tech_filter");
 
 const selectChilds = (filterParam) => {
-  const internetChilds = document.querySelectorAll('.intChild')
-    internetChilds.forEach(child => {
-      if(filterParam === 'all'){
-        child.classList.remove('invisible');
-      }else if(child.classList.contains(filterParam)){
-        child.classList.remove('invisible');
-      }else{
-        child.classList.add('invisible');
-      }
-    });
-}
+  const internetChilds = document.querySelectorAll(".intChild");
+  internetChilds.forEach((child) => {
+    if (filterParam === "all") {
+      child.classList.remove("invisible");
+    } else if (child.classList.contains(filterParam)) {
+      child.classList.remove("invisible");
+    } else {
+      child.classList.add("invisible");
+    }
+  });
+};
 
 const changeFilter = (value) => {
   selectChilds(value);
-}
+};
 
-techFilters.forEach(techFilter => {
-  techFilter.addEventListener('change', ()=>changeFilter(techFilter.value));
-})
+techFilters.forEach((techFilter) => {
+  techFilter.addEventListener("change", () => changeFilter(techFilter.value));
+});
 
 //hide/show projects
 const showAllBtn = document.querySelector("#showAll");
@@ -1384,7 +1385,9 @@ class CertificateCard extends HTMLElement {
   constructor(id, title, docLink, isInvisible) {
     super();
     this.content = `
-      <div id=${id} class="certificate ${isInvisible ? "irrelevant invisible" : ""}">
+      <div id=${id} class="certificate ${
+      isInvisible ? "irrelevant invisible" : ""
+    }">
         <div>    
           <a class="certView" href=${docLink} target="_blank" >
             <div> 
@@ -1497,6 +1500,12 @@ const allCertificate = [
     section: "onlineCertificates4",
   },
   {
+    id: "vue-guide",
+    title: 'Udemy - "Vue Guide',
+    docLink: "./documents/Vue_guide.jpg",
+    section: "onlineCertificates4",
+  },
+  {
     id: "Entrepreneurship",
     title: 'YH - "Entrepreneurship"',
     docLink: "./documents/2015_yrittaja_todistus.png",
@@ -1533,25 +1542,31 @@ const showAllCertificates = () => {
 moreCertificatesBtn.addEventListener("click", showAllCertificates);
 
 /*certificates carousel */
-const carousel = document.querySelector('.carousel')
-const track = document.querySelector('.carousel__track');
-const nextButton = document.querySelector('.carousel__button--right');
-const prevButton = document.querySelector('.carousel__button--left');
-const dotsNav = document.querySelector('.carousel__nav');
+const carousel = document.querySelector(".carousel");
+const track = document.querySelector(".carousel__track");
+const nextButton = document.querySelector(".carousel__button--right");
+const prevButton = document.querySelector(".carousel__button--left");
+const dotsNav = document.querySelector(".carousel__nav");
 
-allCertificate
+allCertificate;
 
 allCertificate.forEach((cert, i) => {
-    track.innerHTML += `
-        <li id="slide${i}" name="slide${i}" class="carousel__slide slide${i} ${i === 0 ? "current_slide" : ""}">
+  track.innerHTML += `
+        <li id="slide${i}" name="slide${i}" class="carousel__slide slide${i} ${
+    i === 0 ? "current_slide" : ""
+  }">
             <a href="${cert.docLink}" target="blank">
-              <img src="${cert.docLink}" alt="slide${cert.id}" class="carousel__image"/>
+              <img src="${cert.docLink}" alt="slide${
+    cert.id
+  }" class="carousel__image"/>
             </a>
         </li>
     `;
-    dotsNav.innerHTML += `
-        <button class="carousel__indicator ${i === 0? "current_dot" : ""} "></button
-    `
+  dotsNav.innerHTML += `
+        <button class="carousel__indicator ${
+          i === 0 ? "current_dot" : ""
+        } "></button
+    `;
 });
 
 const slides = Array.from(track.children);
@@ -1560,92 +1575,91 @@ const dots = Array.from(dotsNav.children);
 const slideWidth = slides[0].getBoundingClientRect().width;
 
 const setSlidePosition = (slide, i) => {
-    slide.style.left = `${i * slideWidth}px`;
-}
+  slide.style.left = `${i * slideWidth}px`;
+};
 
 slides.forEach(setSlidePosition);
 
 const updateDots = (currentDot, targetDot) => {
-    currentDot.classList.remove('current_dot');
-    targetDot.classList.add('current_dot');
-}
+  currentDot.classList.remove("current_dot");
+  targetDot.classList.add("current_dot");
+};
 
 const hideShowArrows = (targetIndex) => {
-    if (targetIndex === 0){
-        prevButton.classList.add('is-hidden');
-        nextButton.classList.remove('is-hidden');
-    }else if(targetIndex === slides.length - 1){
-        prevButton.classList.remove('is-hidden');
-        nextButton.classList.add('is-hidden');
-    }else{
-        nextButton.classList.remove('is-hidden');
-        prevButton.classList.remove('is-hidden');
-    }
-}
+  if (targetIndex === 0) {
+    prevButton.classList.add("is-hidden");
+    nextButton.classList.remove("is-hidden");
+  } else if (targetIndex === slides.length - 1) {
+    prevButton.classList.remove("is-hidden");
+    nextButton.classList.add("is-hidden");
+  } else {
+    nextButton.classList.remove("is-hidden");
+    prevButton.classList.remove("is-hidden");
+  }
+};
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-    currentSlide.classList.remove('current_slide');
-    targetSlide.classList.add('current_slide');
-}
+  track.style.transform = "translateX(-" + targetSlide.style.left + ")";
+  currentSlide.classList.remove("current_slide");
+  targetSlide.classList.add("current_slide");
+};
 
-nextButton.addEventListener('click', () => {
-    const currentSlide = track.querySelector('.current_slide');
-    const nextSlide = currentSlide.nextElementSibling;
-    const targetIndex = slides.findIndex(slide => slide === nextSlide);
-    const currentDot = dotsNav.querySelector('.current_dot');
-    const targetDot = currentDot.nextElementSibling;
-    moveToSlide(track, currentSlide, nextSlide);
-    hideShowArrows(targetIndex);
-    updateDots(currentDot, targetDot);
+nextButton.addEventListener("click", () => {
+  const currentSlide = track.querySelector(".current_slide");
+  const nextSlide = currentSlide.nextElementSibling;
+  const targetIndex = slides.findIndex((slide) => slide === nextSlide);
+  const currentDot = dotsNav.querySelector(".current_dot");
+  const targetDot = currentDot.nextElementSibling;
+  moveToSlide(track, currentSlide, nextSlide);
+  hideShowArrows(targetIndex);
+  updateDots(currentDot, targetDot);
 });
 
-prevButton.addEventListener('click', () => {
-    const currentSlide = track.querySelector('.current_slide');
-    const prevSlide = currentSlide.previousElementSibling;
-    const targetIndex = slides.findIndex(slide => slide === prevSlide);
-    const currentDot = dotsNav.querySelector('.current_dot');
-    const targetDot = currentDot.previousElementSibling;
-    moveToSlide(track, currentSlide, prevSlide);
-    hideShowArrows(targetIndex);
-    updateDots(currentDot, targetDot);
+prevButton.addEventListener("click", () => {
+  const currentSlide = track.querySelector(".current_slide");
+  const prevSlide = currentSlide.previousElementSibling;
+  const targetIndex = slides.findIndex((slide) => slide === prevSlide);
+  const currentDot = dotsNav.querySelector(".current_dot");
+  const targetDot = currentDot.previousElementSibling;
+  moveToSlide(track, currentSlide, prevSlide);
+  hideShowArrows(targetIndex);
+  updateDots(currentDot, targetDot);
 });
 
-dotsNav.addEventListener('click', e =>{
-    const targetDot = e.target.closest('button');
-    if(!targetDot)return;
-   
-    const currentSlide = track.querySelector('.current_slide');
-    const currentDot = dotsNav.querySelector('.current_dot');
-    const targetIndex = dots.findIndex(dot => dot === targetDot);
-    const targetSlide = slides[targetIndex];
+dotsNav.addEventListener("click", (e) => {
+  const targetDot = e.target.closest("button");
+  if (!targetDot) return;
 
-    moveToSlide(track, currentSlide, targetSlide);
-    updateDots(currentDot, targetDot);
-    hideShowArrows(targetIndex);
+  const currentSlide = track.querySelector(".current_slide");
+  const currentDot = dotsNav.querySelector(".current_dot");
+  const targetIndex = dots.findIndex((dot) => dot === targetDot);
+  const targetSlide = slides[targetIndex];
+
+  moveToSlide(track, currentSlide, targetSlide);
+  updateDots(currentDot, targetDot);
+  hideShowArrows(targetIndex);
 });
 
 /* SHOW certificates Mode */
-const gallery = document.querySelector('.gallery');
-const galleryBtn = document.querySelector('.certDisplayMode');
+const gallery = document.querySelector(".gallery");
+const galleryBtn = document.querySelector(".certDisplayMode");
 
 let showAsGallery = false;
 
 const toggleModeCert = () => {
-    carousel.classList.toggle('invisible');
-    gallery.classList.toggle('invisible');
+  carousel.classList.toggle("invisible");
+  gallery.classList.toggle("invisible");
 
-    showAsGallery = !showAsGallery;
+  showAsGallery = !showAsGallery;
 
-    if(showAsGallery){
-      galleryBtn.innerText = 'Show as carousel';
-    }else{
-      galleryBtn.innerText = 'Show as gallery';
-    }
-   
+  if (showAsGallery) {
+    galleryBtn.innerText = "Show as carousel";
+  } else {
+    galleryBtn.innerText = "Show as gallery";
+  }
 };
 
-galleryBtn.addEventListener('click', toggleModeCert);
+galleryBtn.addEventListener("click", toggleModeCert);
 
 /* copyrights */
 const year = new Date();
@@ -1690,5 +1704,3 @@ const createHexMatrix = () => {
     }
   }
 };
-
-
