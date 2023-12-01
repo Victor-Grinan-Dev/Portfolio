@@ -82,11 +82,19 @@ victor.addEventListener("click", animatePorfolio);
 grinan.addEventListener("click", spinDeveloper);
 
 //scrolls functions
+
+let max_scroll_portfolio = 3004;
+let max_scroll_skills = max_scroll_portfolio + 400;
+let max_scroll_certificates = max_scroll_skills + 1000;
+
 const scroll_about = [980, 2021];
-const scroll_portfolio = [2021, 3004];
-const scroll_skills = [3004, 3404];
-const scroll_certificates = [3404, 4400];
-const scroll_conctactMe = [4400, 6610];
+const scroll_portfolio = [2021, max_scroll_portfolio];
+const scroll_skills = [max_scroll_portfolio, max_scroll_skills];
+const scroll_certificates = [max_scroll_portfolio, max_scroll_certificates];
+const scroll_conctactMe = [
+  max_scroll_certificates,
+  max_scroll_certificates + 2000,
+];
 
 const aboutTab = document.querySelector("#aboutTab");
 const portfolioTab = document.querySelector("#portfolioTab");
@@ -107,7 +115,7 @@ window.onscroll = function () {
 function scrollFunction() {
   scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
 
-  // console.log(scrollValue)
+  console.log(scrollValue);
 
   resetActiveTab();
   if (scrollValue >= scroll_about[0] && scrollValue <= scroll_about[1]) {
@@ -733,6 +741,8 @@ for (let i = 0; i < accordion.length; i++) {
     const panel = this.nextElementSibling;
     for (let onePanel of allPanels) {
       if (onePanel !== this.nextElementSibling) onePanel.style.maxHeight = null;
+      // if (onePanel.classList.contains()) {
+      // }
     }
 
     if (panel.style.maxHeight) {
@@ -1427,15 +1437,15 @@ const CertificateSections = {
 
 const allCertificate = [
   {
-    id: "pythonBasics",
-    title: 'SDA - "Python From Scratch"',
-    docLink: "./documents/sda_certificate.png",
-    section: "mainCertificates",
-  },
-  {
     id: "hbc",
     title: "Qualification in Information Tech",
     docLink: "./documents/HBC_graduation_certificate_small.png",
+    section: "mainCertificates",
+  },
+  {
+    id: "pythonBasics",
+    title: 'SDA - "Python From Scratch"',
+    docLink: "./documents/sda_certificate.png",
     section: "mainCertificates",
   },
   {
@@ -1515,6 +1525,12 @@ const allCertificate = [
     id: "Investing",
     title: 'Udemy - "Investing in stocks"',
     docLink: "./documents/UC-a13b9ecc-951b-4ff9-8856-ee83cca0f6cd.png",
+    section: "othersCertificates",
+  },
+  {
+    id: "bachellor",
+    title: 'Cuba - "Bachellor In Humanities"',
+    docLink: "./documents/Bachiller.jpg",
     section: "othersCertificates",
   },
 ];
@@ -1667,40 +1683,40 @@ const yearSpan = document.querySelector(".year");
 yearSpan.innerText = `${year.getFullYear()}`;
 
 /* reset animations */
-const resetAll = () => {
-  hexMap.innerHTML = "";
-  grinan.classList.remove("deattach");
-  g.style.color = "#white";
-  victor.classList.remove("lightsOn");
-  v.style.color = "#white";
-  developer.classList.remove("spin");
-  portfolio.classList.remove("spin");
-};
+// const resetAll = () => {
+//   hexMap.innerHTML = "";
+//   grinan.classList.remove("deattach");
+//   g.style.color = "#white";
+//   victor.classList.remove("lightsOn");
+//   v.style.color = "#white";
+//   developer.classList.remove("spin");
+//   portfolio.classList.remove("spin");
+// };
 
 /* hex Map */
-const hexMap = document.querySelector(".hexMap");
-const hexSize = 50;
+// const hexMap = document.querySelector(".hexMap");
+// const hexSize = 50;
 
-let width = document.body.clientWidth;
-let height = document.body.clientHeight;
-let rows = height / 4 / hexSize;
-let columns = width / hexSize - 1;
+// let width = document.body.clientWidth;
+// let height = document.body.clientHeight;
+// let rows = height / 4 / hexSize;
+// let columns = width / hexSize - 1;
 
-window.addEventListener("resize", () => {
-  resetAll();
-});
+// window.addEventListener("resize", () => {
+//   resetAll();
+// });
 
-const createHexMatrix = () => {
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < columns; j++) {
-      const blank = document.createElement("img");
-      blank.id = `${i}${j}`;
-      blank.src = i % 2 === 0 ? "./hexes/selected.png" : "./hexes/hostile.png";
-      blank.classList = "hex";
-      blank.style.left =
-        i % 2 === 0 ? `${j * hexSize}px` : `${j * hexSize + hexSize / 2}px`;
-      blank.style.top = `${i * (hexSize * 0.75)}px`;
-      hexMap.appendChild(blank);
-    }
-  }
-};
+// const createHexMatrix = () => {
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < columns; j++) {
+//       const blank = document.createElement("img");
+//       blank.id = `${i}${j}`;
+//       blank.src = i % 2 === 0 ? "./hexes/selected.png" : "./hexes/hostile.png";
+//       blank.classList = "hex";
+//       blank.style.left =
+//         i % 2 === 0 ? `${j * hexSize}px` : `${j * hexSize + hexSize / 2}px`;
+//       blank.style.top = `${i * (hexSize * 0.75)}px`;
+//       hexMap.appendChild(blank);
+//     }
+//   }
+// };
