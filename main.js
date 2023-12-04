@@ -82,11 +82,58 @@ victor.addEventListener("click", animatePorfolio);
 grinan.addEventListener("click", spinDeveloper);
 
 //scrolls functions
+
+const tabsNames = ["about", "portfolio", "skills", "certificates", "contact"];
+let activeTab = 0;
+
+// const handleScroll = () => {
+//   const { pageYOffset, innerHeight } = window;
+//   const currentTab = Math.floor(pageYOffset / (innerHeight - 200));
+//   if (currentTab !== activeTab) {
+//   }
+// };
+
+/***
+element.scrollTop - is the pixels hidden in top due to the scroll. With no scroll its value is 0.
+
+element.scrollHeight - is the pixels of the whole div.
+
+element.clientHeight - is the pixels that you see in your browser.
+ */
+
+let pageSize;
+const setPageSize = () => {
+  pageSize = document.documentElement.scrollHeight;
+  console.log(pageSize);
+};
+
+window.onresize = () => setPageSize();
+
+const windowHeight = window.innerHeight;
 const scroll_about = [980, 2021];
 const scroll_portfolio = [2021, 3004];
 const scroll_skills = [3004, 3404];
 const scroll_certificates = [3404, 4400];
 const scroll_conctactMe = [4400, 6610];
+
+const scrollSection_about = document.querySelector("#aboutArticle");
+const scrollSection_portfolio = document.querySelector("#portfolio");
+const scrollSection_skills = document.querySelector("#skillsBoxes");
+const scrollSection_certificates = document.querySelector("#certificates");
+const scrollSection_contact = document.querySelector("#footer");
+
+const sections = [
+  "scrollSection_about",
+  "scrollSection_portfolio",
+  "scrollSection_skills",
+  "scrollSection_certificates",
+  "scrollSection_contact",
+];
+
+console.log(pageSize);
+// for (let section of sections) {
+//   console.log(section.scrollHeight);
+// }
 
 const aboutTab = document.querySelector("#aboutTab");
 const portfolioTab = document.querySelector("#portfolioTab");
@@ -1673,7 +1720,7 @@ const resetAll = () => {
   g.style.color = "#white";
   victor.classList.remove("lightsOn");
   v.style.color = "#white";
-  developer.classList.remove("spin");
+  // developer.classList.remove("spin");
   portfolio.classList.remove("spin");
 };
 
