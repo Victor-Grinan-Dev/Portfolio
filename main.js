@@ -1197,7 +1197,7 @@ const skillsData = [
   {
     id: "dotnet",
     skillName: ".Net",
-    stars: 0,
+    stars: 1,
     imgUrl: "./icons/dot_net.png",
     skillgroup: "embedSystems",
     isInvisible: false,
