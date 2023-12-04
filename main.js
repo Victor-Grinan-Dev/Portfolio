@@ -988,7 +988,7 @@ const skillsData = [
   {
     id: "vue",
     skillName: "Vue",
-    stars: 2,
+    stars: 3,
     imgUrl: "./icons/vue.png",
     skillgroup: "frameworks",
     isInvisible: false,
@@ -1003,14 +1003,14 @@ const skillsData = [
   //     isInvisible:false
   // },
 
-  // {
-  //     id:"angular",
-  //     skillName:"Angular",
-  //     stars:1,
-  //     imgUrl:"./icons/angular.png",
-  //     skillgroup:"frameworks",
-  //     isInvisible: true
-  // },
+  {
+    id: "angular",
+    skillName: "Angular",
+    stars: 1,
+    imgUrl: "./icons/angular.png",
+    skillgroup: "frameworks",
+    isInvisible: true,
+  },
   {
     id: "typescript",
     skillName: "Typescript",
@@ -1040,7 +1040,7 @@ const skillsData = [
   {
     id: "tailwind",
     skillName: "Tailwind",
-    stars: 2,
+    stars: 3,
     imgUrl: "./icons/tailwind.png",
     skillgroup: "advanceFrontend2",
     isInvisible: false,
@@ -1317,12 +1317,17 @@ const renderSkills = () => {
   });
 };
 
+const round = (value, precision) => {
+  var multiplier = Math.pow(10, precision || 0);
+  return Math.round(value * multiplier) / multiplier;
+};
+
 /* Calculate XP% per skill group */
 const allGroups = document.querySelectorAll(".skillGroup");
 const calculatePercent = () => {
   let starText;
   allGroups.forEach((group) => {
-    let stars = 0;
+    let stars = 0; //total of satrs in a skill group
     const overall = group.querySelector(".overall");
     const skillRatings = group.querySelectorAll(".skillRating");
     const skills = group.querySelector(".subSkills");
@@ -1335,9 +1340,14 @@ const calculatePercent = () => {
         }
       }
     });
-    const total = skills.childElementCount * 5;
+
+    // const total = skills.childElementCount * 5
+    const skillCount = skills.childElementCount;
+
     if (overall) {
-      overall.innerText = `${stars}/${total}`;
+      // overall.innerText = `${stars}/${total}`;
+
+      overall.innerText = `${round(stars / skillCount, 1)}x⭐`;
     }
   });
 };
