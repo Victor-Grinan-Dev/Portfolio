@@ -99,22 +99,25 @@ element.scrollTop - is the pixels hidden in top due to the scroll. With no scrol
 element.scrollHeight - is the pixels of the whole div.
 
 element.clientHeight - is the pixels that you see in your browser.
+
+element.getBoundingClientRect()
  */
 
-let pageSize;
+let pageSize = document.documentElement.scrollHeight;
 const setPageSize = () => {
   pageSize = document.documentElement.scrollHeight;
-  console.log(pageSize);
+  // console.log(pageSize);
+  console.log(pageSize - windowHeight);
 };
 
 window.onresize = () => setPageSize();
 
 const windowHeight = window.innerHeight;
-const scroll_about = [980, 2021];
+const scroll_about = [windowHeight - (pageSize - windowHeight), 2021];
 const scroll_portfolio = [2021, 3004];
 const scroll_skills = [3004, 3404];
 const scroll_certificates = [3404, 4400];
-const scroll_conctactMe = [4400, 6610];
+const scroll_conctactMe = [pageSize - windowHeight - 5];
 
 const scrollSection_about = document.querySelector("#aboutArticle");
 const scrollSection_portfolio = document.querySelector("#portfolio");
@@ -123,17 +126,18 @@ const scrollSection_certificates = document.querySelector("#certificates");
 const scrollSection_contact = document.querySelector("#footer");
 
 const sections = [
-  "scrollSection_about",
-  "scrollSection_portfolio",
-  "scrollSection_skills",
-  "scrollSection_certificates",
-  "scrollSection_contact",
+  scrollSection_about,
+  scrollSection_portfolio,
+  scrollSection_skills,
+  scrollSection_certificates,
+  scrollSection_contact,
 ];
 
-console.log(pageSize);
-// for (let section of sections) {
-//   console.log(section.scrollHeight);
-// }
+sections.forEach((sec) => {
+  try {
+    console.log(sec.getBoundingClientRect().y);
+  } catch (error) {}
+});
 
 const aboutTab = document.querySelector("#aboutTab");
 const portfolioTab = document.querySelector("#portfolioTab");
@@ -154,7 +158,7 @@ window.onscroll = function () {
 function scrollFunction() {
   scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
 
-  // console.log(scrollValue)
+  console.log("scrollValue", scrollValue);
 
   resetActiveTab();
   if (scrollValue >= scroll_about[0] && scrollValue <= scroll_about[1]) {
