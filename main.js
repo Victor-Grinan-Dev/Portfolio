@@ -187,7 +187,6 @@ window.onscroll = function () {
 function scrollFunction() {
   scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
 
-
   console.log("scrollValue", scrollValue);
 
   resetActiveTab();
@@ -1110,7 +1109,7 @@ const skillsData = [
   {
     id: "jquery",
     skillName: "jquery",
-    stars: 1,
+    stars: 2,
     imgUrl: "./icons/jquery.png",
     skillgroup: "advanceFrontend",
     isInvisible: false,
@@ -1135,7 +1134,7 @@ const skillsData = [
   {
     id: "bootstrap",
     skillName: "Bootstrap",
-    stars: 2,
+    stars: 3,
     imgUrl: "./icons/bootstrap.png",
     skillgroup: "advanceFrontend2",
     isInvisible: false,
@@ -1277,6 +1276,14 @@ const skillsData = [
     skillName: "Git",
     stars: 3,
     imgUrl: "./icons/git.png",
+    skillgroup: "otherSkills",
+    isInvisible: false,
+  },
+  {
+    id: "canva",
+    skillName: "Canva",
+    stars: 2,
+    imgUrl: "./icons/canva.png",
     skillgroup: "otherSkills",
     isInvisible: false,
   },
