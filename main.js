@@ -83,18 +83,90 @@ grinan.addEventListener("click", spinDeveloper);
 
 //scrolls functions
 
-let max_scroll_portfolio = 3004;
-let max_scroll_skills = max_scroll_portfolio + 400;
-let max_scroll_certificates = max_scroll_skills + 1000;
+const tabsNames = ["about", "portfolio", "skills", "certificates", "contact"];
+let activeTab = 0;
 
-const scroll_about = [980, 2021];
-const scroll_portfolio = [2021, max_scroll_portfolio];
-const scroll_skills = [max_scroll_portfolio, max_scroll_skills];
-const scroll_certificates = [max_scroll_portfolio, max_scroll_certificates];
-const scroll_conctactMe = [
-  max_scroll_certificates,
-  max_scroll_certificates + 2000,
+// const handleScroll = () => {
+//   const { pageYOffset, innerHeight } = window;
+//   const currentTab = Math.floor(pageYOffset / (innerHeight - 200));
+//   if (currentTab !== activeTab) {
+//   }
+// };
+
+/***
+element.scrollTop - is the pixels hidden in top due to the scroll. With no scroll its value is 0.
+
+element.scrollHeight - is the pixels of the whole div.
+
+element.clientHeight - is the pixels that you see in your browser.
+
+element.getBoundingClientRect()
+
+
+$("#thediv").each( function() 
+{
+   // certain browsers have a bug such that scrollHeight is too small
+   // when content does not fill the client area of the element
+   var scrollHeight = Math.max(this.scrollHeight, this.clientHeight);
+   this.scrollTop = scrollHeight - this.clientHeight;
+});
+
+
+
+TODO: try to find the top scroll value from the sections!!!!!
+
+ */
+
+let pageSize = document.documentElement.scrollHeight;
+
+const setPageSize = () => {
+  pageSize = document.documentElement.scrollHeight;
+};
+
+window.onresize = () => setPageSize();
+
+const windowHeight = window.innerHeight;
+
+const scroll_about = [
+  pageSize - (pageSize - windowHeight),
+  pageSize - (pageSize - windowHeight * 2),
 ];
+
+const scroll_portfolio = [
+  pageSize - (pageSize - windowHeight * 2),
+  pageSize - (pageSize - windowHeight * 3),
+];
+
+const scroll_skills = [
+  pageSize - (pageSize - windowHeight * 3),
+  pageSize - windowHeight * 2.5 - 5,
+];
+
+const scroll_certificates = [
+  pageSize - windowHeight * 2.5 - 5,
+  pageSize - windowHeight - 5,
+];
+const scroll_conctactMe = [pageSize - windowHeight - 5];
+
+const scrollSection_about = document.querySelector("#aboutArticle");
+const scrollSection_portfolio = document.querySelector("#portfolio");
+const scrollSection_skills = document.querySelector("#skillsBoxes");
+const scrollSection_certificates = document.querySelector("#certificates");
+const scrollSection_contact = document.querySelector("#footer");
+
+const sections = [
+  scrollSection_about,
+  scrollSection_portfolio,
+  scrollSection_skills,
+  scrollSection_certificates,
+  scrollSection_contact,
+];
+
+sections.forEach((sec) => {
+  try {
+    console.log(sec.getBoundingClientRect().y);
+  } catch (error) {}
+});
 
 const aboutTab = document.querySelector("#aboutTab");
 const portfolioTab = document.querySelector("#portfolioTab");
@@ -115,7 +187,8 @@ window.onscroll = function () {
 function scrollFunction() {
   scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
 
-  console.log(scrollValue);
+
+  console.log("scrollValue", scrollValue);
 
   resetActiveTab();
   if (scrollValue >= scroll_about[0] && scrollValue <= scroll_about[1]) {
@@ -278,6 +351,20 @@ const projectsData = [
     framework: "html",
     technologies: ["javascript", "css"],
     deployed: "github",
+  },
+  {
+    id: "simonsays",
+    title: "Simon Says",
+    type: "primary",
+    link: "https://simon-game-opal-eta.vercel.app/ ",
+    imgUrl: "./images/simonsays.png",
+    description: "Exercise from udemy",
+    sectionId: "personalProjects",
+    repoLink: "11Simon-Game",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "html",
+    technologies: ["javascript", "css", "jquery"],
+    deployed: "vercel",
   },
 
   {
@@ -1693,15 +1780,16 @@ const yearSpan = document.querySelector(".year");
 yearSpan.innerText = `${year.getFullYear()}`;
 
 /* reset animations */
-// const resetAll = () => {
-//   hexMap.innerHTML = "";
-//   grinan.classList.remove("deattach");
-//   g.style.color = "#white";
-//   victor.classList.remove("lightsOn");
-//   v.style.color = "#white";
-//   developer.classList.remove("spin");
-//   portfolio.classList.remove("spin");
-// };
+
+const resetAll = () => {
+  hexMap.innerHTML = "";
+  grinan.classList.remove("deattach");
+  g.style.color = "#white";
+  victor.classList.remove("lightsOn");
+  v.style.color = "#white";
+  // developer.classList.remove("spin");
+  portfolio.classList.remove("spin");
+};
 
 /* hex Map */
 // const hexMap = document.querySelector(".hexMap");
