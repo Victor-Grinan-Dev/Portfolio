@@ -101,22 +101,51 @@ element.scrollHeight - is the pixels of the whole div.
 element.clientHeight - is the pixels that you see in your browser.
 
 element.getBoundingClientRect()
+
+
+$("#thediv").each( function() 
+{
+   // certain browsers have a bug such that scrollHeight is too small
+   // when content does not fill the client area of the element
+   var scrollHeight = Math.max(this.scrollHeight, this.clientHeight);
+   this.scrollTop = scrollHeight - this.clientHeight;
+});
+
+
+
+TODO: try to find the top scroll value from the sections!!!!!
+
  */
 
 let pageSize = document.documentElement.scrollHeight;
+
 const setPageSize = () => {
   pageSize = document.documentElement.scrollHeight;
-  // console.log(pageSize);
-  console.log(pageSize - windowHeight);
 };
 
 window.onresize = () => setPageSize();
 
 const windowHeight = window.innerHeight;
-const scroll_about = [windowHeight - (pageSize - windowHeight), 2021];
-const scroll_portfolio = [2021, 3004];
-const scroll_skills = [3004, 3404];
-const scroll_certificates = [3404, 4400];
+
+const scroll_about = [
+  pageSize - (pageSize - windowHeight),
+  pageSize - (pageSize - windowHeight * 2),
+];
+
+const scroll_portfolio = [
+  pageSize - (pageSize - windowHeight * 2),
+  pageSize - (pageSize - windowHeight * 3),
+];
+
+const scroll_skills = [
+  pageSize - (pageSize - windowHeight * 3),
+  pageSize - windowHeight * 2.5 - 5,
+];
+
+const scroll_certificates = [
+  pageSize - windowHeight * 2.5 - 5,
+  pageSize - windowHeight - 5,
+];
 const scroll_conctactMe = [pageSize - windowHeight - 5];
 
 const scrollSection_about = document.querySelector("#aboutArticle");
@@ -321,6 +350,20 @@ const projectsData = [
     framework: "html",
     technologies: ["javascript", "css"],
     deployed: "github",
+  },
+  {
+    id: "simonsays",
+    title: "Simon Says",
+    type: "primary",
+    link: "https://simon-game-opal-eta.vercel.app/ ",
+    imgUrl: "./images/simonsays.png",
+    description: "Exercise from udemy",
+    sectionId: "personalProjects",
+    repoLink: "11Simon-Game",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "html",
+    technologies: ["javascript", "css", "jquery"],
+    deployed: "vercel",
   },
 
   {
