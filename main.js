@@ -187,6 +187,7 @@ window.onscroll = function () {
 function scrollFunction() {
   scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
 
+
   console.log("scrollValue", scrollValue);
 
   resetActiveTab();
@@ -827,6 +828,8 @@ for (let i = 0; i < accordion.length; i++) {
     const panel = this.nextElementSibling;
     for (let onePanel of allPanels) {
       if (onePanel !== this.nextElementSibling) onePanel.style.maxHeight = null;
+      // if (onePanel.classList.contains()) {
+      // }
     }
 
     if (panel.style.maxHeight) {
@@ -1072,7 +1075,7 @@ const skillsData = [
   {
     id: "vue",
     skillName: "Vue",
-    stars: 2,
+    stars: 3,
     imgUrl: "./icons/vue.png",
     skillgroup: "frameworks",
     isInvisible: false,
@@ -1087,14 +1090,14 @@ const skillsData = [
   //     isInvisible:false
   // },
 
-  // {
-  //     id:"angular",
-  //     skillName:"Angular",
-  //     stars:1,
-  //     imgUrl:"./icons/angular.png",
-  //     skillgroup:"frameworks",
-  //     isInvisible: true
-  // },
+  {
+    id: "angular",
+    skillName: "Angular",
+    stars: 1,
+    imgUrl: "./icons/angular.png",
+    skillgroup: "frameworks",
+    isInvisible: true,
+  },
   {
     id: "typescript",
     skillName: "Typescript",
@@ -1124,7 +1127,7 @@ const skillsData = [
   {
     id: "tailwind",
     skillName: "Tailwind",
-    stars: 2,
+    stars: 3,
     imgUrl: "./icons/tailwind.png",
     skillgroup: "advanceFrontend2",
     isInvisible: false,
@@ -1281,7 +1284,7 @@ const skillsData = [
   {
     id: "dotnet",
     skillName: ".Net",
-    stars: 0,
+    stars: 1,
     imgUrl: "./icons/dot_net.png",
     skillgroup: "embedSystems",
     isInvisible: false,
@@ -1401,12 +1404,17 @@ const renderSkills = () => {
   });
 };
 
+const round = (value, precision) => {
+  var multiplier = Math.pow(10, precision || 0);
+  return Math.round(value * multiplier) / multiplier;
+};
+
 /* Calculate XP% per skill group */
 const allGroups = document.querySelectorAll(".skillGroup");
 const calculatePercent = () => {
   let starText;
   allGroups.forEach((group) => {
-    let stars = 0;
+    let stars = 0; //total of satrs in a skill group
     const overall = group.querySelector(".overall");
     const skillRatings = group.querySelectorAll(".skillRating");
     const skills = group.querySelector(".subSkills");
@@ -1419,9 +1427,14 @@ const calculatePercent = () => {
         }
       }
     });
-    const total = skills.childElementCount * 5;
+
+    // const total = skills.childElementCount * 5
+    const skillCount = skills.childElementCount;
+
     if (overall) {
-      overall.innerText = `${stars}/${total}`;
+      // overall.innerText = `${stars}/${total}`;
+
+      overall.innerText = `${round(stars / skillCount, 1)}x⭐`;
     }
   });
 };
@@ -1521,15 +1534,15 @@ const CertificateSections = {
 
 const allCertificate = [
   {
-    id: "pythonBasics",
-    title: 'SDA - "Python From Scratch"',
-    docLink: "./documents/sda_certificate.png",
-    section: "mainCertificates",
-  },
-  {
     id: "hbc",
     title: "Qualification in Information Tech",
     docLink: "./documents/HBC_graduation_certificate_small.png",
+    section: "mainCertificates",
+  },
+  {
+    id: "pythonBasics",
+    title: 'SDA - "Python From Scratch"',
+    docLink: "./documents/sda_certificate.png",
     section: "mainCertificates",
   },
   {
@@ -1609,6 +1622,12 @@ const allCertificate = [
     id: "Investing",
     title: 'Udemy - "Investing in stocks"',
     docLink: "./documents/UC-a13b9ecc-951b-4ff9-8856-ee83cca0f6cd.png",
+    section: "othersCertificates",
+  },
+  {
+    id: "bachellor",
+    title: 'Cuba - "Bachellor In Humanities"',
+    docLink: "./documents/Bachiller.jpg",
     section: "othersCertificates",
   },
 ];
@@ -1761,6 +1780,7 @@ const yearSpan = document.querySelector(".year");
 yearSpan.innerText = `${year.getFullYear()}`;
 
 /* reset animations */
+
 const resetAll = () => {
   hexMap.innerHTML = "";
   grinan.classList.remove("deattach");
@@ -1772,29 +1792,29 @@ const resetAll = () => {
 };
 
 /* hex Map */
-const hexMap = document.querySelector(".hexMap");
-const hexSize = 50;
+// const hexMap = document.querySelector(".hexMap");
+// const hexSize = 50;
 
-let width = document.body.clientWidth;
-let height = document.body.clientHeight;
-let rows = height / 4 / hexSize;
-let columns = width / hexSize - 1;
+// let width = document.body.clientWidth;
+// let height = document.body.clientHeight;
+// let rows = height / 4 / hexSize;
+// let columns = width / hexSize - 1;
 
-window.addEventListener("resize", () => {
-  resetAll();
-});
+// window.addEventListener("resize", () => {
+//   resetAll();
+// });
 
-const createHexMatrix = () => {
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < columns; j++) {
-      const blank = document.createElement("img");
-      blank.id = `${i}${j}`;
-      blank.src = i % 2 === 0 ? "./hexes/selected.png" : "./hexes/hostile.png";
-      blank.classList = "hex";
-      blank.style.left =
-        i % 2 === 0 ? `${j * hexSize}px` : `${j * hexSize + hexSize / 2}px`;
-      blank.style.top = `${i * (hexSize * 0.75)}px`;
-      hexMap.appendChild(blank);
-    }
-  }
-};
+// const createHexMatrix = () => {
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < columns; j++) {
+//       const blank = document.createElement("img");
+//       blank.id = `${i}${j}`;
+//       blank.src = i % 2 === 0 ? "./hexes/selected.png" : "./hexes/hostile.png";
+//       blank.classList = "hex";
+//       blank.style.left =
+//         i % 2 === 0 ? `${j * hexSize}px` : `${j * hexSize + hexSize / 2}px`;
+//       blank.style.top = `${i * (hexSize * 0.75)}px`;
+//       hexMap.appendChild(blank);
+//     }
+//   }
+// };
