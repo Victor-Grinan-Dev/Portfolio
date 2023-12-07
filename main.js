@@ -161,12 +161,12 @@ const sections = [
   scrollSection_certificates,
   scrollSection_contact,
 ];
-
-sections.forEach((sec) => {
-  try {
-    console.log(sec.getBoundingClientRect().y);
-  } catch (error) {}
-});
+//TODO: sections top scroll value
+// sections.forEach((sec) => {
+//   try {
+//     console.log(sec.getBoundingClientRect().y);
+//   } catch (error) {}
+// });
 
 const aboutTab = document.querySelector("#aboutTab");
 const portfolioTab = document.querySelector("#portfolioTab");
