@@ -146,7 +146,10 @@ const scroll_certificates = [
   pageSize - windowHeight * 2.5 - 5,
   pageSize - windowHeight - 5,
 ];
-const scroll_conctactMe = [pageSize - windowHeight - 5];
+const scroll_conctactMe = [
+  pageSize - windowHeight - 100,
+  pageSize - windowHeight - 10,
+];
 
 const scrollSection_about = document.querySelector("#aboutArticle");
 const scrollSection_portfolio = document.querySelector("#portfolio");
@@ -238,13 +241,15 @@ function topFunction() {
 scrollUp.addEventListener("click", topFunction);
 
 /* Portfolio Projects */
-const schoolProjects = document.querySelector(".schoolProjects");
-const personalProjects = document.querySelector(".personalProjects");
+const schoolProjects = document.querySelector("#schoolProjects");
+const sillyGames = document.querySelector("#sillyGames");
+const personalProjects = document.querySelector("#personalProjects");
 const internet = document.querySelector("#internetProjects");
 const freelancer = document.querySelector("#freelancer");
 
 const section = {
   schoolProjects: schoolProjects,
+  sillyGames: sillyGames,
   personalProjects: personalProjects,
   internet: internet,
   freelancer: freelancer,
@@ -358,7 +363,7 @@ const projectsData = [
     link: "https://simon-game-opal-eta.vercel.app/ ",
     imgUrl: "./images/simonsays.png",
     description: "Exercise from udemy",
-    sectionId: "personalProjects",
+    sectionId: "sillyGames",
     repoLink: "11Simon-Game",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "html",

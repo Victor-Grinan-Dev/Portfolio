@@ -361,10 +361,10 @@ p {
 
 .panel {
   width: 100%;
-  /* padding: 0 18px; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
