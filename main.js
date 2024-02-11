@@ -332,7 +332,7 @@ const projectsData = [
     id: "countriesApp",
     title: "Countries App",
     type: "primary",
-    link: "https://victor-grinan-dev.github.io/countries_app1/",
+    link: "https://countries-app1-pearl.vercel.app/",
     imgUrl: "./images/countries.jpg",
     description: "Introduction to redux",
     sectionId: "schoolProjects",
@@ -1022,6 +1022,7 @@ const backendPHP = document.querySelector("#backendPHP div");
 const cloudService = document.querySelector("#cloudService div");
 const backendJava = document.querySelector("#backendJava div");
 const embedSystems = document.querySelector("#embedSystems div");
+const templating = document.querySelector("#templating div");
 const cms = document.querySelector("#cms div");
 const cicd = document.querySelector("#cicd div");
 const otherSkills = document.querySelector("#otherSkills div");
@@ -1037,6 +1038,7 @@ const skillGroups = {
   cloudService: cloudService,
   backendJava: backendJava,
   embedSystems: embedSystems,
+  templating: templating,
   cms: cms,
   cicd: cicd,
   otherSkills: otherSkills,
@@ -1164,7 +1166,7 @@ const skillsData = [
   {
     id: "express",
     skillName: "Express",
-    stars: 1,
+    stars: 2,
     imgUrl: "./icons/express.png",
     skillgroup: "backendNode",
     isInvisible: false,
@@ -1365,6 +1367,30 @@ const skillsData = [
     skillgroup: "cicd",
     isInvisible: false,
   },
+  {
+    id: "twig",
+    skillName: "Twig",
+    stars: 3,
+    imgUrl: "./icons/twig.png",
+    skillgroup: "templating",
+    isInvisible: false,
+  },
+  {
+    id: "ejs",
+    skillName: "EJS",
+    stars: 3,
+    imgUrl: "./icons/ejs.png",
+    skillgroup: "templating",
+    isInvisible: false,
+  },
+  {
+    id: "pug",
+    skillName: "Pug",
+    stars: 2,
+    imgUrl: "./icons/pug.png",
+    skillgroup: "templating",
+    isInvisible: false,
+  },
   // {
   //     id:"",
   //     skillName:"",
@@ -1454,6 +1480,7 @@ const calculatePercent = () => {
 renderData();
 
 const showMoreSkills = document.querySelector(".showMoreSkills");
+const primarySkillGroup = document.querySelectorAll(".primarySkillGroup");
 const secundarySkillGroup = document.querySelectorAll(".secundarySkillGroup");
 const notStudiedSkill = document.querySelectorAll(".notStudiedSkill");
 let visibleSkill = false;
@@ -1463,15 +1490,18 @@ const toogleMoreSkills = () => {
   secundarySkillGroup.forEach((item) => {
     item.classList.toggle("invisible");
   });
+  primarySkillGroup.forEach((item) => {
+    item.classList.toggle("invisible");
+  });
 
   notStudiedSkill.forEach((item) => {
     item.classList.toggle("invisible");
   });
 
   if (visibleSkill) {
-    showMoreSkills.innerText = "Show less";
+    showMoreSkills.innerText = "Show Strongest";
   } else {
-    showMoreSkills.innerText = "Show more";
+    showMoreSkills.innerText = "Show Weakest";
   }
 };
 
