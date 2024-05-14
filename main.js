@@ -332,11 +332,11 @@ const projectsData = [
     id: "countriesApp",
     title: "Countries App",
     type: "primary",
-    link: "https://countries-app1-pearl.vercel.app/",
+    link: "https://countries-tau-ashy.vercel.app/",
     imgUrl: "./images/countries.jpg",
     description: "Introduction to redux",
     sectionId: "schoolProjects",
-    repoLink: "countries_app1",
+    repoLink: "countries_app",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "react",
     technologies: ["redux", "axios", "bootstrap"],
@@ -879,7 +879,7 @@ class ProjectCard extends HTMLElement {
             <img src=${imgUrl} alt=${id} class="small-project-img">
           </a>
       </div>
-      <div class="small-tech-container">
+      <div class="small-tech-container appear">
       <img src="./icons/${framework}.png" alt="githubRepo" class="tiny-framework">
       ${technologies.map(
         (tech, i) =>
