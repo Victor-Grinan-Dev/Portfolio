@@ -174,3 +174,30 @@
     }
     
 }
+
+.random-move {
+    position: absolute;
+    animation: move 5s infinite linear;
+  }
+.random-color {
+    position: absolute;
+    animation: changeColor 2s infinite;
+  }
+
+/* .hand-write {
+    position: absolute;
+    animation: move 5s infinite linear, changeColor 2s infinite;
+  } */
+  
+  @keyframes move {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(calc(100vw - 100px), calc(100vh - 100px)); }
+  }
+  
+  @keyframes changeColor {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: purple; }
+    100% { color: yellow; }
+  }
