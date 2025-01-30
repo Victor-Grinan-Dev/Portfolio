@@ -833,8 +833,6 @@ for (let i = 0; i < accordion.length; i++) {
     const panel = this.nextElementSibling;
     for (let onePanel of allPanels) {
       if (onePanel !== this.nextElementSibling) onePanel.style.maxHeight = null;
-      // if (onePanel.classList.contains()) {
-      // }
     }
 
     if (panel.style.maxHeight) {
@@ -1391,6 +1389,14 @@ const skillsData = [
     imgUrl: "./icons/pug.png",
     skillgroup: "templating",
     isInvisible: false,
+  },
+  {
+      id:"appwrite",
+      skillName:"AppWrite",
+      stars:2,
+      imgUrl:"./icons/appwrite.png",
+      skillgroup:"otherSkills",
+      isInvisible:false
   },
   // {
   //     id:"",
