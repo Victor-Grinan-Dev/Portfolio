@@ -822,6 +822,21 @@ const projectsData = [
     technologies: ["vuex", "tailwind", "firebase"],
     deployed: "vercel",
   },
+  {
+    id: "inky11",
+    title: "Inky11",
+    type: "primary",
+    link: "https://www.inky11.com/",
+    video: "",
+    imgUrl: "./images/inky11.png",
+    description: "For a friend busisness (in progress)",
+    sectionId: "freelancer",
+    repoLink: "bandida",
+    repoSite: "https://github.com/Victor-Grinan-Dev/",
+    framework: "react",
+    technologies: [ "sass"],
+    deployed: "netlify",
+  },
 ];
 
 /* Accordion handler */
