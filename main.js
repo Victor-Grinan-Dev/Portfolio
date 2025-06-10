@@ -117,6 +117,7 @@ TODO: try to find the top scroll value from the sections!!!!!
 
  */
 
+/* NAV BAR EFFECT ON SCROLL */
 let pageSize = document.documentElement.scrollHeight;
 
 const setPageSize = () => {
