@@ -314,7 +314,7 @@ const projectsData = [
     technologies: ["material_ui"],
     deployed: "netlify",
   },
-  {
+  /*{
     id: "foodApp",
     title: "Food App",
     type: "primary",
@@ -342,7 +342,7 @@ const projectsData = [
     framework: "react",
     technologies: ["redux", "axios", "bootstrap"],
     deployed: "github",
-  },
+  },*/
   {
     id: "diceRoller",
     title: "Dice Roller",
@@ -1883,3 +1883,4 @@ const resetAll = () => {
 //     }
 //   }
 // };
+
