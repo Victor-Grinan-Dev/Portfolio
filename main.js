@@ -816,7 +816,7 @@ const projectsData = [
     video: "",
     imgUrl: "./images/malditos-dice.png",
     description: "For my hobby club (in progress)",
-    sectionId: "freelancer",
+    sectionId: "personalProjects",
     repoLink: "hobby-app",
     repoSite: "https://github.com/Victor-Grinan-Dev/",
     framework: "vue",
@@ -1883,4 +1883,5 @@ const resetAll = () => {
 //     }
 //   }
 // };
+
 
