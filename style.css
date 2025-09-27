@@ -72,6 +72,8 @@ footer {
   background-color: var(--level-5);
 }
 
+
+
 /*HEADER*/
 header {
   background-color: var(--level-0);
@@ -342,6 +344,19 @@ p {
 .about{
   font-size: 16px;
 }
+
+.about-link{
+  color: var(--level-5);
+  font-weight: 700;
+}
+.about-link:hover{
+  color: var(--level-2);
+  font-weight: 700;
+}
+.keyword{
+  font-weight: 800;
+}
+
 /* Projects accordion */
 
 .accordion {
