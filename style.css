@@ -184,6 +184,7 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: space-around;
   z-index: 1;
+  padding: 15px;
 }
 
 #hi {
@@ -353,6 +354,43 @@ p {
 #content {
   background-color: var(--level-2);
 }
+
+/*PARALLAX*/
+
+.parallax-divider{
+  height: 35vh;
+  min-height: 280px;
+  background-color: var(--level-2);
+  background-image: url("./images/free_victor.jpg"); /* <- your image */
+  background-size: 70%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* subtle dark overlay, optional */
+.parallax-divider::after{
+  content: "";
+  position: inherit;
+  display: block;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.25));
+}
+
+/*mobile fallback where background-attachment: fixed is buggy*/
+@media (max-width: 1024px){
+  .parallax-divider{
+    height: 35vh;
+    min-height: 100%;
+    background-color: var(--level-2);
+    background-image: url("./images/free_victor.jpg"); /* <- your image */
+    background-size: 150%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+} 
+
 /*ABOUT SECTION*/
 
 .about{
