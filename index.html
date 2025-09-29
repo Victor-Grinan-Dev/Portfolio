@@ -287,23 +287,111 @@
 
             <div id="skillArticle">
                 <h2 id="skills" class="section-title"> Skills </h2>
-                <!--<p>I rated myself with my own system: </p>-->
+            
                 <p class='ratingLegend skillsLegend invisible'> 5x⭐ = "God like"<br /> 4x⭐ = "Senior level"<br /> 3x⭐ =
                     "Developer Level" <br />2x⭐ = "junior Level"<br /> 1x⭐ = "I have play with it" <br /> 0x⭐ = "Haven't
                     seen it yet"</p>
                 <div class='skillBtns'>
-                    <button class='showSkillsLegend appButton'>Show legend</button> <button
-                        class='showMoreSkills appButton'>Show Weakest</button>
-                    <br> <br>
+                    <button class='toggleTextSkills appButton' id="skillModeBtn"> Toggle skills</button>
+                    <button class='showSkillsLegend appButton invisible'>Show legend</button> 
+                    <button class='showMoreSkills appButton invisible'>Show Weakest</button>
                 </div>
-                <div id="allSkills">
+                <br>
+                <div id="skillsText" class="">
+                    <div class="txtSkills-section">
+                        
+                        <div class="txtSkills-subsection">
+
+                            <h4 class="txtSkills-section-heading">IT-Support, Server & Cloud Management </h4>
+
+                            <div class="txtSkills-subsection-content">
+  
+                                <div class="skill-icon-card">
+                                    <div class="icon-container">
+                                        <img src="./icons/ui/technical-support.png" alt="skill-icon">
+                                    </div>
+                                    <p>Diagnosing and resolving hardware, software and networking IT issues</p>
+                                </div>
+                                <div class="skill-icon-card">
+                                    <div class="icon-container">
+                                        <img src="./icons/ui/online-support.png" alt="skill-icon">
+                                    </div>
+                                    <p>Remote tools like TeamViewer,and Remote Desktop.</p>
+                                </div>
+                                <div class="skill-icon-card">
+                                    <div class="icon-container">
+                                        <img src="./icons/ui/server.png" alt="skill-icon">
+                                    </div>
+                                    <p>User management, cybersecurity, and  Windows Server administration.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="txtSkills-subsection">
+                            <h4 class="txtSkills-section-heading">Coding, Scripting & Web/Software Developing </h4>
+
+                            <div class="txtSkills-subsection-content">
+                                <div class="skill-icon-card">
+                                    <div class="icon-container">
+                                        <img src="./icons/ui/algorithm.png" alt="skill-icon">
+                                    </div>
+                                    <p>Strong understanding of algorithms</p>
+                                </div>
+                                <div class="skill-icon-card">
+                                    <div class="icon-container">
+                                        <img src="icons/ui/ui.png" alt="skill-icon">
+                                    </div>
+                                    <p>Perfect understanding of the importance of UI/UX.</p>
+                                </div>
+                                <!-- <div class="skill-icon-card">
+                                    <div class="icon-container">
+                                        <img src="" alt="skill-icon">
+                                    </div>
+                                    <p>...</p>
+                                </div> -->
+                            </div>
+
+                        </div>
+
+                        <div class="txtSkills-subsection">
+
+                            <h4 class="txtSkills-section-heading">Customer Service & Crisis Handling</h4>
+
+                            <div class="txtSkills-subsection-content">
+  
+                                <div class="skill-icon-card">
+                                    <div class="icon-container">
+                                        <img src="./icons/ui/consulting.png" alt="skill icon">
+                                    </div>
+                                    <p>Strong customer service abilities</p>
+                                </div>
+                                <div class="skill-icon-card">
+                                    <div class="icon-container">
+                                        <img src="./icons/ui/languages.png" alt="skill icon">
+                                    </div>
+                                    <p>Clear in Spanish, Inglish and finnish</p>
+                                </div>
+                                <div class="skill-icon-card">
+                                    <div class="icon-container">
+                                        <img src="./icons/ui/positive-vibes.png" alt="skill icon">
+                                    </div>
+                                    <p>I carry a steadfast and upbeat vibe</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="allSkills" class="invisible">
 
                     <div class="skillGroup primarySkillGroup" id='basicFrontend'>
                         <h3 class="skillGroupTitle">Basic Frontend:</h3>
-                        <div class="subSkills">
-
-                        </div>
-                        <div class="overall">😎</div> <!--15/9-->
+                        <div class="subSkills"></div>
+                        <div class="overall">😎</div>
                     </div>
                     <div class="skillGroup primarySkillGroup" id='templating'>
                         <h3 class="skillGroupTitle">Templating Languages</h3>
@@ -312,53 +400,39 @@
                     </div>
                     <div class="skillGroup primarySkillGroup" id='frameworks'>
                         <h3 class="skillGroupTitle">JS Frameworks:</h3>
-                        <div class="subSkills">
-
-                        </div>
-                        <div class="overall">😎</div><!--7/15-->
+                        <div class="subSkills"></div>
+                        <div class="overall">😎</div>
                     </div>
 
                     <div class="skillGroup primarySkillGroup" id='advanceFrontend'>
                         <h3 class="skillGroupTitle">Advance JS:</h3>
-                        <div class="subSkills">
-
-                        </div>
-                        <div class="overall">😎</div><!--7/15-->
+                        <div class="subSkills"></div>
+                        <div class="overall">😎</div>
                     </div>
                     <div class="skillGroup primarySkillGroup" id='advanceFrontend2'>
                         <h3 class="skillGroupTitle">CSS Frameworks:</h3>
-                        <div class="subSkills">
-
-                        </div>
-                        <div class="overall">😎</div><!--7/15-->
+                        <div class="subSkills"></div>
+                        <div class="overall">😎</div>
                     </div>
                     <div class="skillGroup primarySkillGroup" id='backendNode'>
                         <h3 class="skillGroupTitle">Backend Node:</h3>
-                        <div class="subSkills">
-
-                        </div>
-                        <div class="overall">😎</div><!--2/10-->
+                        <div class="subSkills"></div>
+                        <div class="overall">😎</div>
                     </div>
                     <div class="skillGroup primarySkillGroup" id='backendPython'>
                         <h3 class="skillGroupTitle">Backend Python:</h3>
-                        <div class="subSkills">
-
-                        </div>
-                        <div class="overall">😎</div><!--7/15-->
+                        <div class="subSkills"></div>
+                        <div class="overall">😎</div>
                     </div>
                     <div class="skillGroup secundarySkillGroup invisible" id='backendPHP'>
                         <h3 class="skillGroupTitle">Backend PHP:</h3>
-                        <div class="subSkills">
-
-                        </div>
-                        <div class="overall">😎</div><!--4/15-->
+                        <div class="subSkills"></div>
+                        <div class="overall">😎</div>
                     </div>
                     <div class="skillGroup secundarySkillGroup invisible" id='cloudService'>
                         <h3 class="skillGroupTitle">Cloud Service:</h3>
-                        <div class="subSkills">
-
-                        </div>
-                        <div class="overall">😎</div><!--4/15-->
+                        <div class="subSkills"></div>
+                        <div class="overall">😎</div>
                     </div>
 
                     <div class="skillGroup secundarySkillGroup invisible" id='backendJava'>
@@ -370,13 +444,13 @@
                     <div class="skillGroup secundarySkillGroup invisible" id='embedSystems'>
                         <h3 class="skillGroupTitle">Embed Systems:</h3>
                         <div class="subSkills"></div>
-                        <div class="overall">😎</div><!--3/15-->
+                        <div class="overall">😎</div>
                     </div>
 
                     <div class="skillGroup secundarySkillGroup invisible" id='cms'>
                         <h3 class="skillGroupTitle">CMS's:</h3>
                         <div class="subSkills"></div>
-                        <div class="overall">😎</div><!--1/10-->
+                        <div class="overall">😎</div>
                     </div>
                     <div class="skillGroup secundarySkillGroup invisible" id='cicd'>
                         <h3 class="skillGroupTitle">CI / CD:</h3>
@@ -389,8 +463,8 @@
                         <div class="subSkills"></div>
                         <div>😎</div>
                     </div>
-
                 </div> <!--allSkill end-->
+                
             </div>
             </div>
             </div>

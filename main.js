@@ -1057,6 +1057,11 @@ const cms = document.querySelector("#cms div");
 const cicd = document.querySelector("#cicd div");
 const otherSkills = document.querySelector("#otherSkills div");
 
+//skill modes txt or apps
+// const skillModeBtn = document.querySelectorAll("#toggleTextSkills");
+// const skillText = document.querySelector("#skillsText");
+// const allSkills = document.querySelector("#allSkills");
+
 const skillGroups = {
   basicFrontend: basicFrontend,
   frameworks: frameworks,
@@ -1073,6 +1078,22 @@ const skillGroups = {
   cicd: cicd,
   otherSkills: otherSkills,
 };
+
+//toggle skill text
+document.addEventListener("DOMContentLoaded", () => {
+  const skillText = document.querySelector("#skillsText");
+  const allSkills = document.querySelector("#allSkills");
+  const skillModeBtn = document.querySelector("#skillModeBtn");
+
+  const toggleSkillText = () => {
+    skillText.classList.toggle("invisible");
+    allSkills.classList.toggle("invisible");
+  };
+
+  skillModeBtn.addEventListener("click", toggleSkillText);
+});
+
+ 
 //todo: move skills data to database
 const skillsData = [
   {
