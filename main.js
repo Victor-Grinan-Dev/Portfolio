@@ -1035,6 +1035,7 @@ let is_showing = false;
 
 /* Skill functions */
 const basicFrontend = document.querySelector("#basicFrontend div");
+const itSupport = document.querySelector("#itSupport div");
 const frameworks = document.querySelector("#frameworks div");
 const advanceFrontend = document.querySelector("#advanceFrontend div");
 const advanceFrontend2 = document.querySelector("#advanceFrontend2 div");
@@ -1055,6 +1056,7 @@ const otherSkills = document.querySelector("#otherSkills div");
 // const allSkills = document.querySelector("#allSkills");
 
 const skillGroups = {
+  itSupport: itSupport,
   basicFrontend: basicFrontend,
   frameworks: frameworks,
   advanceFrontend: advanceFrontend,
@@ -1068,6 +1070,7 @@ const skillGroups = {
   templating: templating,
   cms: cms,
   cicd: cicd,
+
   otherSkills: otherSkills,
 };
 
@@ -1145,7 +1148,7 @@ const skillsData = [
     stars: 1,
     imgUrl: "./icons/angular.png",
     skillgroup: "frameworks",
-    isInvisible: true,
+    isInvisible: false,
   },
   {
     id: "typescript",
@@ -1245,7 +1248,7 @@ const skillsData = [
     stars: 2,
     imgUrl: "./icons/php.png",
     skillgroup: "backendPHP",
-    isInvisible: true,
+    isInvisible: false,
   },
   {
     id: "synfony",
@@ -1253,7 +1256,7 @@ const skillsData = [
     stars: 2,
     imgUrl: "./icons/symfony.png",
     skillgroup: "backendPHP",
-    isInvisible: true,
+    isInvisible: false,
   },
   {
     id: "laravel",
@@ -1261,7 +1264,7 @@ const skillsData = [
     stars: 0,
     imgUrl: "./icons/laravel.png",
     skillgroup: "backendPHP",
-    isInvisible: true,
+    isInvisible: false,
   },
 
   {
@@ -1283,7 +1286,7 @@ const skillsData = [
   {
     id: "azure",
     skillName: "Azure",
-    stars: 0,
+    stars: 2,
     imgUrl: "./icons/azure.png",
     skillgroup: "cloudService",
     isInvisible: true,
@@ -1292,7 +1295,7 @@ const skillsData = [
   {
     id: "drupal",
     skillName: "Drupal",
-    stars: 1,
+    stars: 2,
     imgUrl: "./icons/drupal.png",
     skillgroup: "cms",
     isInvisible: false,
@@ -1300,7 +1303,7 @@ const skillsData = [
   {
     id: "wordpress",
     skillName: "Wordpress",
-    stars: 0,
+    stars: 1,
     imgUrl: "./icons/word_press.png",
     skillgroup: "cms",
     isInvisible: false,
@@ -1442,6 +1445,46 @@ const skillsData = [
       skillgroup:"otherSkills",
       isInvisible:false
   },
+  {
+      id:"unity",
+      skillName:"Unity",
+      stars:2,
+      imgUrl:"./icons/unity.png",
+      skillgroup:"otherSkills",
+      isInvisible:false
+  },
+  {
+      id:"server",
+      skillName:"Server",
+      stars:3,
+      imgUrl:"./icons/windows_server.png",
+      skillgroup:"itSupport",
+      isInvisible:false
+  },
+  {
+      id:"remote_desktop",
+      skillName:"Remote",
+      stars: 3,
+      imgUrl:"./icons/remote_desktop.png",
+      skillgroup:"itSupport",
+      isInvisible:false
+  },
+  {
+      id:"vmware",
+      skillName:"vmware",
+      stars:3,
+      imgUrl:"./icons/vmware.png",
+      skillgroup:"itSupport",
+      isInvisible:false
+  },
+  {
+      id:"m365",
+      skillName:"M365",
+      stars:2,
+      imgUrl:"./icons/m365.svg",
+      skillgroup:"cloudService",
+      isInvisible:false
+  },
   // {
   //     id:"",
   //     skillName:"",
@@ -1461,24 +1504,42 @@ class SkillCard extends HTMLElement {
    */
   constructor(id, skillName, stars, imgUrl, isInvisible) {
     super();
-    this.content = `<div id=${id} class="skill" ${
-      isInvisible ? "invisible" : null
-    } >
-                <img class='techLogo' src="${imgUrl}" alt="icon">
-                <div class='skillValues'>
-                    <p class='skillTitle'>${skillName}</p>
-                    <p class='skillRating'>${
-                      stars > 0 ? "⭐".repeat(stars) : " - "
-                    }</p> 
-                    <div class="fill-bar"><div class="level" id="HTML-level"></div></div>
-                </div> 
-            </div>`;
+    this.content = `
+      <div id="${id}" class="skill ${isInvisible ? "invisible" : ""}">
+        <img class='techLogo' src="${imgUrl}" alt="icon">
+        <div class='skillValues'>
+          <p class='skillTitle'>${skillName}</p>
+          <p class='skillRating'>${stars > 0 ? "⭐".repeat(stars) : " - "}</p>
+          <div class="fill-bar"><div class="level"></div></div>
+        </div>
+      </div>`;
+
   }
 }
 
 if ("customElements" in window) {
   customElements.define("skill-card", SkillCard);
 }
+
+const round = (v, p=0) => Math.round(v * 10**p) / 10**p;
+
+const calculatePercent = () => {
+  /* Calculate XP% per skill group */
+  document.querySelectorAll(".skillGroup").forEach(group => {
+    const overall = group.querySelector(".overall");
+    if (!overall) return;
+
+    // only count visible skills
+    const ratings = [...group.querySelectorAll(".skillRating")]
+      .filter(el => !el.closest(".skill")?.classList.contains("invisible"));
+
+    const totalStars = ratings.reduce((sum, el) =>
+      sum + ((el.textContent.match(/⭐/g) || []).length), 0);
+
+    const count = ratings.length || 1; // avoid /0
+    overall.textContent = `${round(totalStars / count, 1)}×⭐`;
+  });
+};
 
 const renderData = () => {
   renderSkills();
@@ -1493,40 +1554,6 @@ const renderSkills = () => {
   });
 };
 
-const round = (value, precision) => {
-  var multiplier = Math.pow(10, precision || 0);
-  return Math.round(value * multiplier) / multiplier;
-};
-
-/* Calculate XP% per skill group */
-const allGroups = document.querySelectorAll(".skillGroup");
-const calculatePercent = () => {
-  let starText;
-  allGroups.forEach((group) => {
-    let stars = 0; //total of satrs in a skill group
-    const overall = group.querySelector(".overall");
-    const skillRatings = group.querySelectorAll(".skillRating");
-    const skills = group.querySelector(".subSkills");
-    skillRatings.forEach((rating) => {
-      starText = rating.innerText;
-
-      for (const char of starText) {
-        if (char === "⭐") {
-          stars++;
-        }
-      }
-    });
-
-    // const total = skills.childElementCount * 5
-    const skillCount = skills.childElementCount;
-
-    if (overall) {
-      // overall.innerText = `${stars}/${total}`;
-
-      overall.innerText = `${round(stars / skillCount, 1)}x⭐`;
-    }
-  });
-};
 
 renderData();
 
