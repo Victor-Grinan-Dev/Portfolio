@@ -130,11 +130,11 @@ const windowHeight = window.innerHeight;
 
 const scroll_about = [
   pageSize - (pageSize - windowHeight),
-  pageSize - (pageSize - windowHeight * 2),
+  pageSize - (pageSize - windowHeight * 2.3),
 ];
 
 const scroll_portfolio = [
-  pageSize - (pageSize - windowHeight * 2),
+  pageSize - (pageSize - windowHeight * 2.3),
   pageSize - (pageSize - windowHeight * 3),
 ];
 
