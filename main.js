@@ -147,10 +147,6 @@ const scroll_certificates = [
   pageSize - windowHeight * 2.5 - 5,
   pageSize - windowHeight - 5,
 ];
-const scroll_conctactMe = [
-  pageSize - windowHeight - 100,
-  pageSize - windowHeight - 10,
-];
 
 const scrollSection_about = document.querySelector("#aboutArticle");
 const scrollSection_portfolio = document.querySelector("#portfolio");
@@ -165,12 +161,6 @@ const sections = [
   scrollSection_certificates,
   scrollSection_contact,
 ];
-//TODO: sections top scroll value
-// sections.forEach((sec) => {
-//   try {
-//     console.log(sec.getBoundingClientRect().y);
-//   } catch (error) {}
-// });
 
 const aboutTab = document.querySelector("#aboutTab");
 const portfolioTab = document.querySelector("#portfolioTab");
@@ -178,7 +168,7 @@ const skillsTab = document.querySelector("#skillsTab");
 const certTab = document.querySelector("#certTab");
 const contactTab = document.querySelector("#contactTab");
 
-const menuBar = document.querySelector("#menuBar"); //bg change color not working.
+const menuBar = document.querySelector("#menuBar");
 const tabs = document.querySelectorAll("tab");
 const scrollUp = document.querySelector(".scrollUp");
 
@@ -190,8 +180,6 @@ window.onscroll = function () {
 
 function scrollFunction() {
   scrollValue = document.body.scrollTop || document.documentElement.scrollTop;
-
-  // console.log("scrollValue", scrollValue);
 
   resetActiveTab();
   if (scrollValue >= scroll_about[0] && scrollValue <= scroll_about[1]) {
@@ -211,7 +199,10 @@ function scrollFunction() {
     scrollValue <= scroll_certificates[1]
   ) {
     certTab.classList.add("activeTab");
-  } else if (scrollValue >= scroll_conctactMe[0]) {
+  } else if (
+    window.innerHeight + scrollValue >=
+    document.documentElement.scrollHeight - 5
+  ) {
     contactTab.classList.add("activeTab");
   }
 
@@ -231,6 +222,7 @@ const resetActiveTab = () => {
   certTab.classList.remove("activeTab");
   contactTab.classList.remove("activeTab");
 };
+
 
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
