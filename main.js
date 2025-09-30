@@ -1043,7 +1043,7 @@ const backendNode = document.querySelector("#backendNode div");
 const backendPython = document.querySelector("#backendPython div");
 const backendPHP = document.querySelector("#backendPHP div");
 const cloudService = document.querySelector("#cloudService div");
-const backendJava = document.querySelector("#backendJava div");
+// const backendJava = document.querySelector("#backendJava div");
 const embedSystems = document.querySelector("#embedSystems div");
 const templating = document.querySelector("#templating div");
 const cms = document.querySelector("#cms div");
@@ -1065,7 +1065,7 @@ const skillGroups = {
   backendPython: backendPython,
   backendPHP: backendPHP,
   cloudService: cloudService,
-  backendJava: backendJava,
+  // backendJava: backendJava,
   embedSystems: embedSystems,
   templating: templating,
   cms: cms,
@@ -1373,22 +1373,22 @@ const skillsData = [
     skillgroup: "embedSystems",
     isInvisible: false,
   },
-  {
-    id: "java",
-    skillName: "Java",
-    stars: 1,
-    imgUrl: "./icons/java.png",
-    skillgroup: "backendJava",
-    isInvisible: false,
-  },
-  {
-    id: "spring",
-    skillName: "Spring",
-    stars: 1,
-    imgUrl: "./icons/spring.png",
-    skillgroup: "backendJava",
-    isInvisible: false,
-  },
+  // {
+  //   id: "java",
+  //   skillName: "Java",
+  //   stars: 1,
+  //   imgUrl: "./icons/java.png",
+  //   skillgroup: "backendJava",
+  //   isInvisible: false,
+  // },
+  // {
+  //   id: "spring",
+  //   skillName: "Spring",
+  //   stars: 1,
+  //   imgUrl: "./icons/spring.png",
+  //   skillgroup: "backendJava",
+  //   isInvisible: false,
+  // },
   {
     id: "kubernetes",
     skillName: "Kubernetes",
