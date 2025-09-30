@@ -399,7 +399,8 @@ p {
 /*ABOUT SECTION*/
 
 .about{
-  font-size: 16px;
+  font-size: 18px;
+  max-width: 600px;
 }
 
 .about-link{
