@@ -1266,7 +1266,6 @@ const skillsData = [
     skillgroup: "backendPHP",
     isInvisible: false,
   },
-
   {
     id: "aws",
     skillName: "AWS",
@@ -1289,7 +1288,7 @@ const skillsData = [
     stars: 2,
     imgUrl: "./icons/azure.png",
     skillgroup: "cloudService",
-    isInvisible: true,
+    isInvisible: false,
   },
 
   {
@@ -1379,7 +1378,7 @@ const skillsData = [
   //   stars: 1,
   //   imgUrl: "./icons/java.png",
   //   skillgroup: "backendJava",
-  //   isInvisible: false,
+  //   isInvisible: true,
   // },
   // {
   //   id: "spring",
@@ -1387,7 +1386,7 @@ const skillsData = [
   //   stars: 1,
   //   imgUrl: "./icons/spring.png",
   //   skillgroup: "backendJava",
-  //   isInvisible: false,
+  //   isInvisible: true,
   // },
   {
     id: "kubernetes",
