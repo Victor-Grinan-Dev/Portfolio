@@ -367,7 +367,7 @@ p {
   min-height: 280px;
   background-color: var(--level-2);
   background-image: url("./images/free_victor.jpg"); /* <- your image */
-  background-size: 70%;
+  background-size:cover;
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -386,11 +386,11 @@ p {
 @media (max-width: 1024px){
   .parallax-divider{
     height: 35vh;
-    min-height: 100dvh;
+    min-height: 50dvh;
     background-color: var(--level-2);
     background-image: url("./images/free_victor.jpg"); /* <- your image */
-    background-size: 200%;
-    background-position: bottom center;
+    background-size: auto 170%;  
+    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
@@ -398,12 +398,12 @@ p {
 
 @media (max-width: 400px){
   .parallax-divider{
-    height: 50dvh;
-    min-height: 100dvh;
+    height:50dvh;
+    min-height: 50dvh;
     background-color: var(--level-2);
     background-image: url("./images/free_victor.jpg"); /* <- your image */
-    background-size: 200%;
-    background-position: bottom center;
+    background-size: auto 150%;  
+    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
