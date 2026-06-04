@@ -1658,13 +1658,7 @@ const allCertificate = [
     docLink: "./documents/HBC_graduation_certificate_small.png",
     section: "mainCertificates",
   },
-  {
-    id: "pythonBasics",
-    title: 'SDA - "Python From Scratch"',
-    docLink: "./documents/sda_certificate.png",
-    section: "mainCertificates",
-  },
-  {
+    {
     id: "taitotalo",
     title: 'Taitotalo - "Network Administration"',
     docLink: "./documents/taitotalo.png",
@@ -1675,6 +1669,12 @@ const allCertificate = [
     title: 'AWS - "CodeCommit"',
     docLink: "./documents/AWS_CodeCommit_Course_Completion_Certificate.png",
     section: "onlineCertificates1",
+  },
+  {
+    id: "pythonBasics",
+    title: 'SDA - "Python From Scratch"',
+    docLink: "./documents/sda_certificate.png",
+    section: "mainCertificates",
   },
   {
     id: "DevOps",
