@@ -1654,7 +1654,7 @@ const CertificateSections = {
 const allCertificate = [
   {
     id: "hbc",
-    title: "Qualification in Information Tech",
+    title: ' HBC - "Qualification in Information Tech"',
     docLink: "./documents/HBC_graduation_certificate_small.png",
     section: "mainCertificates",
   },
@@ -1662,6 +1662,12 @@ const allCertificate = [
     id: "pythonBasics",
     title: 'SDA - "Python From Scratch"',
     docLink: "./documents/sda_certificate.png",
+    section: "mainCertificates",
+  },
+  {
+    id: "taitotalo",
+    title: 'Taitotalo - "Network Administration"',
+    docLink: "./documents/taitotalo.png",
     section: "mainCertificates",
   },
   {
